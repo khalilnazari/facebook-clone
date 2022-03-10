@@ -1,0 +1,388 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  box-shadow: 0px 0px 10px #a7a7a75e;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px 8px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: .5rem;
+}
+
+header {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0px 3px 5px #dfdfdf5e;
+  padding: 0 10px;
+  margin-bottom: .5rem;
+  height: 4rem;
+}
+
+header .logo-icons {
+  display: flex;
+  align-items: center;
+}
+
+header .logo-icons .logo {
+  margin-right: -10px;
+  color: #1b74e4;
+  font-size: 2.3rem;
+}
+
+header .logo-icons form {
+  display: flex;
+  align-items: center;
+}
+
+header .logo-icons form .search {
+  transform: translate(30px, 1px);
+  font-size: 19px;
+  color: #888888;
+}
+
+header .logo-icons form input {
+  padding: 5px 5px 5px 37px;
+  border: 1px solid #dfdfdf;
+  border-radius: 20px;
+  outline: none;
+  font-size: 20px;
+  width: 208px;
+  font-weight: 300;
+}
+
+header .page-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+header .page-icons a {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-right: .5rem;
+  margin-left: .5rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+header .page-icons a i {
+  font-size: 22px;
+  color: #65676b;
+}
+
+header .page-icons a.active {
+  border-bottom: 3px solid #1b74e4;
+}
+
+header .page-icons a.active i {
+  color: #1b74e4;
+}
+
+header .profile-icons {
+  display: flex;
+  align-items: center;
+}
+
+header .profile-icons .user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 31px;
+  padding: 1px 15px 1px 0;
+}
+
+header .profile-icons .user i {
+  margin-right: .5rem;
+  margin-left: 1px;
+}
+
+header .profile-icons i {
+  margin-left: 1rem;
+  color: #000;
+  font-size: 15px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  display: grid;
+  place-content: center;
+  background-color: #f0f0f0;
+}
+
+header .profile-icons i.active {
+  background-color: #caecff;
+  color: #0541a4;
+}
+
+header i {
+  cursor: pointer;
+}
+
+.left-panel {
+  grid-column: 1/4;
+}
+
+main {
+  grid-column: 4/10;
+}
+
+main .post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+main .post i {
+  margin-right: 1rem;
+  background: #f3f3f3;
+  padding: 10px 12px;
+  border-radius: 20px;
+  font-size: 19px;
+}
+
+main .post input {
+  flex-grow: 1;
+  border-radius: 24px;
+  border: none;
+  background: #eaeaea;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  cursor: pointer;
+}
+
+main .post input:hover {
+  background: #eaeaea;
+}
+
+main .links {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+main .links > div {
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 4px;
+  width: 33%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .links > div .live {
+  color: lightcoral;
+}
+
+main .links > div .photo {
+  color: lightgreen;
+}
+
+main .links > div .feeling {
+  color: orange;
+}
+
+main .links > div span {
+  color: #65676b;
+}
+
+main .links > div i {
+  font-size: 20px;
+  margin-right: 1rem;
+}
+
+main .links > div:hover {
+  background-color: #f0f2f5;
+}
+
+main .posts .card {
+  padding: 0;
+  margin: 10px 0;
+}
+
+main .posts .card img {
+  width: 100%;
+}
+
+main .posts .post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+}
+
+main .posts .post-header > div {
+  flex-grow: 1;
+}
+
+main .posts .post-header h4 {
+  font-weight: 500;
+}
+
+main .posts .post-header p {
+  margin-top: 5px;
+  color: #65676b;
+  font-size: 13px;
+}
+
+main .posts .post-header p i {
+  font-size: 13px;
+}
+
+main .posts .post-header .fb-user {
+  font-size: 25px;
+  padding: 10px;
+  background: #f0f2f5;
+  border-radius: 27px;
+  margin-right: 12px;
+}
+
+main .posts .post-header .menu {
+  color: #65676b;
+  padding: 10px 12px;
+  border-radius: 26px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+main .posts .post-header .menu:hover {
+  background: #f0f2f5;
+}
+
+main .posts .post-text {
+  padding: 10px 16px;
+  line-height: 25px;
+  color: #2f2f2f;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+main .posts .post-footer .reactions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+}
+
+main .posts .post-footer .reactions p {
+  color: #65676b;
+}
+
+main .posts .post-footer .reactions .like:hover, main .posts .post-footer .reactions .share:hover, main .posts .post-footer .reactions .comment:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+main .posts .post-footer .reactions .comment {
+  margin-right: 1rem;
+}
+
+main .posts .post-footer .action-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #c9c9c9;
+  margin: 0 16px;
+}
+
+main .posts .post-footer .action-buttons button {
+  font-size: 16px;
+  width: 32%;
+  padding: 7px 0;
+  border: none;
+  background: transparent;
+  color: #65676b;
+  cursor: pointer;
+}
+
+main .posts .post-footer .action-buttons button i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+main .posts .post-footer .action-buttons button:hover {
+  background-color: #f0f2f5;
+}
+
+.right-panel {
+  grid-column: 10/13;
+}
+
+@media screen and (max-width: 1100px) {
+  header .logo-icons form input {
+    width: 40px;
+    padding: 6px;
+    border: none;
+    background: #f0f0f0;
+  }
+  header .profile-icons .user {
+    display: none;
+  }
+  .left-panel {
+    display: none;
+  }
+  main {
+    grid-column: 1/9;
+  }
+  .right-panel {
+    grid-column: 9/13;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header .page-icons a {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  main {
+    grid-column: 1/13;
+  }
+  .right-panel {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header .page-icons {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
