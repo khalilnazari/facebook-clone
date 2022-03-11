@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" href="./images/fb-logo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./css/style.css">
     <title>Home</title>
@@ -15,10 +16,60 @@
     <header>
         <div class="logo-icons">
             <i class="logo fa-brands fa-facebook"></i>
-            <form action="">
+            <i id="logo-search-btn" class="fa-solid fa-magnifying-glass"></i>
+
+            <form action="" class="temp-form">
                 <i class="search fa-solid fa-magnifying-glass"></i>
-                <input type="text">
+                <input type="text" id="temp-input" placeholder="Search Facebook...">
             </form>
+
+
+            <!-- recent search  -->
+            <div class="recent-search">
+                <!-- <div class="form"> -->
+                    <form class="form">
+                        <i class="fa-solid fa-arrow-left" id="rs-back-btn"></i>
+                        <input type="text" placeholder="Search Facebook">
+                    </form>
+
+                    <div class="header">
+                        <h4>Recent Searches</h4>
+                        <button>Edit</button>
+                    </div>
+
+                    <div class="search-terms">
+                        <div class="term">
+                            <p><i class="fa-solid fa-circle-user"></i>Knowlege is power</p>
+                            <i class="remove-rs-term fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div class="term">
+                            <p><i class="fa-solid fa-circle-user"></i>Kam Air</p>
+                            <i class="remove-rs-term fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div class="term">
+                            <p><i class="fa-solid fa-circle-user"></i>Mark Z.</p>
+                            <i class="remove-rs-term fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div class="term">
+                            <p><i class="fa-solid fa-circle-user"></i>Books</p>
+                            <i class="remove-rs-term fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div class="term">
+                            <p><i class="fa-solid fa-circle-user"></i>Coding</p>
+                            <i class="remove-rs-term fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div class="term">
+                            <p><i class="fa-solid fa-circle-user"></i>Javascript groups</p>
+                            <i class="remove-rs-term fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
         </div>
 
         <div class="page-icons">
@@ -32,15 +83,179 @@
         <a id="bookmark_toggle_btn"><i class="fa-solid fa-bars"></i></a>
 
         <div class="profile-icons">
-            <div class="user">
+            <a href="./pages/profile.html" class="user">
                 <i class="fa-solid fa-user"></i><span>Khalil</span>
-            </div>
-            <i class="fa-solid fa-braille"></i>
+            </a>
             
+            <i id="mega-menu-btn" class="fa-solid fa-braille"></i>
+
             <i class="fa-brands fa-facebook-messenger"></i>
             <i class="fa-solid fa-bell"></i>
             <i class="fa-solid fa-caret-down"></i>
         </div>
+
+
+        <div class="mega-menu">
+            <h3>Menu</h3>
+            <div class="content">
+                <div class="menu thin-scrollbar">
+                    <form action="" class="menu-form">
+                        <input type="text" placeholder="Search Menu">
+                    </form>
+
+                    <div class="social">
+                        <h5 class="title">Social</h5>
+
+                        <a href="#" class="item">
+                            <i class="event fa-solid fa-calendar"></i>
+                            <article>
+                                <p class="name">Event</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+
+                        <a href="#" class="item">
+                            <i class="friends fa-solid fa-user-group"></i>
+                            <article>
+                                <p class="name">Friends</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+
+                        <a href="#" class="item">
+                            <i class="group fa-solid fa-users"></i>
+                            <article>
+                                <p class="name">Groups</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="entertainment social">
+                        <h5 class="title">Entertainment</h5>
+
+                        <a href="#" class="item">
+                            <i class="event fa-solid fa-gamepad"></i>
+                            <article>
+                                <p class="name">Game</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+
+                        <a href="#" class="item">
+                            <i class="friends fa-solid fa-tv"></i>
+                            <article>
+                                <p class="name">Watch</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="entertainment social">
+                        <h5 class="title">Personal</h5>
+
+                        <a href="#" class="item">
+                            <i class="event fa-solid fa-bookmark"></i>
+                            <article>
+                                <p class="name">Saved</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+
+                        <a href="#" class="item">
+                            <i class="friends fa-solid fa-cloud-sun-rain"></i>
+                            <article>
+                                <p class="name">Weather</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="entertainment social">
+                        <h5 class="title">More From Meta</h5>
+
+                        <a href="#" class="item">
+                            <i class="group fa-brands fa-facebook-messenger"></i>
+                            <article>
+                                <p class="name">Messenger</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+
+                        <a href="#" class="item">
+                            <i class="friends fa-brands fa-facebook-messenger"></i>
+                            <article>
+                                <p class="name">Messenger for kids</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="create">
+                    <h5 class="title">Create</h5>
+
+                    <a href="#" class="item">
+                        <i class="fa-solid fa-square-pen"></i>
+                        <span>Post</span>
+                    </a>
+
+                    <a href="#" class="item">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Story</span>
+                    </a>
+                    
+                    <a href="#" class="item">
+                        <i class="fa-solid fa-video"></i>
+                        <span>Story</span>
+                    </a>
+
+                    <div class="divider"></div>
+
+                    <a href="#" class="item">
+                        <i class="fa-solid fa-flag"></i>
+                        <span>Page</span>
+                    </a>
+
+                    <a href="#" class="item">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Group</span>
+                    </a>
+
+                    <a href="#" class="item">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                        <span>Event</span>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+        
     </header>
 
 
@@ -418,5 +633,8 @@
 
     </div>
 
+
+    <!-- javascript -->
+    <script src="./js/mains.js"></script>
 </body>
 </html>

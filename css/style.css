@@ -41,6 +41,13 @@ a {
   display: none;
 }
 
+.divider {
+  height: 1px;
+  width: 95%;
+  background: #bebebe;
+  margin: 10px 0;
+}
+
 .thin-scrollbar {
   /* Track */
   /* Handle */
@@ -52,10 +59,15 @@ a {
 }
 
 .thin-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: transparent;
 }
 
 .thin-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 5px;
+}
+
+.thin-scrollbar:hover::-webkit-scrollbar-thumb {
   background: #b8b8b8;
 }
 
@@ -91,32 +103,128 @@ header .logo-icons .logo {
   font-size: 2.3rem;
 }
 
-header .logo-icons form {
+header .logo-icons i#logo-search-btn {
+  display: none;
+}
+
+header .logo-icons input {
+  padding: 8px 5px 8px 37px;
+  border: 1px solid #dfdfdf;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  width: 208px;
+  font-weight: 300;
+}
+
+header .logo-icons form.temp-form {
   display: flex;
   align-items: center;
 }
 
-header .logo-icons form .search {
+header .logo-icons form.temp-form i.search {
   transform: translate(30px, 1px);
   font-size: 19px;
   color: #888888;
 }
 
-header .logo-icons form input {
-  padding: 5px 5px 5px 37px;
-  border: 1px solid #dfdfdf;
-  border-radius: 20px;
-  outline: none;
-  font-size: 20px;
-  width: 208px;
-  font-weight: 300;
+header .logo-icons .recent-search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 320px;
+  height: 0;
+  visibility: hidden;
+  max-height: 500px;
+  padding: 10px 20px 10px 10px;
+}
+
+header .logo-icons .recent-search.show-rs {
+  height: auto;
+  visibility: visible;
+}
+
+header .logo-icons .recent-search form.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 5px;
+}
+
+header .logo-icons .recent-search form.form input {
+  width: 90%;
+  font-size: 15px;
+  padding: 10px 18px;
+}
+
+header .logo-icons .recent-search .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 5px;
+}
+
+header .logo-icons .recent-search .header h4 {
+  font-weight: 500;
+}
+
+header .logo-icons .recent-search .header button {
+  border: none;
+  background: transparent;
+  padding: 8px 11px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #1b74e4;
+}
+
+header .logo-icons .recent-search .header button:hover {
+  background-color: #dfdfdf;
+}
+
+header .logo-icons .recent-search .search-terms .term {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 12px 12px 7px;
+  margin-bottom: .5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header .logo-icons .recent-search .search-terms .term:hover {
+  background: #dfdfdf;
+}
+
+header .logo-icons .recent-search .search-terms .term p {
+  display: flex;
+  align-items: center;
+}
+
+header .logo-icons .recent-search .search-terms .term p i {
+  margin-right: 12px;
+  font-size: 30px;
+}
+
+header .logo-icons .recent-search .search-terms .term > i {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}
+
+header .logo-icons .recent-search .search-terms .term > i:hover {
+  background: #bfbcbc;
 }
 
 header .page-icons {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
+  height: 85%;
 }
 
 header .page-icons a {
@@ -134,6 +242,11 @@ header .page-icons a {
 header .page-icons a i {
   font-size: 22px;
   color: #65676b;
+}
+
+header .page-icons a:hover {
+  background-color: #f0f2f5;
+  border-radius: 5px;
 }
 
 header .page-icons a.active {
@@ -155,11 +268,16 @@ header .profile-icons .user {
   align-items: center;
   font-weight: 500;
   padding: 1px 15px 1px 0;
+  cursor: pointer;
 }
 
 header .profile-icons .user i {
   margin-right: .5rem;
   margin-left: 1px;
+}
+
+header .profile-icons .user.active {
+  background-color: #1b74e4;
 }
 
 header .profile-icons i {
@@ -182,6 +300,156 @@ header .profile-icons i.active {
 
 header i {
   cursor: pointer;
+}
+
+header .mega-menu {
+  background-color: orange;
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  background-color: #f0f2f5;
+  width: 610px;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #f0f2f5;
+  box-shadow: 3px 3px 5px #7979797d, -3px -1px 5px #7979797d;
+  height: 0;
+  visibility: hidden;
+}
+
+header .mega-menu .content {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+header .mega-menu .content .menu {
+  background-color: white;
+  padding: 10px;
+  position: fixed;
+  overflow-x: hidden;
+  height: 620px;
+  width: 340px;
+  border-radius: 10px;
+}
+
+header .mega-menu .content .menu:hover {
+  overflow-y: scroll;
+}
+
+header .mega-menu .content .menu .menu-form {
+  margin-bottom: 2rem;
+}
+
+header .mega-menu .content .menu .menu-form input {
+  border: none;
+  outline: none;
+  background: #f0f2f5;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 22px;
+}
+
+header .mega-menu .content .menu .social .title {
+  color: #050505;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+header .mega-menu .content .menu .social .item {
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+  margin-bottom: .5rem;
+  border-radius: 10px;
+}
+
+header .mega-menu .content .menu .social .item .name {
+  color: #050505;
+}
+
+header .mega-menu .content .menu .social .item .about {
+  font-size: 13px;
+  color: #65676b;
+}
+
+header .mega-menu .content .menu .social .item:hover {
+  background-color: #f0f2f5;
+}
+
+header .mega-menu .content .menu .social .item i {
+  color: #65676b;
+  font-size: 32px;
+}
+
+header .mega-menu .content .menu .social .item .group {
+  color: #4f92ff;
+}
+
+header .mega-menu .content .menu .social .item .friends {
+  color: #65676b;
+}
+
+header .mega-menu .content .menu .social .item .event {
+  color: #ff4a68;
+}
+
+header .mega-menu .content .menu .entertainment {
+  margin-top: 1rem;
+}
+
+header .mega-menu .content .create {
+  position: fixed;
+  right: 23px;
+  width: 220px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+}
+
+header .mega-menu .content .create .title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+header .mega-menu .content .create .item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+header .mega-menu .content .create .item:hover {
+  background: #f0f2f5;
+}
+
+header .mega-menu .content .create .item span {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+header .mega-menu .content .create .item i {
+  font-size: 22px;
+  background: #d6d6d6;
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+header .mega-menu .content .create .item hr {
+  margin: 1rem 0;
+}
+
+header .mega-menu.show-mega-menu {
+  height: 90vh;
+  visibility: visible;
 }
 
 .main-content {
@@ -643,11 +911,20 @@ main .posts .post-footer .action-buttons button:hover {
   #bookmark_toggle_btn {
     display: grid;
   }
-  header .logo-icons form input {
-    width: 40px;
-    padding: 6px;
-    border: none;
+  header .logo-icons .logo {
+    margin-right: 7px;
+  }
+  header .logo-icons form.temp-form {
+    display: none;
+  }
+  header .logo-icons i#logo-search-btn {
+    display: inline;
     background: #f0f0f0;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
   }
   header .profile-icons .user {
     display: none;
