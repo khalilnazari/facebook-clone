@@ -20,29 +20,64 @@ a {
   color: inherit;
 }
 
+.white-menu {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}
+
 .card {
   box-shadow: 0px 0px 10px #a7a7a75e;
   background-color: #fff;
   padding: 1rem;
-  border-radius: 5px 8px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: .5rem;
+#bookmark_toggle_btn {
+  display: none;
 }
 
+.thin-scrollbar {
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background: #b8b8b8;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #8a8a8a;
+}
+
+/************* Header **************/
 header {
-  grid-column: 1/13;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  z-index: 1111;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #fff;
-  box-shadow: 0px 3px 5px #dfdfdf5e;
+  box-shadow: 0px 3px 5px #dfdfdf;
   padding: 0 10px;
   margin-bottom: .5rem;
-  height: 4rem;
 }
 
 header .logo-icons {
@@ -119,7 +154,6 @@ header .profile-icons .user {
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  border-radius: 31px;
   padding: 1px 15px 1px 0;
 }
 
@@ -133,12 +167,12 @@ header .profile-icons i {
   color: #000;
   font-size: 15px;
   height: 40px;
-  border-radius: 50%;
-  border: none;
   width: 40px;
   display: grid;
   place-content: center;
   background-color: #f0f0f0;
+  border-radius: 50%;
+  border: none;
 }
 
 header .profile-icons i.active {
@@ -150,12 +184,77 @@ header i {
   cursor: pointer;
 }
 
-.left-panel {
-  grid-column: 1/4;
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: .5rem;
+  padding-top: 85px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
+/************* Left Panel **************/
+.left-panel {
+  grid-column: 1/4;
+  position: relative;
+  background-color: rgba(253, 182, 182, 0);
+}
+
+.left-panel .links-wrapper {
+  position: fixed;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.icon-text-link .link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: .5rem;
+  padding: 7px 5px;
+}
+
+.icon-text-link .link:hover {
+  background-color: #eaeaea;
+}
+
+.icon-text-link i {
+  display: grid;
+  place-content: center;
+  font-size: 22px;
+  background-color: white;
+  height: 45px;
+  width: 45px;
+  border-radius: 29px;
+  margin-right: 6px;
+}
+
+.icon-text-link p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.icon-text-link p i {
+  font-size: 7px;
+  height: 0;
+  width: 0;
+  display: inline;
+  margin-right: 3px;
+}
+
+.icon-text-link p span {
+  display: block;
+  color: #1b74e4;
+  font-size: 10px;
+}
+
+/************************ main ********************/
 main {
   grid-column: 4/10;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main .post {
@@ -344,9 +443,206 @@ main .posts .post-footer .action-buttons button:hover {
 
 .right-panel {
   grid-column: 10/13;
+  position: relative;
+}
+
+.right-panel .content-wrapper {
+  position: fixed;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.right-panel .sponser {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.right-panel .sponser .box {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 1rem .6rem;
+}
+
+.right-panel .sponser .box img {
+  width: 100px;
+  height: 100px;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+
+.right-panel .sponser .box p {
+  color: #050505;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.right-panel .sponser .box a {
+  color: #65676b;
+  font-size: 13px;
+}
+
+.right-panel .sponser .box:hover {
+  background-color: #dfdfdf;
+}
+
+.right-panel .sponser .box:hover .white-menu {
+  background-color: #ffff;
+}
+
+.right-panel .sponser .box .white-menu {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.right-panel .contact .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #65676b;
+  border-top: 1px solid grey;
+}
+
+.right-panel .contact .header p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.right-panel .contact .header .icons {
+  display: flex;
+  align-items: center;
+}
+
+.right-panel .contact .header .icons i {
+  background: transparent;
+  font-size: 13px;
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.right-panel .contact .header .icons i:hover {
+  background: #e4e6eb;
+}
+
+.right-panel .contact .link {
+  position: relative;
+}
+
+.right-panel .contact .link .online, .right-panel .contact .link .offline {
+  position: absolute;
+  bottom: 13px;
+  left: 43px;
+  height: 5px;
+  width: 5px;
+  font-size: 10px;
+}
+
+.right-panel .contact .link .online {
+  color: #1ecc1e;
+}
+
+.right-panel .contact .link .offline {
+  color: #7e7e7e;
+}
+
+.right-panel .group {
+  margin-bottom: 1rem;
+}
+
+.right-panel .group .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 13px;
+}
+
+.right-panel .group .header .info {
+  display: flex;
+  align-items: center;
+}
+
+.right-panel .group .header .info .name {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 5px;
+  color: #050505;
+}
+
+.right-panel .group .header .info .text {
+  font-size: 14px;
+  font-weight: 400;
+  color: grey;
+}
+
+.right-panel .group .header .info i {
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-content: center;
+  background: #f0f2f5;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.right-panel .group .header i {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-content: center;
+  border-radius: 29px;
+}
+
+.right-panel .group .header i:hover {
+  background: #ebedef;
+}
+
+.right-panel .group img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.right-panel .group .group-name {
+  color: #050505;
+}
+
+.right-panel .group .group-detail span {
+  font-size: 12px;
+  color: #65676b;
+}
+
+.right-panel .group .join-btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  margin-top: 1rem;
+  color: #050505;
+  background-color: #e4e6eb;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.right-panel .group .join-btn:hover {
+  background-color: #dfdfdf;
 }
 
 @media screen and (max-width: 1100px) {
+  #game_btn {
+    display: none;
+  }
+  #bookmark_toggle_btn {
+    display: grid;
+  }
   header .logo-icons form input {
     width: 40px;
     padding: 6px;

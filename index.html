@@ -10,43 +10,187 @@
     <title>Home</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo-icons">
-                <i class="logo fa-brands fa-facebook"></i>
-                <form action="">
-                    <i class="search fa-solid fa-magnifying-glass"></i>
-                    <input type="text">
-                </form>
-            </div>
 
-            <div class="page-icons">
-                <a href="#" class="active"><i class="fa-solid fa-house"></i></a>
-                <a href="#"><i class="fa-solid fa-video"></i></a>
-                <a href="#"><i class="fa-solid fa-box-archive"></i></a>
-                <a href="#"><i class="fa-solid fa-chess-board"></i></a>
-                <a href="#"><i class="fa-solid fa-user-group"></i></a>
-            </div>
+    <!-- header -->
+    <header>
+        <div class="logo-icons">
+            <i class="logo fa-brands fa-facebook"></i>
+            <form action="">
+                <i class="search fa-solid fa-magnifying-glass"></i>
+                <input type="text">
+            </form>
+        </div>
 
-            <div class="profile-icons">
-                <div class="user">
-                    <i class="fa-solid fa-user"></i><span>Khalil</span>
-                </div>
-
-                <i class="fa-solid fa-bars active"></i>
-                <i class="fa-solid fa-message"></i>
-                <i class="fa-solid fa-bell"></i>
-                <i class="fa-solid fa-caret-down"></i>
-            </div>
-        </header>
-    
-    
-        <section class="left-panel">
-            <div class="card">
-                right panel 
-            </div> 
-        </section>
+        <div class="page-icons">
+            <a href="./pages/index.html" class="active"><i class="fa-solid fa-house"></i></a>
+            <a href="./pages/watch.html"><i class="fa-solid fa-tv"></i></a>
+            <a href="./pages/marketplace.html"><i class="fa-solid fa-store"></i></a>
+            <a href="./pages/groups.html"><i class="fa-solid fa-user-group"></i></a>
+            <a href="./pages/games.html" id="game_btn"><i class="fa-solid fa-gamepad"></i></i></a>
+        </div>
         
+        <a id="bookmark_toggle_btn"><i class="fa-solid fa-bars"></i></a>
+
+        <div class="profile-icons">
+            <div class="user">
+                <i class="fa-solid fa-user"></i><span>Khalil</span>
+            </div>
+            <i class="fa-solid fa-braille"></i>
+            
+            <i class="fa-brands fa-facebook-messenger"></i>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+    </header>
+
+
+    <!-- main content -->
+    <div class="main-content">
+        <!-- left-pannel -->
+        <section class="left-panel">
+            <div class="links-wrapper thin-scrollbar">
+                <div class="icon-text-link">
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-user-large"></i>
+                        <span>Khalil Ahmad</span>
+                    </a>
+    
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span>Friends</span>
+                    </a>
+    
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-users"></i>
+                        <p>
+                            Groups
+                            <span><i class="fa-solid fa-circle"></i> 9 new posts</span>
+                        </p>
+                    </a>
+    
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-store"></i>
+                        <span>Marketplace</span>
+                    </a>
+    
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Memories</span>
+                    </a>
+    
+                    <div class="see-more">
+                        <a class="link more">
+                            <i class="fa-solid fa-angle-down"></i>
+                            <span>See more</span>
+                        </a>
+    
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-bookmark"></i>
+                            <span>Saved</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-bullhorn"></i>
+                            <span>Ad Center</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-industry"></i>
+                            <span>Ads Manager</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-cloud-moon"></i>
+                            <span>Climate Science Center</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <span>Community Help</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-virus-covid"></i>
+                            <span>Covid-19 information Center</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-face-grin-hearts"></i>
+                            <span>Emotional Health</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <span>Events</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                            <span>Facebook Pay</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-star"></i>
+                            <span>Favouties</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-brands fa-gratipay"></i>
+                            <span>Fundraisers</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>Gaming Video</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-video"></i>
+                            <span>Live video</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-brands fa-facebook-messenger"></i>
+                            <span>Messenger</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-brands fa-facebook-messenger"></i>
+                            <span>Messenger Kids</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Most recent</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Pages</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-brands fa-xbox"></i>
+                            <span>Play games</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-map"></i>
+                            <span>Recent ad activity</span>
+                        </a>
+        
+                        <a href="#" class="link">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <span>Weather</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end left-pannel -->
+
+
+        <!-- main -->
         <main>
             <div class="post-input card">
                 <div class="post">
@@ -168,13 +312,109 @@
 
             </div>
         </main>
-    
+        <!-- end main -->
+
+
+        <!-- right-pannel -->
         <section class="right-panel">
-            <div class="card">
-                right panel 
+            <div class="content-wrapper thin-scrollbar">
+                <div class="card group">
+                    <div class="header">
+                        <div class="info">
+                            <i class="fa-solid fa-users"></i>
+                            <span class="name">Groups</span>
+                            <span class="dot"></span>
+                            <span class="text">Suggested for you</span>
+                        </div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+    
+                    <img src="https://images.pexels.com/photos/1767434/pexels-photo-1767434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                    <p class="group-name">Group name</p>
+                    <p class="group-detail"><span>91k members</span> <span>10+ posts a day</span></p>
+
+                    <a href="#" class="join-btn">Join Group</a>
+                </div>
+
+
+                <!-- sponsered box -->
+                <div class="sponser">
+                    <div class="box">
+                        <img src="./images/carsome.jpg" alt="sponser image">
+                        <div>
+                            <p>Carsome Malaysi</p>
+                            <a href="#">carsome.my</a>
+                        </div>
+
+                        <i class="white-menu fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+
+
+                <!-- contacts -->
+                <div class="icon-text-link contact">
+                    <div class="header">
+                        <p>Contacts</p>
+                        <div class="icons">
+                            <i class="fa-solid fa-video"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-user-large"></i>
+                        <span>Khalil Ahmad</span>
+                        <i class="online fa-solid fa-circle"></i>
+                    </a>
+
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-user-large"></i>
+                        <span>Khalil Ahmad</span>
+                        <i class="online fa-solid fa-circle"></i>
+                    </a>
+
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-user-large"></i>
+                        <span>Khalil Ahmad</span>
+                        <i class="online fa-solid fa-circle"></i>
+                    </a>
+
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-user-large"></i>
+                        <span>Khalil Ahmad</span>
+                        <i class="online fa-solid fa-circle"></i>
+                    </a>
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-user-large"></i>
+                        <span>Khalil Ahmad</span>
+                        <i class="offline fa-solid fa-circle"></i>
+                    </a>
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-user-large"></i>
+                        <span>Khalil Ahmad</span>
+                        <i class="online fa-solid fa-circle"></i>
+                    </a> 
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-user-large"></i>
+                        <span>Khalil Ahmad</span>
+                        <i class="offline fa-solid fa-circle"></i>
+                    </a> 
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-user-large"></i>
+                        <span>Khalil Ahmad</span>
+                        <i class="online fa-solid fa-circle"></i>
+                    </a> 
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-user-large"></i>
+                        <span>Khalil Ahmad</span>
+                    </a>
+    
+                </div>
+
             </div>
-            
         </section>
+        <!--end right-pannel -->
 
     </div>
 
