@@ -75,6 +75,35 @@ a {
   background: #8a8a8a;
 }
 
+.primary-btn, .secondary-btn {
+  border: none;
+  outline: none;
+  padding: 9px 20px;
+  border-radius: 9px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.primary-btn {
+  background-color: #2e85ee;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: #1b74e4;
+}
+
+.secondary-btn {
+  background-color: #cbd6e4;
+  color: #050505;
+}
+
+.secondary-btn:hover {
+  background-color: #b4bac4;
+}
+
 /************* Header **************/
 header {
   position: fixed;
@@ -85,11 +114,15 @@ header {
   z-index: 1111;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   background: #fff;
   box-shadow: 0px 3px 5px #dfdfdf;
   padding: 0 10px;
   margin-bottom: .5rem;
+}
+
+header #create_menu_btn {
+  display: none;
 }
 
 header .logo-icons {
@@ -224,12 +257,10 @@ header .page-icons {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 85%;
+  height: 100%;
 }
 
 header .page-icons a {
-  padding-right: 2rem;
-  padding-left: 2rem;
   margin-right: .5rem;
   margin-left: .5rem;
   margin-bottom: 0;
@@ -242,9 +273,13 @@ header .page-icons a {
 header .page-icons a i {
   font-size: 22px;
   color: #65676b;
+  height: 56px;
+  width: 102px;
+  display: grid;
+  place-content: center;
 }
 
-header .page-icons a:hover {
+header .page-icons a i:hover {
   background-color: #f0f2f5;
   border-radius: 5px;
 }
@@ -281,7 +316,7 @@ header .profile-icons .user.active {
 }
 
 header .profile-icons i {
-  margin-left: 1rem;
+  margin-left: 8px;
   color: #000;
   font-size: 15px;
   height: 40px;
@@ -302,19 +337,142 @@ header i {
   cursor: pointer;
 }
 
-header .mega-menu {
-  background-color: orange;
-  position: absolute;
+header .user-menu {
+  position: fixed;
   top: 60px;
-  right: 15px;
-  background-color: #f0f2f5;
-  width: 610px;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid #f0f2f5;
-  box-shadow: 3px 3px 5px #7979797d, -3px -1px 5px #7979797d;
+  right: 10px;
+  background-color: #fff;
   height: 0;
+  width: 360px;
+  border-radius: 10px;
+  padding: .5rem;
   visibility: hidden;
+  user-select: none;
+  box-shadow: 3px 3px 5px #7979797d, -3px -1px 5px #7979797d;
+}
+
+header .user-menu .item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+header .user-menu .item i {
+  background-color: #e6e6e6;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}
+
+header .user-menu .item p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+header .user-menu .item span {
+  font-size: 14px;
+  font-weight: 300;
+  color: #65676b;
+}
+
+header .user-menu .item:hover {
+  background-color: #f1f1f1;
+}
+
+header .user-menu .profile-link {
+  padding: 10px;
+}
+
+header .user-menu .profile-link i {
+  width: 65px;
+  height: 65px;
+  font-size: 40px;
+}
+
+header .user-menu .feedback {
+  padding: 5px 10px;
+}
+
+header .user-menu .feedback i {
+  width: 35px;
+  height: 35px;
+  font-size: 24px;
+}
+
+header .user-menu .feedback span {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+header .user-menu .settings {
+  padding: 8px 10px;
+  margin-bottom: .5rem;
+  justify-content: space-between;
+}
+
+header .user-menu .settings .name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .user-menu .settings .name i {
+  width: 35px;
+  height: 35px;
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+header .user-menu .settings > i {
+  font-size: 16px;
+  background-color: transparent !important;
+}
+
+header .user-menu .logout {
+  padding: 8px 10px;
+}
+
+header .user-menu .logout i {
+  width: 35px;
+  height: 35px;
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+header .user-menu .footer-links {
+  font-size: 13px;
+  padding: 10px;
+}
+
+header .user-menu .footer-links span {
+  font-size: 20px;
+}
+
+header .user-menu .footer-links a:hover {
+  text-decoration: underline;
+}
+
+header .user-menu.show-um {
+  height: 480px;
+  visibility: visible;
+}
+
+header .mega-menu {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  height: 0;
+  width: 360px;
+  border-radius: 10px;
+  padding: .5rem;
+  visibility: hidden;
+  user-select: none;
+  box-shadow: 3px 3px 5px #7979797d, -3px -1px 5px #7979797d;
+  width: 600px;
+  background-color: #f0f2f5;
 }
 
 header .mega-menu .content {
@@ -449,6 +607,324 @@ header .mega-menu .content .create .item hr {
 
 header .mega-menu.show-mega-menu {
   height: 90vh;
+  visibility: visible;
+}
+
+header .notification-menu {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  height: 0;
+  width: 360px;
+  border-radius: 10px;
+  padding: .5rem;
+  visibility: hidden;
+  user-select: none;
+  box-shadow: 3px 3px 5px #7979797d, -3px -1px 5px #7979797d;
+}
+
+header .notification-menu.show-nm {
+  visibility: visible;
+  height: 90vh;
+}
+
+header .notification-menu .header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+header .notification-menu .header h3 {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+header .notification-menu .header i {
+  font-size: 19px;
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}
+
+header .notification-menu .header i:hover {
+  background: #f0f2f5;
+}
+
+header .notification-menu .filter-btns {
+  margin-bottom: 1rem;
+}
+
+header .notification-menu .filter-btns button {
+  border: none;
+  background: #f0f2f5;
+  padding: 9px 15px;
+  border-radius: 18px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+header .notification-menu .filter-btns button.active {
+  background-color: lightblue;
+}
+
+header .notification-menu .noti-wrapper {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+header .notification-menu .noti-wrapper .text {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .notification-menu .noti-wrapper .text p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+header .notification-menu .noti-wrapper .text a {
+  font-size: 16px;
+  font-weight: 300;
+  color: #1b74e4;
+  padding: 9px;
+  border-radius: 5px;
+}
+
+header .notification-menu .noti-wrapper .text a:hover {
+  background-color: #f0f2f5;
+}
+
+header .notification-menu .noti-wrapper .noti-box {
+  display: flex;
+  padding: 10px;
+  margin-bottom: .7rem;
+  border-radius: 10px;
+}
+
+header .notification-menu .noti-wrapper .noti-box:hover {
+  background: #f0f2f5;
+}
+
+header .notification-menu .noti-wrapper .noti-box i.user {
+  font-size: 40px;
+  background: #dadada;
+  height: 65px;
+  width: 65px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+header .notification-menu .noti-wrapper .noti-box article {
+  align-self: flex-start;
+  font-weight: 300;
+}
+
+header .notification-menu .noti-wrapper .noti-box article .user {
+  font-weight: 400;
+}
+
+header .notification-menu .noti-wrapper .noti-box article .post-time {
+  color: #1b74e4;
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: .5rem;
+}
+
+header .notification-menu .noti-wrapper .noti-box article .no-of-mf {
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+header .notification-menu .noti-wrapper .noti-box article .btn {
+  margin-top: .5rem;
+}
+
+header .notification-menu .noti-wrapper .noti-box i.indicator {
+  font-size: 10px;
+  color: #1b74e4;
+  align-self: center;
+}
+
+header .messenger-menu {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  height: 0;
+  width: 360px;
+  border-radius: 10px;
+  padding: .5rem;
+  visibility: hidden;
+  user-select: none;
+  box-shadow: 3px 3px 5px #7979797d, -3px -1px 5px #7979797d;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+header .messenger-menu.show-mm {
+  height: 90vh;
+  visibility: visible;
+}
+
+header .messenger-menu .header {
+  display: flex;
+  justify-content: space-between;
+  margin: .5rem 0 1rem 0;
+}
+
+header .messenger-menu .header h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #050505;
+}
+
+header .messenger-menu .header .icons {
+  display: flex;
+  align-items: center;
+}
+
+header .messenger-menu .header .icons i {
+  margin-left: 5px;
+  color: #65676b;
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}
+
+header .messenger-menu .header .icons i:hover {
+  background: #f0f2f5;
+}
+
+header .messenger-menu > form {
+  margin-bottom: 1rem;
+}
+
+header .messenger-menu > form input {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  background: #f0f2f5;
+  border-radius: 23px;
+  font-size: 15px;
+}
+
+header .messenger-menu .friends-message .box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #65676b;
+  margin-bottom: 1rem;
+}
+
+header .messenger-menu .friends-message .box p.last-message {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+header .messenger-menu .friends-message .box i {
+  font-size: 40px;
+  background: #dadada;
+  height: 65px;
+  width: 65px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+header .messenger-menu .friends-message .box .seen-ind {
+  position: absolute;
+  top: 15px;
+  right: -8px;
+  height: 25px;
+  width: 25px;
+  background: lightgray;
+  font-size: 12px;
+  display: grid;
+  place-content: center;
+}
+
+header .messenger-menu .friends-message .box .offline-ind, header .messenger-menu .friends-message .box .online-ind {
+  position: absolute;
+  left: 57px;
+  bottom: 13px;
+  height: 0;
+  width: 0;
+  font-size: 14px;
+}
+
+header .messenger-menu .friends-message .box .online-ind {
+  color: #1ecc1e;
+}
+
+header .messenger-menu .friends-message .box .offline-ind {
+  color: #65676b;
+}
+
+header .create_menu {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  height: 0;
+  width: 360px;
+  border-radius: 10px;
+  padding: .5rem;
+  visibility: hidden;
+  user-select: none;
+  box-shadow: 3px 3px 5px #7979797d, -3px -1px 5px #7979797d;
+}
+
+header .create_menu h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #090909;
+  margin: 10px;
+}
+
+header .create_menu .create-box {
+  display: flex;
+  cursor: pointer;
+  padding: 14px 10px;
+  border-radius: 10px;
+}
+
+header .create_menu .create-box:hover {
+  background: #eeeeee;
+}
+
+header .create_menu .create-box i {
+  font-size: 20px;
+  height: 38px;
+  width: 38px;
+  background-color: #e4e6eb;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  margin-right: 8px;
+}
+
+header .create_menu .create-box article .name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+header .create_menu .create-box article span {
+  font-size: .8125rem;
+  color: #65676b;
+}
+
+header .create_menu.show-cm {
+  height: 80vh;
   visibility: visible;
 }
 
@@ -904,6 +1380,12 @@ main .posts .post-footer .action-buttons button:hover {
   background-color: #dfdfdf;
 }
 
+@media screen and (max-width: 1260px) {
+  header .profile-icons a.user {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   #game_btn {
     display: none;
@@ -926,9 +1408,6 @@ main .posts .post-footer .action-buttons button:hover {
     place-content: center;
     border-radius: 50%;
   }
-  header .profile-icons .user {
-    display: none;
-  }
   .left-panel {
     display: none;
   }
@@ -941,9 +1420,8 @@ main .posts .post-footer .action-buttons button:hover {
 }
 
 @media screen and (max-width: 900px) {
-  header .page-icons a {
-    padding-right: 1rem;
-    padding-left: 1rem;
+  header .page-icons a i {
+    width: 65px;
   }
   main {
     grid-column: 1/13;
@@ -954,8 +1432,20 @@ main .posts .post-footer .action-buttons button:hover {
 }
 
 @media screen and (max-width: 700px) {
-  header .page-icons {
+  header {
+    justify-content: none;
+  }
+  header .page-icons .page_link {
     display: none;
+  }
+  header .profile-icons {
+    margin-left: auto;
+  }
+  header #mega-menu-btn {
+    display: none;
+  }
+  header #create_menu_btn {
+    display: grid;
   }
 }
 /*# sourceMappingURL=style.css.map */

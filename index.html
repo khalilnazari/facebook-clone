@@ -73,14 +73,26 @@
         </div>
 
         <div class="page-icons">
-            <a href="./pages/index.html" class="active"><i class="fa-solid fa-house"></i></a>
-            <a href="./pages/watch.html"><i class="fa-solid fa-tv"></i></a>
-            <a href="./pages/marketplace.html"><i class="fa-solid fa-store"></i></a>
-            <a href="./pages/groups.html"><i class="fa-solid fa-user-group"></i></a>
-            <a href="./pages/games.html" id="game_btn"><i class="fa-solid fa-gamepad"></i></i></a>
+            <a href="./index.html" class="page_link active">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <a href="./pages/watch.html" class="page_link">
+                <i class="fa-solid fa-tv"></i>
+            </a>
+            <a href="./pages/marketplace.html" class="page_link">
+                <i class="fa-solid fa-store"></i>
+            </a>
+            <a href="./pages/groups.html" class="page_link">
+                <i class="fa-solid fa-user-group"></i>
+            </a>
+            <a href="./pages/games.html" class="page_link" id="game_btn">
+                <i class="fa-solid fa-gamepad"></i></i>
+            </a>
+            <a href="./pages/notifications.html" id="bookmark_toggle_btn" class="bookmark_toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
         
-        <a id="bookmark_toggle_btn"><i class="fa-solid fa-bars"></i></a>
 
         <div class="profile-icons">
             <a href="./pages/profile.html" class="user">
@@ -88,13 +100,332 @@
             </a>
             
             <i id="mega-menu-btn" class="fa-solid fa-braille"></i>
-
-            <i class="fa-brands fa-facebook-messenger"></i>
-            <i class="fa-solid fa-bell"></i>
-            <i class="fa-solid fa-caret-down"></i>
+            <i id="create_menu_btn" class="fa-solid fa-plus"></i>
+            <i id="messenger_menu_btn" class="fa-brands fa-facebook-messenger"></i>
+            <i id="notification-menu-btn" class="fa-solid fa-bell"></i>
+            <i id="user-menu-btn" class="fa-solid fa-caret-down"></i>
         </div>
 
+        <!-- user-menu -->
+        <div class="user-menu">
+            <a href="./pages/profile.html" class="item profile-link">
+                <i class="fa fa-user"></i>
+                <div>
+                    <p>Khalil Ahmad</p>
+                    <span>See your profile</span>
+                </div>
+            </a>
 
+            <div class="divider"></div>
+
+            <div class="item feedback">
+                <i class="fa-solid fa-circle-info"></i>
+                <div>
+                    <p>Give Feedback</p>
+                    <span>Help us improve Facebook.</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="item settings">
+                <div class="name">
+                    <i class="fa-solid fa-gear"></i>
+                    <p>Settings & Privacy</p>
+                </div>
+                
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <div class="item settings">
+                <div class="name">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <p>Help & Support</p>
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <div class="item settings">
+                <div class="name">
+                    <i class="fa-solid fa-moon"></i>
+                    <p>Display & accessibility</p>
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <a href="./login.html" class="item logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <p>Log out</p>
+            </a>
+
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <span>.</span>
+                <a href="#">Terms</a>
+                <span>.</span>
+                <a href="#">Adversity</a>
+                <span>.</span>
+                <a href="#">Ad choices</a>
+                <span>.</span>
+                <a href="#">Cookies</a>
+                <span>.</span>
+                <a href="#">More</a>
+                <span>.</span>
+                <a href="#">Meta &copf; 2022</a>
+            </div>
+        </div>
+
+        <!-- Notifications Menu -->
+        <div class="notification-menu thin-scrollbar">
+            <div class="header">
+                <h3>Notifications</h3>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+
+            <!-- filter buttons -->
+            <div class="filter-btns">
+                <button>All</button>
+                <button>Unread</button>
+            </div>
+
+            <!-- new -->
+            <div class="noti-wrapper">
+                <div class="text">
+                    <p>New</p>
+                    <a href="./pages/notifications.html">See All</a>
+                </div>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-users"></i>
+                    <article>
+                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
+                        <p class="post-time">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+            </div>
+
+            <!-- friend requests -->
+            <div class="noti-wrapper friend-request">
+                <div class="text">
+                    <p>Freinds Requests</p>
+                    <a href="./pages/notifications.html">See All</a>
+                </div>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-users"></i>
+                    <article>
+                        <p><span class="user">Mark Z.</span> friend request</p>
+                        <p class="post-time">2 hours ago</p>
+                        <p class="no-of-mf">43 mutual friends</p>
+                        <div class="btn">
+                            <button class="primary-btn">Confirm</button>
+                            <button class="secondary-btn">Delete</button>
+                        </div>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-users"></i>
+                    <article>
+                        <p><span class="user">Mustafa A.</span> friend request</p>
+                        <p class="post-time">yesterday</p>
+                        <p class="no-of-mf">43 mutual friends</p>
+                        <div class="btn">
+                            <button class="primary-btn">Confirm</button>
+                            <button class="secondary-btn">Delete</button>
+                        </div>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-users"></i>
+                    <article>
+                        <p><span class="user">John Doe</span> friend request</p>
+                        <p class="post-time">2 day ago</p>
+                        <p class="no-of-mf">43 mutual friends</p>
+                        <div class="btn">
+                            <button class="primary-btn">Confirm</button>
+                            <button class="secondary-btn">Delete</button>
+                        </div>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+            </div>
+
+            <!-- earlier -->
+            <div class="noti-wrapper">
+                <div class="text">
+                    <p>Earlier</p>
+                </div>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-user"></i>
+                    <article>
+                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
+                        <p class="post-time">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-user"></i>
+                    <article>
+                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
+                        <p class="post-time">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-user"></i>
+                    <article>
+                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
+                        <p class="post-time">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-user"></i>
+                    <article>
+                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
+                        <p class="post-time">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-user"></i>
+                    <article>
+                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
+                        <p class="post-time">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+            </div>
+
+
+        </div>
+
+        <!-- messenger-menu -->
+        <div class="messenger-menu thin-scrollbar">
+            <div class="header">
+                <h4>Messenger</h4>
+                <div class="icons">
+                    <i class="fa-solid fa-ellipsis"></i>
+                    <i class="fa-solid fa-maximize"></i>
+                    <i class="fa-solid fa-video"></i>
+                    <i class="fa-solid fa-square-pen"></i>
+                </div>
+            </div>
+
+            <form action="">
+                <input type="text" placeholder="Search Messenger">
+            </form>
+
+            <div class="friends-message">
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="seen-ind fa-solid fa-user"></i>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="seen-ind fa-solid fa-user"></i>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="offline-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="seen-ind fa-solid fa-user"></i>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="offline-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="seen-ind fa-solid fa-user"></i>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="seen-ind fa-solid fa-user"></i>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="offline-ind fa-solid fa-circle"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- mega menu -->
         <div class="mega-menu">
             <h3>Menu</h3>
             <div class="content">
@@ -255,7 +586,72 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- create-menu -->
+        <div class="create_menu">
+            <h3>Create</h3>
+            
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-square-pen"></i>
+                <article>
+                    <p class="name">Post</p>
+                    <span>Share a post on News Feed.</span>
+                </article>
+            </a>
+
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-book-open"></i>
+                <article>
+                    <p class="name">Story</p>
+                    <span>Share a photo or write something.</span>
+                </article>
+            </a>
+
+
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-video"></i>
+                <article>
+                    <p class="name">Video</p>
+                    <span>Make video clases</span>
+                </article>
+            </a>
+
+            <div class="divider"></div>
+
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-flag"></i>
+                <article>
+                    <p class="name">Page</p>
+                    <span>Video chat with anyone,.</span>
+                </article>
+            </a>
+
+
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-bullhorn"></i>
+                <article>
+                    <p class="name">Ad</p>
+                    <span>Video chat with anyone,.</span>
+                </article>
+            </a>
+
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-users"></i>
+                <article>
+                    <p class="name">Group</p>
+                    <span>Video chat with anyone,.</span>
+                </article>
+            </a>
+
+
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-calendar-day"></i>
+                <article>
+                    <p class="name">EVent</p>
+                    <span>Video chat with anyone,.</span>
+                </article>
+            </a>
+        </div>
     </header>
 
 
@@ -551,9 +947,11 @@
                     <a href="#" class="join-btn">Join Group</a>
                 </div>
 
+                <div class="divider"></div>
 
                 <!-- sponsered box -->
                 <div class="sponser">
+                    <h5>Sponsored</h5>
                     <div class="box">
                         <img src="./images/carsome.jpg" alt="sponser image">
                         <div>

@@ -37,12 +37,44 @@ Array.from(remove_rs_term).forEach(btn => {
 })
 
 
-
-
 // mega-menu
 const mega_menu_btn = document.getElementById('mega-menu-btn')
 const mega_menu = document.querySelector('.mega-menu')
 mega_menu_btn.addEventListener("click", (e) => {
     e.target.classList.toggle('active')
     mega_menu.classList.toggle('show-mega-menu')
+})
+
+
+// user-menu
+const user_menu_btn = document.getElementById('user-menu-btn'); 
+const user_menu = document.querySelector('.user-menu'); 
+user_menu_btn.addEventListener('click', (e) => {
+    user_menu.classList.toggle('show-um')
+    e.target.classList.toggle('active')
+})
+
+// notification menu
+const notification_menu_btn = document.getElementById('notification-menu-btn')
+const notification_menu = document.querySelector('.notification-menu')
+notification_menu_btn.addEventListener('click', (e) => {
+    e.target.classList.toggle("active")
+    notification_menu.classList.toggle('show-nm')
+})
+
+// messenger-menu
+const messenger_menu_btn = document.getElementById('messenger_menu_btn')
+const messenger_menu = document.querySelector('.messenger-menu')
+messenger_menu_btn.addEventListener('click', (e) => {
+    e.target.classList.toggle('active')
+    messenger_menu.classList.toggle('show-mm')
+})
+
+
+// create-menu
+const create_menu_btn = document.getElementById('create_menu_btn')
+const create_menu = document.querySelector('.create_menu')
+create_menu_btn.addEventListener('click', (e) => {
+    e.target.classList.toggle('active')
+    create_menu.classList.toggle('show-cm')
 })
