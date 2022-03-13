@@ -18,7 +18,7 @@ rs_back_btn.addEventListener('click', (e) => {
 // remove recent serach item 
 const remove_rs_term = document.querySelectorAll('.remove-rs-term');  
 Array.from(remove_rs_term).forEach(btn => {
-    btn.addEventListener('click', (e) => {
+           btn.addEventListener('click', (e) => {
         // Travers to find the parent 
         let parent = e.target.closest('.search-terms'); 
 

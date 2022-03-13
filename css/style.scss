@@ -859,6 +859,7 @@ header {
             display: flex;
             justify-content: space-between;
             margin: .5rem 0 1rem 0;
+            
             h4 {
                 font-size:1.5rem;
                 font-weight: 700;
@@ -885,7 +886,7 @@ header {
             }
         }
 
-        &>form {
+        & > form {
             margin-bottom: 1rem;
             input {
                 width: 100%;
@@ -1160,9 +1161,6 @@ main {
             img {
                 width: 100%;
             }
-
-
-
         }
 
         .post-header {

@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" href="../images/fb-logo.png" type="image/x-icon">
+
 
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+
     <title>Home</title>
 </head>
 <body>
@@ -15,38 +19,1155 @@
     <header>
         <div class="logo-icons">
             <i class="logo fa-brands fa-facebook"></i>
-            <form action="">
+            <i id="logo-search-btn" class="fa-solid fa-magnifying-glass"></i>
+
+            <form action="" class="temp-form">
                 <i class="search fa-solid fa-magnifying-glass"></i>
-                <input type="text">
+                <input type="text" id="temp-input" placeholder="Search Facebook...">
             </form>
+
+
+            <!-- recent search  -->
+            <div class="recent-search">
+                <!-- <div class="form"> -->
+                    <form class="form">
+                        <i class="fa-solid fa-arrow-left" id="rs-back-btn"></i>
+                        <input type="text" placeholder="Search Facebook">
+                    </form>
+
+                    <div class="header">
+                        <h4>Recent Searches</h4>
+                        <button>Edit</button>
+                    </div>
+
+                    <div class="search-terms">
+                        <div class="term">
+                            <p><i class="fa-solid fa-circle-user"></i>Knowlege is power</p>
+                            <i class="remove-rs-term fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div class="term">
+                            <p><i class="fa-solid fa-circle-user"></i>Kam Air</p>
+                            <i class="remove-rs-term fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div class="term">
+                            <p><i class="fa-solid fa-circle-user"></i>Mark Z.</p>
+                            <i class="remove-rs-term fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div class="term">
+                            <p><i class="fa-solid fa-circle-user"></i>Books</p>
+                            <i class="remove-rs-term fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div class="term">
+                            <p><i class="fa-solid fa-circle-user"></i>Coding</p>
+                            <i class="remove-rs-term fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div class="term">
+                            <p><i class="fa-solid fa-circle-user"></i>Javascript groups</p>
+                            <i class="remove-rs-term fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
         </div>
 
         <div class="page-icons">
-            <a href="../index.html"><i class="fa-solid fa-house"></i></a>
-            <a href="./watch.html"><i class="fa-solid fa-tv"></i></a>
-            <a href="./marketplace.html" class="active"><i class="fa-solid fa-store"></i></a>
-            <a href="./groups.html"><i class="fa-solid fa-user-group"></i></a>
-            <a href="./games.html" id="game_btn"><i class="fa-solid fa-gamepad"></i></i></a>
+            <a href="../index.html" class="page_link active">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <a href="./watch.html" class="page_link">
+                <i class="fa-solid fa-tv"></i>
+            </a>
+            <a href="./marketplace.html" class="page_link">
+                <i class="fa-solid fa-store"></i>
+            </a>
+            <a href="./groups.html" class="page_link">
+                <i class="fa-solid fa-user-group"></i>
+            </a>
+            <a href="./games.html" class="page_link" id="game_btn">
+                <i class="fa-solid fa-gamepad"></i></i>
+            </a>
+            <a href="./notifications.html" id="bookmark_toggle_btn" class="bookmark_toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
         
-        <a id="bookmark_toggle_btn"><i class="fa-solid fa-bars"></i></a>
 
         <div class="profile-icons">
             <a href="./profile.html" class="user">
                 <i class="fa-solid fa-user"></i><span>Khalil</span>
             </a>
-            <i class="fa-solid fa-braille"></i>
             
-            <i class="fa-brands fa-facebook-messenger"></i>
-            <i class="fa-solid fa-bell"></i>
-            <i class="fa-solid fa-caret-down"></i>
+            <i id="mega-menu-btn" class="fa-solid fa-braille"></i>
+            <i id="create_menu_btn" class="fa-solid fa-plus"></i>
+            <i id="messenger_menu_btn" class="fa-brands fa-facebook-messenger"></i>
+            <i id="notification-menu-btn" class="fa-solid fa-bell"></i>
+            <i id="user-menu-btn" class="fa-solid fa-caret-down"></i>
+        </div>
+
+        <!-- user-menu -->
+        <div class="user-menu">
+            <a href="./profile.html" class="item profile-link">
+                <i class="fa fa-user"></i>
+                <div>
+                    <p>Khalil Ahmad</p>
+                    <span>See your profile</span>
+                </div>
+            </a>
+
+            <div class="divider"></div>
+
+            <div class="item feedback">
+                <i class="fa-solid fa-circle-info"></i>
+                <div>
+                    <p>Give Feedback</p>
+                    <span>Help us improve Facebook.</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="item settings">
+                <div class="name">
+                    <i class="fa-solid fa-gear"></i>
+                    <p>Settings & Privacy</p>
+                </div>
+                
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <div class="item settings">
+                <div class="name">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <p>Help & Support</p>
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <div class="item settings">
+                <div class="name">
+                    <i class="fa-solid fa-moon"></i>
+                    <p>Display & accessibility</p>
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <a href="../login.html" class="item logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <p>Log out</p>
+            </a>
+
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <span>.</span>
+                <a href="#">Terms</a>
+                <span>.</span>
+                <a href="#">Adversity</a>
+                <span>.</span>
+                <a href="#">Ad choices</a>
+                <span>.</span>
+                <a href="#">Cookies</a>
+                <span>.</span>
+                <a href="#">More</a>
+                <span>.</span>
+                <a href="#">Meta &copf; 2022</a>
+            </div>
+        </div>
+
+        <!-- Notifications Menu -->
+        <div class="notification-menu thin-scrollbar">
+            <div class="header">
+                <h3>Notifications</h3>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+
+            <!-- filter buttons -->
+            <div class="filter-btns">
+                <button>All</button>
+                <button>Unread</button>
+            </div>
+
+            <!-- new -->
+            <div class="noti-wrapper">
+                <div class="text">
+                    <p>New</p>
+                    <a href="./notifications.html">See All</a>
+                </div>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-users"></i>
+                    <article>
+                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
+                        <p class="post-time">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+            </div>
+
+            <!-- friend requests -->
+            <div class="noti-wrapper friend-request">
+                <div class="text">
+                    <p>Freinds Requests</p>
+                    <a href="./pages/notifications.html">See All</a>
+                </div>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-users"></i>
+                    <article>
+                        <p><span class="user">Mark Z.</span> friend request</p>
+                        <p class="post-time">2 hours ago</p>
+                        <p class="no-of-mf">43 mutual friends</p>
+                        <div class="btn">
+                            <button class="primary-btn">Confirm</button>
+                            <button class="secondary-btn">Delete</button>
+                        </div>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-users"></i>
+                    <article>
+                        <p><span class="user">Mustafa A.</span> friend request</p>
+                        <p class="post-time">yesterday</p>
+                        <p class="no-of-mf">43 mutual friends</p>
+                        <div class="btn">
+                            <button class="primary-btn">Confirm</button>
+                            <button class="secondary-btn">Delete</button>
+                        </div>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-users"></i>
+                    <article>
+                        <p><span class="user">John Doe</span> friend request</p>
+                        <p class="post-time">2 day ago</p>
+                        <p class="no-of-mf">43 mutual friends</p>
+                        <div class="btn">
+                            <button class="primary-btn">Confirm</button>
+                            <button class="secondary-btn">Delete</button>
+                        </div>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+            </div>
+
+            <!-- earlier -->
+            <div class="noti-wrapper">
+                <div class="text">
+                    <p>Earlier</p>
+                </div>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-user"></i>
+                    <article>
+                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
+                        <p class="post-time">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-user"></i>
+                    <article>
+                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
+                        <p class="post-time">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-user"></i>
+                    <article>
+                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
+                        <p class="post-time">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-user"></i>
+                    <article>
+                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
+                        <p class="post-time">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+
+                <a href="#" class="noti-box">
+                    <i class="user fa-solid fa-user"></i>
+                    <article>
+                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
+                        <p class="post-time">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+            </div>
+
+
+        </div>
+
+        <!-- messenger-menu -->
+        <div class="messenger-menu thin-scrollbar">
+            <div class="header">
+                <h4>Messenger</h4>
+                <div class="icons">
+                    <i class="fa-solid fa-ellipsis"></i>
+                    <i class="fa-solid fa-maximize"></i>
+                    <i class="fa-solid fa-video"></i>
+                    <i class="fa-solid fa-square-pen"></i>
+                </div>
+            </div>
+
+            <form action="">
+                <input type="text" placeholder="Search Messenger">
+            </form>
+
+            <div class="friends-message">
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="seen-ind fa-solid fa-user"></i>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="seen-ind fa-solid fa-user"></i>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="offline-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="seen-ind fa-solid fa-user"></i>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="offline-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="seen-ind fa-solid fa-user"></i>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="seen-ind fa-solid fa-user"></i>
+                    <i class="online-ind fa-solid fa-circle"></i>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <p class="name">Ahmad Ali</p>
+                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                    </div>
+                    <i class="offline-ind fa-solid fa-circle"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- mega menu -->
+        <div class="mega-menu">
+            <h3>Menu</h3>
+            <div class="content">
+                <div class="menu thin-scrollbar">
+                    <form action="" class="menu-form">
+                        <input type="text" placeholder="Search Menu">
+                    </form>
+
+                    <div class="social">
+                        <h5 class="title">Social</h5>
+
+                        <a href="#" class="item">
+                            <i class="event fa-solid fa-calendar"></i>
+                            <article>
+                                <p class="name">Event</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+
+                        <a href="#" class="item">
+                            <i class="friends fa-solid fa-user-group"></i>
+                            <article>
+                                <p class="name">Friends</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+
+                        <a href="#" class="item">
+                            <i class="group fa-solid fa-users"></i>
+                            <article>
+                                <p class="name">Groups</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="entertainment social">
+                        <h5 class="title">Entertainment</h5>
+
+                        <a href="#" class="item">
+                            <i class="event fa-solid fa-gamepad"></i>
+                            <article>
+                                <p class="name">Game</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+
+                        <a href="#" class="item">
+                            <i class="friends fa-solid fa-tv"></i>
+                            <article>
+                                <p class="name">Watch</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="entertainment social">
+                        <h5 class="title">Personal</h5>
+
+                        <a href="#" class="item">
+                            <i class="event fa-solid fa-bookmark"></i>
+                            <article>
+                                <p class="name">Saved</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+
+                        <a href="#" class="item">
+                            <i class="friends fa-solid fa-cloud-sun-rain"></i>
+                            <article>
+                                <p class="name">Weather</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="entertainment social">
+                        <h5 class="title">More From Meta</h5>
+
+                        <a href="#" class="item">
+                            <i class="group fa-brands fa-facebook-messenger"></i>
+                            <article>
+                                <p class="name">Messenger</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+
+                        <a href="#" class="item">
+                            <i class="friends fa-brands fa-facebook-messenger"></i>
+                            <article>
+                                <p class="name">Messenger for kids</p>
+                                <span class="about">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                            </article>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="create">
+                    <h5 class="title">Create</h5>
+
+                    <a href="#" class="item">
+                        <i class="fa-solid fa-square-pen"></i>
+                        <span>Post</span>
+                    </a>
+
+                    <a href="#" class="item">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Story</span>
+                    </a>
+                    
+                    <a href="#" class="item">
+                        <i class="fa-solid fa-video"></i>
+                        <span>Story</span>
+                    </a>
+
+                    <div class="divider"></div>
+
+                    <a href="#" class="item">
+                        <i class="fa-solid fa-flag"></i>
+                        <span>Page</span>
+                    </a>
+
+                    <a href="#" class="item">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Group</span>
+                    </a>
+
+                    <a href="#" class="item">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                        <span>Event</span>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- create-menu -->
+        <div class="create_menu">
+            <h3>Create</h3>
+            
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-square-pen"></i>
+                <article>
+                    <p class="name">Post</p>
+                    <span>Share a post on News Feed.</span>
+                </article>
+            </a>
+
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-book-open"></i>
+                <article>
+                    <p class="name">Story</p>
+                    <span>Share a photo or write something.</span>
+                </article>
+            </a>
+
+
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-video"></i>
+                <article>
+                    <p class="name">Video</p>
+                    <span>Make video clases</span>
+                </article>
+            </a>
+
+            <div class="divider"></div>
+
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-flag"></i>
+                <article>
+                    <p class="name">Page</p>
+                    <span>Video chat with anyone,.</span>
+                </article>
+            </a>
+
+
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-bullhorn"></i>
+                <article>
+                    <p class="name">Ad</p>
+                    <span>Video chat with anyone,.</span>
+                </article>
+            </a>
+
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-users"></i>
+                <article>
+                    <p class="name">Group</p>
+                    <span>Video chat with anyone,.</span>
+                </article>
+            </a>
+
+
+            <a href="#" class="create-box">
+                <i class="fa-solid fa-calendar-day"></i>
+                <article>
+                    <p class="name">EVent</p>
+                    <span>Video chat with anyone,.</span>
+                </article>
+            </a>
         </div>
     </header>
 
 
-    <div class="main-content">
-        <h1>Profile</h1>
+    <!-- profile content -->
+
+    <div class="profile-background">
+        <div class="container">
+            <img src="../images/profile-background-image.jpg" alt="profile-background-image">
+        </div>
     </div>
 
+    <!-- profile hero -->
+    <section class="profile-hero">
+        <div class="container">
+            <div class="profile-image">
+                <i class="avatar fa-solid fa-user"></i>
+                <div class="profile-name">
+                    <h1>Khalil Ahmad</h1>
+                    <p>1K Friends</p>
+                    <div class="friends-show">
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="buttons">
+                <button class="create"><i class="fa-solid fa-circle-plus"></i></i> Create story</button>
+                <button class="edit"><i class="fa-solid fa-pen"></i> Edit Profile</button>
+            </div>
+        </div>
+    </section>  
+
+    <!-- nav -->
+    <section class="profile-nav">
+        <div class="container">
+            <!-- <div class="links"> -->
+                <ul class="links">
+                    <li class="active"><a href="#">Posts</a></li>
+                    <li><a href="#">Posts</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Friends</a></li>
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Check-ins</a></li>
+                    <li class="more">
+                        <a>More <i class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                </ul>
+            <!-- </div> -->
+
+            <div class="menu">
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- main-content -->
+    <section class="profile-main">
+        <div class="container">
+            <div class="profile_summary">
+                <div class="intro">
+                    <div class="title">
+                        <h3>Intro</h3>
+                    </div>
+                    <div>
+                        <button id="add_bio">Add Bio</button>
+                    </div>
+
+                    <div>
+                        <button id="edit_details">Edit Details</button>
+
+                    </div>
+
+                    <div>
+                        <button id="add_hobbies">Add Hobbies</button>
+
+                    </div>
+
+                    <div>
+                        <button id="add_featured">Add Featured</button>
+
+                    </div>
+                </div>
+    
+                <!-- photos -->
+                <div class="photos">
+                    <div class="title">
+                        <h3>Photos</h3>
+                        <a href="#">See All Photos</a>
+                    </div>
+    
+                    <div class="photo_snip">
+                        <i class="photo_item fa-solid fa-image"></i>
+                        <i class="photo_item fa-solid fa-image"></i>
+                        <i class="photo_item fa-solid fa-image"></i>
+    
+                        <i class="photo_item fa-solid fa-image"></i>
+                        <i class="photo_item fa-solid fa-image"></i>
+                        <i class="photo_item fa-solid fa-image"></i>
+    
+                        <i class="photo_item fa-solid fa-image"></i>
+                        <i class="photo_item fa-solid fa-image"></i>
+                        <i class="photo_item fa-solid fa-image"></i>
+                    </div>
+                </div>
+    
+                <!-- frineds -->
+                <div class="photos friends">
+                    <div class="title">
+                        <h3>Friends</h3>
+                        <a href="#">See All Friends</a>
+                    </div>
+                    <p class="friends_count">1,230 frineds</p>
+    
+                    <div class="photo_snip">
+                        <i class="photo_item fa-solid fa-user-large"></i>
+                        <i class="photo_item fa-solid fa-user-large"></i>
+                        <i class="photo_item fa-solid fa-user-large"></i>
+    
+                        <i class="photo_item fa-solid fa-user-large"></i>
+                        <i class="photo_item fa-solid fa-user-large"></i>
+                        <i class="photo_item fa-solid fa-user-large"></i>
+    
+                        <i class="photo_item fa-solid fa-user-large"></i>
+                        <i class="photo_item fa-solid fa-user-large"></i>
+                        <i class="photo_item fa-solid fa-user-large"></i>
+                    </div>
+                </div>
+    
+                <div class="life_events">
+                    <div class="title">
+                        <h3>Life events</h3>
+                        <a href="#">See all</a>
+                    </div>
+    
+                    <div class="events_item">
+                        no data available
+                    </div>
+                </div>
+    
+            </div>
+    
+
+            <!-- posts on proile -->
+            <div class="profile_posts">
+
+                <div class="post-input">
+                    <div class="post">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="What's on your mind, Khalil?" readonly="">
+                    </div>  
+                    <div class="links">
+                        <div>
+                            <i class="fa-solid fa-video live"></i>
+                            <span>Live Video</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-image photo"></i>
+                            <span>Photo/Video</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-face-smile feeling"></i>
+                            <span>Feeling/Activity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- post item -->
+                <div class="post_item">
+                    <div class="header">
+                        <div class="user_info">
+                            <i class="user_avatar fa-solid fa-user"></i>
+                            <div class="text">
+                                <p class="name">Khalil Ahmad</p>
+                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                            </div>
+                        </div>
+
+                        <i class="menu fa-solid fa-ellipsis"></i>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
+                        
+                    </div>
+
+                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+
+                    <div class="post_footer">
+                        <div class="reactions">
+                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
+                            <p>
+                                <span class="comment">434 Comments</span>
+                                <span class="share">21 share</span>
+                            </p>
+                        </div>
+                        <div class="action-buttons">
+                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                            <button><i class="fa-solid fa-message"></i> Commet</button>
+                            <button><i class="fa-solid fa-share"></i> Share</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post_item">
+                    <div class="header">
+                        <div class="user_info">
+                            <i class="user_avatar fa-solid fa-user"></i>
+                            <div class="text">
+                                <p class="name">Khalil Ahmad</p>
+                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                            </div>
+                        </div>
+
+                        <i class="menu fa-solid fa-ellipsis"></i>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
+                        
+                    </div>
+
+                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+
+                    <div class="post_footer">
+                        <div class="reactions">
+                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
+                            <p>
+                                <span class="comment">434 Comments</span>
+                                <span class="share">21 share</span>
+                            </p>
+                        </div>
+                        <div class="action-buttons">
+                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                            <button><i class="fa-solid fa-message"></i> Commet</button>
+                            <button><i class="fa-solid fa-share"></i> Share</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="post_item">
+                    <div class="header">
+                        <div class="user_info">
+                            <i class="user_avatar fa-solid fa-user"></i>
+                            <div class="text">
+                                <p class="name">Khalil Ahmad</p>
+                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                            </div>
+                        </div>
+
+                        <i class="menu fa-solid fa-ellipsis"></i>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
+                        
+                    </div>
+
+                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+
+                    <div class="post_footer">
+                        <div class="reactions">
+                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
+                            <p>
+                                <span class="comment">434 Comments</span>
+                                <span class="share">21 share</span>
+                            </p>
+                        </div>
+                        <div class="action-buttons">
+                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                            <button><i class="fa-solid fa-message"></i> Commet</button>
+                            <button><i class="fa-solid fa-share"></i> Share</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="post_item">
+                    <div class="header">
+                        <div class="user_info">
+                            <i class="user_avatar fa-solid fa-user"></i>
+                            <div class="text">
+                                <p class="name">Khalil Ahmad</p>
+                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                            </div>
+                        </div>
+
+                        <i class="menu fa-solid fa-ellipsis"></i>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
+                        
+                    </div>
+
+                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+
+                    <div class="post_footer">
+                        <div class="reactions">
+                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
+                            <p>
+                                <span class="comment">434 Comments</span>
+                                <span class="share">21 share</span>
+                            </p>
+                        </div>
+                        <div class="action-buttons">
+                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                            <button><i class="fa-solid fa-message"></i> Commet</button>
+                            <button><i class="fa-solid fa-share"></i> Share</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="post_item">
+                    <div class="header">
+                        <div class="user_info">
+                            <i class="user_avatar fa-solid fa-user"></i>
+                            <div class="text">
+                                <p class="name">Khalil Ahmad</p>
+                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                            </div>
+                        </div>
+
+                        <i class="menu fa-solid fa-ellipsis"></i>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
+                        
+                    </div>
+
+                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+
+                    <div class="post_footer">
+                        <div class="reactions">
+                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
+                            <p>
+                                <span class="comment">434 Comments</span>
+                                <span class="share">21 share</span>
+                            </p>
+                        </div>
+                        <div class="action-buttons">
+                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                            <button><i class="fa-solid fa-message"></i> Commet</button>
+                            <button><i class="fa-solid fa-share"></i> Share</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="post_item">
+                    <div class="header">
+                        <div class="user_info">
+                            <i class="user_avatar fa-solid fa-user"></i>
+                            <div class="text">
+                                <p class="name">Khalil Ahmad</p>
+                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                            </div>
+                        </div>
+
+                        <i class="menu fa-solid fa-ellipsis"></i>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
+                        
+                    </div>
+
+                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+
+                    <div class="post_footer">
+                        <div class="reactions">
+                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
+                            <p>
+                                <span class="comment">434 Comments</span>
+                                <span class="share">21 share</span>
+                            </p>
+                        </div>
+                        <div class="action-buttons">
+                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                            <button><i class="fa-solid fa-message"></i> Commet</button>
+                            <button><i class="fa-solid fa-share"></i> Share</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="post_item">
+                    <div class="header">
+                        <div class="user_info">
+                            <i class="user_avatar fa-solid fa-user"></i>
+                            <div class="text">
+                                <p class="name">Khalil Ahmad</p>
+                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                            </div>
+                        </div>
+
+                        <i class="menu fa-solid fa-ellipsis"></i>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
+                        
+                    </div>
+
+                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+
+                    <div class="post_footer">
+                        <div class="reactions">
+                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
+                            <p>
+                                <span class="comment">434 Comments</span>
+                                <span class="share">21 share</span>
+                            </p>
+                        </div>
+                        <div class="action-buttons">
+                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                            <button><i class="fa-solid fa-message"></i> Commet</button>
+                            <button><i class="fa-solid fa-share"></i> Share</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="post_item">
+                    <div class="header">
+                        <div class="user_info">
+                            <i class="user_avatar fa-solid fa-user"></i>
+                            <div class="text">
+                                <p class="name">Khalil Ahmad</p>
+                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                            </div>
+                        </div>
+
+                        <i class="menu fa-solid fa-ellipsis"></i>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
+                        
+                    </div>
+
+                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+
+                    <div class="post_footer">
+                        <div class="reactions">
+                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
+                            <p>
+                                <span class="comment">434 Comments</span>
+                                <span class="share">21 share</span>
+                            </p>
+                        </div>
+                        <div class="action-buttons">
+                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                            <button><i class="fa-solid fa-message"></i> Commet</button>
+                            <button><i class="fa-solid fa-share"></i> Share</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="post_item">
+                    <div class="header">
+                        <div class="user_info">
+                            <i class="user_avatar fa-solid fa-user"></i>
+                            <div class="text">
+                                <p class="name">Khalil Ahmad</p>
+                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                            </div>
+                        </div>
+
+                        <i class="menu fa-solid fa-ellipsis"></i>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
+                        
+                    </div>
+
+                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+
+                    <div class="post_footer">
+                        <div class="reactions">
+                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
+                            <p>
+                                <span class="comment">434 Comments</span>
+                                <span class="share">21 share</span>
+                            </p>
+                        </div>
+                        <div class="action-buttons">
+                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                            <button><i class="fa-solid fa-message"></i> Commet</button>
+                            <button><i class="fa-solid fa-share"></i> Share</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- javascript -->
+    <script src="../js/mains.js"></script>
 </body>
 </html>
