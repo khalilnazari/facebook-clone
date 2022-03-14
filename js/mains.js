@@ -78,3 +78,41 @@ create_menu_btn.addEventListener('click', (e) => {
     e.target.classList.toggle('active')
     create_menu.classList.toggle('show-cm')
 })
+
+
+/*############################# Watch Page  ################################*/
+// video post menu .show_video_post_menu .menu_list .video_menu_btn
+const vdieo_menu_list = document.querySelectorAll('.video_menu_btn'); 
+[...vdieo_menu_list].forEach(vmbtn => {
+    vmbtn.addEventListener('click', (e) => {
+        // e.target.parentNode.children[1].classList.toggle('show_video_post_menu');
+        e.target.nextElementSibling.classList.toggle('show_video_post_menu')
+    })
+})
+
+// show-hide comment section
+const show_comment_btn = document.querySelectorAll('.show_comment_btn'); 
+const video_comment_count = document.querySelectorAll('.video_comment_count'); 
+
+show_comment_btn.forEach(btn => {
+    btn.addEventListener("click", e => {
+        e.target.closest('.video_item').children[4].classList.add('show_video_coment_detail') 
+    })
+})
+
+video_comment_count.forEach(btn => {
+    btn.addEventListener("click", e => {
+        e.target.closest('.video_item').children[4].classList.toggle('show_video_coment_detail') 
+    })
+})
+
+
+// most relevent menu 
+const video_mr_comment = document.querySelectorAll('.video_mr_comment'); 
+video_mr_comment.forEach(btn => {
+    btn.addEventListener('click', e=> {
+        e.target.nextElementSibling.classList.toggle('show_mr_menu_video');
+    })
+})
+/*############################# end of Watch Page  ################################*/
+

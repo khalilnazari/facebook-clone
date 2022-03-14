@@ -199,7 +199,7 @@ header {
     align-items: stretch;
     background: #fff;
     box-shadow: 0px 3px 5px #dfdfdf;
-    padding: 0 10px;
+    padding: 0 15px;
     margin-bottom: .5rem;
 
 
@@ -432,7 +432,8 @@ header {
             }
 
             &.active {
-                background-color: $text-theme;
+                background-color: #b0d3ff;
+                border-radius: 35px;
             }
         }
 
