@@ -106,7 +106,6 @@ video_comment_count.forEach(btn => {
     })
 })
 
-
 // most relevent menu 
 const video_mr_comment = document.querySelectorAll('.video_mr_comment'); 
 video_mr_comment.forEach(btn => {
@@ -116,3 +115,21 @@ video_mr_comment.forEach(btn => {
 })
 /*############################# end of Watch Page  ################################*/
 
+
+
+/*############################# Marketplace Page  ################################*/
+const mp_see_fewer_btn = document.querySelectorAll('.mp_see_fewer_btn'); 
+const mp_see_fewer_menu = document.querySelectorAll('.mp_see_fewer_menu'); 
+
+mp_see_fewer_btn.forEach(btn => {
+    // click on three dot menu button
+    btn.addEventListener('click', e => {
+        e.target.nextElementSibling.classList.toggle('show_mp_see_fewer_menu')
+    })
+
+    // click on the menu itselp
+    btn.nextElementSibling.addEventListener('click', (e) => {
+        e.target.classList.remove('show_mp_see_fewer_menu')
+    })
+})
+/*############################# end of Marketplace Page  ################################*/
