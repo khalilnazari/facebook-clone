@@ -92,17 +92,19 @@ const vdieo_menu_list = document.querySelectorAll('.video_menu_btn');
 
 // show-hide comment section
 const show_comment_btn = document.querySelectorAll('.show_comment_btn'); 
-const video_comment_count = document.querySelectorAll('.video_comment_count'); 
+const video_comment_count = document.querySelectorAll('.post_comment_count'); 
 
 show_comment_btn.forEach(btn => {
     btn.addEventListener("click", e => {
-        e.target.closest('.video_item').children[4].classList.add('show_video_coment_detail') 
+        console.log(e.target)
+        e.target.closest('.post_display').children[4].classList.add('show_video_coment_detail') 
     })
 })
 
+
 video_comment_count.forEach(btn => {
-    btn.addEventListener("click", e => {
-        e.target.closest('.video_item').children[4].classList.toggle('show_video_coment_detail') 
+    btn.addEventListener('click', e => {
+        e.target.closest('.post_display').children[4].classList.toggle('show_video_coment_detail') 
     })
 })
 
@@ -133,3 +135,18 @@ mp_see_fewer_btn.forEach(btn => {
     })
 })
 /*############################# end of Marketplace Page  ################################*/
+
+
+const see_more_bm_btn = document.querySelectorAll('.see_more_bm_btn');  
+
+const scrollable_wrapper_left  =document.querySelector('.scrollable_wrapper_left'); 
+see_more_bm_btn.forEach(btn => {
+    btn.addEventListener('click', e => {
+        let parentChild = e.target.closest('.bookmarks_home').children; 
+        parentChild = [...parentChild].find(ele => [...ele.classList].includes("see_more_bm"))
+        parentChild.classList.toggle('show_see_more_bm')
+
+        // scroll top
+        scrollable_wrapper_left.scrollTop = 0;
+    }) 
+})
