@@ -298,41 +298,32 @@
   margin: 2rem auto 0 auto;
   display: flex;
   justify-content: space-between;
-  gap: .5rem;
+  gap: 1.5rem;
 }
 
-.watch_main_content .group_content .group_posts, .mp_main_content .group_content .group_posts, .group_main_content .group_content .group_posts {
+.watch_main_content .group_content img, .watch_main_content .group_content video, .mp_main_content .group_content img, .mp_main_content .group_content video, .group_main_content .group_content img, .group_main_content .group_content video {
   width: 100%;
 }
 
-.watch_main_content .group_content .group_posts h4, .mp_main_content .group_content .group_posts h4, .group_main_content .group_content .group_posts h4 {
+.watch_main_content .group_content .posts, .mp_main_content .group_content .posts, .group_main_content .group_content .posts {
+  max-width: 680px;
+  width: 98%;
+  margin: 0 auto;
+}
+
+.watch_main_content .group_content .posts h4, .mp_main_content .group_content .posts h4, .group_main_content .group_content .posts h4 {
   color: #616161;
   letter-spacing: 1px;
   font-size: 18px;
+  margin-bottom: 1rem;
 }
 
 .watch_main_content .group_content .group_suggestions, .mp_main_content .group_content .group_suggestions, .group_main_content .group_content .group_suggestions {
-  width: 490px;
+  width: 600px;
 }
 
-.watch_main_content .group_content .group_suggestions .card .header, .mp_main_content .group_content .group_suggestions .card .header, .group_main_content .group_content .group_suggestions .card .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 13px;
-}
-
-.watch_main_content .group_content .group_suggestions .card .header .info, .mp_main_content .group_content .group_suggestions .card .header .info, .group_main_content .group_content .group_suggestions .card .header .info {
-  display: flex;
-  align-items: center;
-}
-
-.watch_main_content .group_content .group_suggestions .card .header i, .mp_main_content .group_content .group_suggestions .card .header i, .group_main_content .group_content .group_suggestions .card .header i {
-  cursor: pointer;
-  height: 40px;
-  width: 40px;
-  display: grid;
-  place-content: center;
-  border-radius: 29px;
+.watch_main_content .group_content .group_suggestions .join-btn, .mp_main_content .group_content .group_suggestions .join-btn, .group_main_content .group_content .group_suggestions .join-btn {
+  background-color: #1b74e4;
+  color: white;
 }
 /*# sourceMappingURL=watch.css.map */
