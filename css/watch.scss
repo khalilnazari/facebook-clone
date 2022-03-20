@@ -1,4 +1,4 @@
-.watch_main_content, .mp_main_content, .group_main_content {
+.watch_main_content, .mp_main_content, .group_main_content, .game_main_content {
     margin-top: 64px;
     display: flex;
     gap: 1rem;
@@ -71,8 +71,7 @@
                 &:hover {
                     background-color: #f0f0f0;
                 }
-    
-    
+
                 &.active {
                     background-color: #f0f0f0;
                     
@@ -104,7 +103,6 @@
                     border: none;
                     background-color: transparent;
                     cursor: pointer;
-    
     
                     &:hover {
                         background: #f0f2f5;
@@ -288,7 +286,6 @@
                             font-weight: 300;
                         }
                      }
-
                 }
             }
         }
@@ -320,13 +317,16 @@
         }
 
         .group_suggestions {
-
             width: 600px;
-
             .join-btn {
                 background-color: #1b74e4;
                 color: white;
             }
         }
+    }
+
+    // games 
+    .game_content {
+
     }
 }
