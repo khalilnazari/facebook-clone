@@ -258,22 +258,41 @@ a {
     font-size: 22px;
     font-weight: 700;
 }
-
 .heading_2 {
     font-size: 1.25rem;
     font-weight: 700;
 }
+.text_primary {color: $text-primary;}
+.text_primary {color: $text-primary;}
+.text_theme {color: $text-theme;}
+.text_xlg{font-size: 1.5rem;}
+.text_lg{font-size: 1.06rem;}
+.text_m{font-size: .9375rem;}
+.text_s{font-size: .8125rem;}
+.font_weight_700 {font-weight: 700;}
+.font_weight_600 {font-weight: 600;}
+.font_weight_500 {font-weight: 500;}
+.font_weight_400 {font-weight: 400;}
+.font_weight_300 {font-weight: 300;}
+
 /************* Avataras **************/
 @mixin centeredAvatar {
     display: grid;
     place-content: center;
     border-radius: 50%;
 }
-.avatar_round_36 {
+.avatar_user_65 {
     @include centeredAvatar(); 
-    font-size: 22px;
-    height: 36px;
-    width: 36px;
+    background-color: rgb(224, 224, 224);
+    width: 65px;
+    height: 65px;
+    font-size: 40px;
+}
+.avatar_round_56 {
+    @include centeredAvatar(); 
+    font-size: 25px;
+    height: 56px;
+    width: 56px;
 }
 .avatar_round_40 {
     @include centeredAvatar(); 
@@ -281,11 +300,11 @@ a {
     width: 40px;
     font-size: 18px;
 }
-.avatar_round_28 {
+.avatar_round_36 {
     @include centeredAvatar(); 
-    height: 28px;
-    width: 28px;
-    font-size: 15px;
+    font-size: 22px;
+    height: 36px;
+    width: 36px;
 }
 .avatar_round_32 {
     @include centeredAvatar(); 
@@ -293,18 +312,22 @@ a {
     height: 32px;
     width: 32px;
 }
-.avatar_user_lg {
+.avatar_round_28 {
     @include centeredAvatar(); 
-    background-color: rgb(224, 224, 224);
-    width: 65px;
-    height: 65px;
-    font-size: 40px;
+    height: 28px;
+    width: 28px;
+    font-size: 15px;
+}
+.avatar_round_16 {
+    @include centeredAvatar(); 
+    width: 16px;
+    height: 16px;font-size: 12px;
 }
 
 /************* Online/Offline indicator *************/
 .online, .offline {
     position: absolute;
-    font-size: 7px;
+    font-size: 10px;
     border: 2px solid rgb(255, 255, 255); 
     @include centeredAvatar(); 
 }
@@ -314,8 +337,14 @@ a {
 .offline {
     color: #7e7e7e;
 }
-
-
+.user_avatar {
+    position: relative;
+    .online {
+        position: absolute;
+        right: 0px;
+        bottom: 7px;
+    }
+}
 
 #bookmark_toggle_btn {
     display: none;
@@ -350,22 +379,45 @@ a {
     }
 }
 
-.full_width_btn {
+@mixin button_genetal {
     border: none;
     outline: none;
     border-radius: 6px;
-    font-size: 16px;
-    font-weight: 500;
-    display: block;
     text-align: center;
     padding: 9px 20px;
     cursor: pointer;
-    background: #f0f2f5;
+}
+.btn_auto {
+    @include button_genetal();
+    display: block;
+    width: auto;
+}
+.full_width_btn {
+    @include button_genetal();
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+}
+.btn_link{
+    @include button_genetal();
+    padding: 8px 5px;
+    border-radius: 3px;
+    font-weight: 300;
+    color: $text-theme;
+    
     &:hover {
-        background: #e4e6eb;
+        background-color: $bg-hover;
     }
 }
-
+.primary_btn {
+    @include button_genetal(); 
+    background-color: $primary-color; 
+    color: #fff;
+}
+.secondary_btn{
+    @include button_genetal(); 
+    background-color: $bg-hover;
+}
 
 // mega menu button
 .mega-menu-btn {
@@ -862,6 +914,24 @@ a {
 
 
 /************* Header **************/
+@mixin box_shadow {
+    box-shadow: 3px 3px 5px #7979797d, -3px -1px 5px #7979797d;
+}
+
+@mixin menu_main_property {
+    position: fixed;
+    top: 60px; 
+    right: 10px;
+    background-color: #fff;
+    height: 0;
+    width: 360px;
+    border-radius: 10px;
+    padding: .5rem;
+    visibility: hidden;
+    user-select: none;
+    @include box_shadow();
+}
+
 header {
     // position
     position: fixed;
@@ -885,27 +955,6 @@ header {
     #create_menu_btn {
         display: none;
     }
-
-
-    @mixin box_shadow {
-        box-shadow: 3px 3px 5px #7979797d, -3px -1px 5px #7979797d;
-    }
-
-    @mixin menu_main_property {
-        position: fixed;
-        top: 60px; 
-        right: 10px;
-        background-color: #fff;
-        height: 0;
-        width: 360px;
-        border-radius: 10px;
-        padding: .5rem;
-        visibility: hidden;
-        user-select: none;
-        @include box_shadow();
-    }
-
-    
 
     // logo-icons
     .logo-icons {
@@ -1131,476 +1180,355 @@ header {
         }
     }
 
-    // user-menu
-    .user-menu {
-        @include menu_main_property(); 
-
-        .item {
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-            border-radius: 10px;
-            cursor: pointer;
-            
-            &:hover {
-                background-color: #f0f2f5;            
-            }
-        }
-
-        .profile-link {
-            padding: 10px;
-        }
-
-        .feedback {
-            padding: 5px;
-        }
-
-        .settings {
-            padding: 8px 15px 8px 5px;
-            justify-content: space-between;
-            margin-bottom: .5rem;
-
-            .name {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-        }
-
-        .logout {
-            padding: 8px 5px;
-        }
-
-        .footer-links {
-            a:hover {
-                text-decoration: underline;
-            }
-        }
-
-        &.show-um {
-            height: 480px;
-            visibility: visible;
-        }
-    }
-
-    // mega-menu
-    .mega-menu {
-        @include menu_main_property(); 
-        width: 600px;
-        background-color: $secondarylight-color;
-
-        .content {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            margin-top: 1rem;
-            border-radius: 10px;
-            
-            // menu
-            .menu {
-                background-color: rgb(255, 255, 255);
-                padding: 10px;
-                position: fixed;
-                overflow-x: hidden;
-                height: 620px;
-                width: 340px;
-                border-radius: 10px;
-
-                &:hover {
-                    overflow-y: scroll;
-                } 
-
-                // menu-form
-                .menu-form {
-                    margin-bottom: 2rem;
-                    input {
-                        border: none;
-                        outline: none;
-                        background: #f0f2f5;
-                        width: 100%;
-                        padding: 10px 12px;
-                        border-radius: 22px;
-                    }
-                }
-
-                // social
-                .social {
-                    .title {
-                        color: $text-primary;
-                        font-weight: 500;
-                        font-size: 18px;
-                        margin-bottom: 1rem;
-                    }
-
-                    .item {
-                        display: flex;
-                        gap: 1rem;
-                        padding: 10px;
-                        margin-bottom: .5rem;
-                        border-radius: 10px;
-
-                        .name {
-                            color: $text-primary;
-                            
-                        }
-
-                        .about {
-                            font-size: 13px;
-                            color: $text-scondary;
-                        }
-
-                        &:hover {
-                            background-color: $secondarylight-color;
-                        }
-
-                        i {
-                            color: $text-scondary;
-                            font-size: 32px;
-                        }
-
-                        .group {
-                            color: #4f92ff;
-                        }
-
-                        .friends {
-                            color: #65676b;
-                        }
-
-                        .event {
-                            color: rgb(255, 74, 104);
-                        }
-                    }
-                }
-
-                // entertainment 
-                .entertainment {
-                    margin-top: 1rem;
-                }
-            }
-
-            // create
-            .create {
-                position: fixed;
-                right: 23px;
-                width: 220px;
-                border-radius: 10px;
-                padding: 10px;
-                background-color: rgb(255, 255, 255);
-
-                .title {
-                    font-size: 18px;
-                    font-weight: 500;
-                    margin-bottom: 10px;
-                }
-
-                .item {
-                    display: flex;
-                    align-items: center;
-                    padding: 8px;
-                    border-radius: 10px;
-                    
-                    &:hover {
-                        background: $secondarylight-color;
-                    }
-                    
-                    span {
-                        font-weight: 500;
-                        font-size: 16px;
-                    }
-
-                    i {
-                        font-size: 22px;
-                        background: rgb(214, 214, 214);
-                        height: 40px;
-                        width: 40px;
-                        display: grid;
-                        place-content: center;
-                        border-radius: 50%;
-                        margin-right: 1rem;
-                    }
-
-                    hr {
-                        margin: 1rem 0;
-                    }
-                }
-            }
-        }
-
-        &.show-mega-menu {
-            height: 90vh;
-            visibility: visible;
-        }
-    }
-
-    // Notification-menu
-    .notification-menu {
-        @include menu_main_property(); 
-
-        &.show-nm {
-            visibility: visible;
-            height: 90vh;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            h3{
-                font-size: 20px;
-                letter-spacing: 1px;
-            }
-            i {
-                font-size: 19px;
-                height: 30px;
-                width: 30px;
-                display: grid;
-                place-content: center;
-                border-radius: 50%;
-
-                &:hover {
-                    background: $secondarylight-color;
-                }      
-            }
-        }
-
-        .filter-btns {
-            margin-bottom: 1rem;
-            button {
-                border: none;
-                background: $secondarylight-color;
-                padding: 9px 15px;
-                border-radius: 18px;
-                font-size: 16px;
-                cursor: pointer;
-                &.active {
-                    background-color: lightblue;
-                }
-            }
-        }
-
-        .noti-wrapper {
-            border-radius: 10px;
-            margin-bottom: 1rem;
-
-            
-            .text {
-                display: flex;
-                justify-content: space-between;
-                
-                p {
-                    font-size: 18px;
-                    font-weight: 400;
-                }
-                a {
-                    @include link_btn();
-                }
-            }
-
-            .noti-box {
-                display: flex;
-                padding: 10px;
-                margin-bottom: .7rem;
-                border-radius: 10px;
-                
-                &:hover {
-                    background: $secondarylight-color;
-                }
-    
-                i.user {
-                    @include big_icon(); 
-                    margin-right: 10px;
-                }
-
-                article {
-                    align-self: flex-start;
-                    font-weight: 300;
-                    .user {
-                        font-weight: 400;    
-                    }
-
-                    .post-time {
-                        color: $text-theme;
-                        font-size: 11px;
-                        font-weight: 500;
-                        margin-top: .5rem;
-                    }
-
-                    .no-of-mf {
-                        font-size: 13px;
-                        margin: 5px 0;
-                    }
-                    .btn {
-                        margin-top: .5rem;
-                    }
-                }
-
-                i.indicator {
-                    font-size: 10px;
-                    color: $text-theme;
-                    align-self: center;
-                }
-            }
-        }
-        
-        .new {
-
-        }
-
-        .friend-requests {
-
-        }
-
-    }
-
-    // messenger-menu
-    .messenger-menu {
-        @include menu_main_property(); 
-        overflow-y: auto;
-        overflow-x: hidden;
-
-        &.show-mm {
-            height: 90vh;
-            visibility: visible;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            margin: .5rem 0 1rem 0;
-            
-            h4 {
-                font-size:1.5rem;
-                font-weight: 700;
-                color: $text-primary;
-            }
-
-            .icons {
-                display: flex;
-                align-items: center;
-
-                i {
-                    margin-left: 5px;
-                    color: $secondary-color;
-                    height: 30px;
-                    width: 30px;
-                    display: grid;
-                    place-content: center;
-                    border-radius: 50%;
-                    
-                    &:hover {
-                        background: $secondarylight-color;
-                    }
-                }
-            }
-        }
-
-        & > form {
-            margin-bottom: 1rem;
-            input {
-                width: 100%;
-                padding: 12px 20px;
-                border: none;
-                outline: none;
-                background: $secondarylight-color;
-                border-radius: 23px;
-                font-size: 15px;
-            }
-        }
-
-
-        .friends-message {
-            .box {
-                position: relative;
-                display: flex;
-                align-items: center;
-                color: $secondary-color;
-                margin-bottom: 1rem;
-                
-                p.last-message {
-                    margin-top: 5px;
-                    font-size: 12px;
-                    font-weight: 300;
-                }
-                i {
-                    @include big_icon();
-                    margin-right: 10px;
-                }
-
-                .seen-ind {
-                    position: absolute;
-                    top: 15px;
-                    right: -8px;
-                    height: 25px;
-                    width: 25px;
-                    background: lightgray;
-                    font-size: 12px;
-                    display: grid;
-                    place-content: center;
-                }
-
-
-                .offline-ind, .online-ind {
-                    position: absolute;
-                    left: 57px;
-                    bottom: 13px;
-                    height: 0;
-                    width: 0;
-                    font-size: 14px;
-                }
-
-                .online-ind {
-                    color: #1ecc1e;
-                }
-
-                .offline-ind {
-                    color: $secondary-color;
-                }
-            }
-        }
-        
-    }
-
     // create-menu
     .create_menu {
         @include menu_main_property();
         
-        h3 { @include menu_title();}
-
         .create-box {
             display: flex;
+            gap: .6rem;
+            padding: 10px 5px;
+            border-radius: 8px;
             cursor: pointer;
-            padding: 14px 10px;
-            border-radius: 10px;
 
             &:hover {
-                background: #eeeeee;
-            }
-
-            i {
-                @include menu_icon(20px, 38px)
-            }
-
-            article {
-                .name {
-                    font-size: 16px;
-                    font-weight: 500;
-                }
-    
-                span {
-                    font-size: .8125rem; 
-                    color: $text-scondary;
-                }
+                background: #f0f2f5;
             }
         }
 
         &.show-cm {
-            height: 80vh;
+            height: auto;
             visibility: visible;
         }
 
+        .avatar_round_36 {
+            background-color: $bg-scondary;
+        }
+        h3 {
+            margin-bottom: 10px;
+        }
     }
 
     i { cursor: pointer; }
-}   
+}  
+
+// Notification-menu
+.notification-menu {
+    @include menu_main_property(); 
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    visibility: visible;
+        height: 90vh;
+
+    &.show-nm {
+        visibility: visible;
+        height: 90vh;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .avatar_round_32:hover {
+        background: $bg-hover;
+    }
+
+    .filter-btns {
+        display: flex;
+        gap: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    .notification-type {
+        padding: 0 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .noti-wrapper {
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .noti-box {
+        position: relative;
+        display: flex;
+        gap: .6rem;
+        padding: 10px;
+        margin-bottom: .7rem;
+        border-radius: 10px;
+        
+        &:hover {
+            background: $secondarylight-color;
+        }
+    }
+    .indicator {
+        position: absolute;
+        right: 10px;
+        font-size: 10px;
+        color: $text-theme;
+        align-self: center;
+    }
+
+    .avatar_round_56 {
+        border:1px solid $secondary-color;
+    }
+    .fr-buttons {
+        margin-top: 10px;
+    }
+    article {
+        align-self: flex-start;
+        font-weight: 300;
+    }
+}
+
+// messenger-menu
+.messenger-menu {
+    @include menu_main_property(); 
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &.show-mm {
+        height: 90vh;
+        visibility: visible;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin: .5rem 0 1rem 0;
+    }  
+
+    .header_icons {
+        display: flex;
+        align-items: center;
+        gap: .5rem; 
+    }
+
+    .avatar_round_32 {
+        color: $secondary-color;
+        &:hover {
+            background: #f0f2f5;
+        }
+    }
+
+    form {
+        margin-bottom: 1rem;
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            border: none;
+            outline: none;
+            background: $secondarylight-color;
+            border-radius: 23px;
+            font-size: 15px;
+        }
+    }
+
+
+    .message_box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        padding: 10px 6px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+            background-color: #f3f3f3;
+        }
+    }
+
+    .avatar_round_56 {
+        background-color: #eaeaea;
+    }
+
+    @mixin mess_delivery_status {
+        right: 4px;
+        bottom: 12px;
+        position: absolute;
+    }
+
+    .sent_msg {
+        @include mess_delivery_status(); 
+        border: 1px solid gray;
+    }
+
+    .delivered_msg {
+        @include mess_delivery_status(); 
+        font-size: 15px;
+        color: gray;
+    }
+    .seen_msg {
+        @include mess_delivery_status(); 
+        color: rgb(235, 235, 235);
+        background: #868686;
+    }
+}
+
+// user-menu
+.user-menu {
+    @include menu_main_property(); 
+
+    .item {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        border-radius: 10px;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: #f0f2f5;            
+        }
+    }
+
+    .profile-link {
+        padding: 10px;
+    }
+
+    .feedback {
+        padding: 5px;
+    }
+
+    .settings {
+        padding: 8px 15px 8px 5px;
+        justify-content: space-between;
+        margin-bottom: .5rem;
+    }
+    
+    .name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .logout {
+        padding: 8px 5px;
+    }
+
+    .footer-links  a:hover {
+        text-decoration: underline;
+    }
+
+    &.show-um {
+        height: 480px;
+        visibility: visible;
+    }
+
+    .avatar_round_36 {
+        background: #d3d3d3
+    }
+}
+
+// mega-menu
+.mega-menu {
+    @include menu_main_property(); 
+    width: 600px;
+    background-color: #f0f2f5;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+    }
+        
+    // menu
+    .menu {
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        position: fixed;
+        overflow-x: hidden;
+        height: 83%;
+        width: 340px;
+        border-radius: 10px;
+
+        &:hover {
+            overflow-y: scroll;
+        } 
+    }
+
+    // menu-form
+    .menu-form {
+        margin-bottom: 2rem;
+        input {
+            border: none;
+            outline: none;
+            background: #f0f2f5;
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 22px;
+        }
+    }
+
+    // social
+    .social_item {
+        display: flex;
+        gap: 1rem;
+        padding: 10px;
+        margin-bottom: .5rem;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: $secondarylight-color;
+        }
+
+        .group {
+            color: #4f92ff;
+        }
+
+        .friends {
+            color: #65676b;
+        }
+
+        .event {
+            color: rgb(255, 74, 104);
+        }
+    }
+
+    // entertainment 
+    .entertainment {
+        margin-top: 1rem;
+    }
+
+    // create
+    .create {
+        position: fixed;
+        right: 23px;
+        width: 220px;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgb(255, 255, 255);
+    }
+        
+    .create_item {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        padding: 8px;
+        border-radius: 10px;
+        
+        &:hover {
+            background: $secondarylight-color;
+        }
+    }
+
+    .avatar_round_36 {
+        background: #eaeaea;
+    }
+
+    &.show-mega-menu {
+        height: 90vh;
+        visibility: visible;
+    }
+}
+
 
 .scrollable_wrapper_left {
     position: fixed;
