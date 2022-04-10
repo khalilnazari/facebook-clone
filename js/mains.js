@@ -1,18 +1,52 @@
 
 // toggle search form and recent-search items 
-const rs_back_btn = document.getElementById('rs-back-btn'); 
-const logo_search_btn = document.getElementById('logo-search-btn'); 
-const temp_input = document.getElementById('temp-input'); 
+const search_close_btn = document.getElementById('search-close-btn'); 
+const search_input_field = document.querySelector('.search-input-feild'); 
 const recent_search = document.querySelector('.recent-search')
+const logo_wrapper = document.querySelector('.logo-wrapper')
+const logo_icon = document.querySelector('.logo-icon') 
 
-logo_search_btn.addEventListener('click', (e) => {
+const logo_search_btn = document.getElementById('logo-search-btn'); 
+const logo_search_btn_1 = document.getElementById('logo-search-btn-1'); 
+const logo_search_btn_2 = document.getElementById('search-close-btn-2'); 
+
+
+// click on input field
+search_input_field.addEventListener('click', e => {
+    logo_wrapper.classList.add('visible_lw')
+    search_close_btn.classList.add('show_scb')
     recent_search.classList.add('show-rs')
+    logo_icon.classList.add('hide_li')
 })
-temp_input.addEventListener('click', (e) => {
-    recent_search.classList.add('show-rs')
+
+// click on close button
+search_close_btn.addEventListener('click', () => {
+    logo_wrapper.classList.remove('visible_lw')
+    search_close_btn.classList.remove('show_scb')
+    recent_search.classList.remove('show-rs')
+    logo_icon.classList.remove('hide_li')
+
+    if(window.innerWidth < 1260) {
+        search_input_field.classList.remove('show-sif')
+    }
 })
-rs_back_btn.addEventListener('click', (e) => {
-    e.target.closest('.recent-search').classList.remove('show-rs')
+
+// click on search button
+logo_search_btn.addEventListener('click', () => {
+    if(window.innerWidth < 1260) {
+        logo_wrapper.classList.add('visible_lw')
+        search_close_btn.classList.add('show_scb')
+        recent_search.classList.add('show-rs')
+        logo_icon.classList.add('hide_li')
+        search_input_field.classList.add('show-sif')
+    }
+})
+
+logo_search_btn_1.addEventListener('click', () => {
+    recent_search.classList.add('show-rs'); 
+})
+logo_search_btn_2.addEventListener('click', () => {
+    recent_search.classList.remove('show-rs'); 
 })
 
 // remove recent serach item 
@@ -25,59 +59,80 @@ Array.from(remove_rs_term).forEach(btn => {
         // Find clicked button's parent
         let child = [...parent.children].find(ele => ele === e.target.closest('.term'))
         parent.removeChild(child)
-        
-        // another way 
-        // Array.from(parent.children).forEach(ele => {
-        //     // if the clicked button's parent is the same as 
-        //     if(ele == e.target.closest('.term')) {
-        //         parent.removeChild(ele)
-        //     }
-        // }) 
     })
 })
 
 
+
+/*######################### header Dropdowns ######################3*/
 // mega-menu
 const mega_menu_btn = document.getElementById('mega-menu-btn')
 const mega_menu = document.querySelector('.mega-menu')
-mega_menu_btn.addEventListener("click", (e) => {
-    e.target.classList.toggle('active')
-    mega_menu.classList.toggle('show-mega-menu')
-})
-
 
 // user-menu
 const user_menu_btn = document.getElementById('user-menu-btn'); 
 const user_menu = document.querySelector('.user-menu'); 
-user_menu_btn.addEventListener('click', (e) => {
-    user_menu.classList.toggle('show-um')
-    e.target.classList.toggle('active')
-})
 
-// notification menu
+// notification menu 
 const notification_menu_btn = document.getElementById('notification-menu-btn')
 const notification_menu = document.querySelector('.notification-menu')
-notification_menu_btn.addEventListener('click', (e) => {
-    e.target.classList.toggle("active")
-    notification_menu.classList.toggle('show-nm')
-})
 
 // messenger-menu
 const messenger_menu_btn = document.getElementById('messenger_menu_btn')
 const messenger_menu = document.querySelector('.messenger-menu')
-messenger_menu_btn.addEventListener('click', (e) => {
-    e.target.classList.toggle('active')
-    messenger_menu.classList.toggle('show-mm')
-})
-
 
 // create-menu
 const create_menu_btn = document.getElementById('create_menu_btn')
 const create_menu = document.querySelector('.create_menu')
-create_menu_btn.addEventListener('click', (e) => {
-    e.target.classList.toggle('active')
-    create_menu.classList.toggle('show-cm')
+
+// toggle menues
+window.addEventListener('click', e => {
+    // toggle mega-menu
+    if(e.target == mega_menu_btn) {
+        mega_menu_btn.classList.toggle('active')
+        mega_menu.classList.toggle('show-mega-menu')
+    } else {
+        mega_menu_btn.classList.remove('active')
+        mega_menu.classList.remove('show-mega-menu')
+    }
+    
+    // toggle user-menu
+    if (e.target == user_menu_btn){
+        user_menu.classList.toggle('show-um')
+        user_menu_btn.classList.toggle('active')
+    } else {
+        user_menu.classList.remove('show-um')
+        user_menu_btn.classList.remove('active')
+    }
+
+    // toggle notification-menu
+    if(e.target == notification_menu_btn) {
+        notification_menu_btn.classList.toggle("active")
+        notification_menu.classList.toggle('show-nm')
+    } else {
+        notification_menu_btn.classList.remove("active")
+        notification_menu.classList.remove('show-nm')
+    }
+
+    // toggle messenger-menu
+    if(e.target == messenger_menu_btn){
+        messenger_menu_btn.classList.toggle('active')
+        messenger_menu.classList.toggle('show-mm')
+    } else {
+        messenger_menu_btn.classList.remove('active')
+        messenger_menu.classList.remove('show-mm')
+    }
+
+    // toggle create-menu 
+    if(e.target == create_menu_btn) {
+        e.target.classList.toggle('active')
+        create_menu.classList.toggle('show-cm')
+    } else  {
+        create_menu_btn.classList.remove('active')
+        create_menu.classList.remove('show-cm')
+    }
 })
+
 
 
 /*############################# Watch Page  ################################*/
@@ -142,7 +197,7 @@ const see_more_bm_btn = document.querySelectorAll('.see_more_bm_btn');
 const scrollable_wrapper_left  =document.querySelector('.scrollable_wrapper_left'); 
 see_more_bm_btn.forEach(btn => {
     btn.addEventListener('click', e => {
-        let parentChild = e.target.closest('.bookmarks_home').children; 
+        let parentChild = e.target.closest('.left-col').children; 
         parentChild = [...parentChild].find(ele => [...ele.classList].includes("see_more_bm"))
         parentChild.classList.toggle('show_see_more_bm')
 
