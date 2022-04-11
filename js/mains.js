@@ -136,38 +136,41 @@ window.addEventListener('click', e => {
 
 
 /*############################# Watch Page  ################################*/
-// video post menu .show_video_post_menu .menu_list .video_menu_btn
-const vdieo_menu_list = document.querySelectorAll('.video_menu_btn'); 
+// hide-show header dropdown menu
+const vdieo_menu_list = document.querySelectorAll('.post-header-dropdown-btn'); 
 [...vdieo_menu_list].forEach(vmbtn => {
     vmbtn.addEventListener('click', (e) => {
         // e.target.parentNode.children[1].classList.toggle('show_video_post_menu');
-        e.target.nextElementSibling.classList.toggle('show_video_post_menu')
+        e.target.nextElementSibling.classList.toggle('show')
     })
 })
 
 // show-hide comment section
-const show_comment_btn = document.querySelectorAll('.show_comment_btn'); 
-const video_comment_count = document.querySelectorAll('.post_comment_count'); 
-
-show_comment_btn.forEach(btn => {
+const show_comment_count = document.querySelectorAll('.comment-count'); 
+const video_comment = document.querySelectorAll('.comment'); 
+// click on comment 
+video_comment.forEach(btn => {
     btn.addEventListener("click", e => {
-        console.log(e.target)
-        e.target.closest('.post_display').children[4].classList.add('show_video_coment_detail') 
+        const parent = e.target.closest('.post').children[4]; 
+        parent.classList.add('show') 
+        const input = parent.querySelector('input')
+        input.focus(); 
     })
 })
 
-
-video_comment_count.forEach(btn => {
+// click on comment count
+show_comment_count.forEach(btn => {
     btn.addEventListener('click', e => {
-        e.target.closest('.post_display').children[4].classList.toggle('show_video_coment_detail') 
+        e.target.closest('.post').children[4].classList.toggle('show') 
     })
 })
 
-// most relevent menu 
-const video_mr_comment = document.querySelectorAll('.video_mr_comment'); 
-video_mr_comment.forEach(btn => {
-    btn.addEventListener('click', e=> {
-        e.target.nextElementSibling.classList.toggle('show_mr_menu_video');
+// filter comments 
+const comments_filter_btn = document.querySelectorAll('.comments-filter-btn'); 
+comments_filter_btn.forEach(btn => {
+    btn.addEventListener('click', e => {
+        const nextSiblin = e.target.nextElementSibling; 
+       nextSiblin.classList.toggle('show');
     })
 })
 /*############################# end of Watch Page  ################################*/

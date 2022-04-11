@@ -1,332 +1,154 @@
-.watch_main_content, .mp_main_content, .group_main_content, .game_main_content {
-    margin-top: 64px;
+// scroll
+@mixin vertical_scroll {
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: transparent; 
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 5px;
+    }
+    
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            background: rgb(184, 184, 184); 
+        }
+    }
+
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgb(138, 138, 138); 
+    }
+}
+
+// watch page layout
+.page-main-content {
     display: flex;
-    gap: 1rem;
-
-    // left pannel 
-    .left-side-nav {
-        background: #fff;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 1600px;
+    width: 100%;
+    margin: 65px auto 0 auto;
+    
+    // left nav column
+    .left-col {
         width: 360px;
-        padding: 10px;
-        box-shadow: 0 0 5px rgba(170, 170, 170, 0.308);
-    
-        .search-box {
-            padding: 0 10px 10px 10px;
-            .title {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: .5rem;
-                h4 {
-                    font-size: 25px;
-                    letter-spacing: 1px;
-                }
-    
-                i {
-                    font-size: 20px;
-                    width: 40px;
-                    height: 40px;
-                    background: #f0f0f0;
-                    place-content: center;
-                    display: grid;
-                    border-radius: 50%;
-                }
-            }
-    
-            .input input {
-                
-                width: 100%;
-                border: none;
-                outline: none;
-                background: #f0f0f0;
-                padding: 11px 20px;
-                border-radius: 20px;
-            }
-        }
-    
-        .links {
-            .link-item {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                padding: 8px 10px 8px 7px;
-                border-radius: 5px;
-                cursor: pointer;
-    
-                p {
-                    font-size: 16px;
-                    font-weight: 500;
-                }
-    
-                i {
-                    font-size: 21px;
-                    background: #e1e1e1;
-                    height: 45px;
-                    width: 45px;
-                    display: grid;
-                    place-content: center;
-                    border-radius: 50%;
-                }
-    
-                &:hover {
-                    background-color: #f0f0f0;
-                }
-
-                &.active {
-                    background-color: #f0f0f0;
-                    
-                    i {
-                        background-color: #1b74e4;
-                        color: white;
-                    }
-                }
-            }
-    
-            .following_users {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin: 0 10px 6px 10px;
-    
-                h5 {
-                    font-size: 17px;
-                    font-weight: 500;
-                    color: #65676b;
-                }
-    
-                button {
-                    color: #1b74e4;
-                    font-size: 16px;
-                    padding: 10px 17px;
-                    border-radius: 4px;
-                    outline: none;
-                    border: none;
-                    background-color: transparent;
-                    cursor: pointer;
-    
-                    &:hover {
-                        background: #f0f2f5;
-                    }
-                }
-            }
-
-            /*################# Marketplace style ######*/
-            // crete new list button
-            .mp_create_new_list_btn {
-                display: block;
-                text-align: center;
-                width: 100%;
-                padding: 10px;
-                margin-top: 1rem;
-                color: #1b74e4;
-                font-weight: 500;
-                border: none;
-                outline: none;
-                border-radius: 5px;
-                background-color: #dcefff;
-
-                &:hover {
-                    background-color: #c6ddf0;
-                }
-            }
-            // filter link
-            .mp_filter_title {
-                p {
-                   font-size: 16px;
-                   font-weight: 600; 
-                    letter-spacing: 1px;
-                }   
-
-                button {
-                    background: transparent;
-                    border: none;
-                    outline: none;
-                    padding: 10px 10px 10px 0;
-                    color: #1b74e4;
-                    font-size: 16px ;
-                    font-weight: 400; 
-
-                    &:hover {
-                        background-color: #c6ddf0;
-                    }
-                }
-            }
-            // categoreis 
-            .mp_categories_title {
-                font-size: 16px;
-                font-weight: 600; 
-                letter-spacing: 1px;
-            }
-        }
+        flex-shrink: 0;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.147);
+        padding: 10px 10px 10px 15px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
     }
-
-    // videos carts
-    .watch_content {
-        max-width: 899px;
-        width: 95%;
-        margin: 0 auto;
+    
+    // right/main column
+    .main-col {
+        width: 60%;
+        margin: 20px auto 0;
     }
+}
 
+.col-wrraper {
+    position: fixed; 
+    top: 80px;
+    width: 330px;
+}
 
-    /*############# Marketplace main content ##################*/
-    .mp_content {
-        max-width: 1820px;
-        width: 90%;
-        margin: 0 auto;
-        padding-right: 15px;
-
-        .mp_category {
-            padding: 2rem 0 1rem 0;
-            border-top: 1px solid grey;
-
-            .header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 2rem;
-                h4 {
-                    font-size: 1.25rem;
-                    font-weight: 500;
-                }
-
-                button {
-                    background: transparent;
-                    border: none;
-                    outline: none;
-                }
-                .location {
-                    color: #1b74e4;
-                    font-size: 13px;
-                    font-weight: 300;
-                }
-
-                .link_nav {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    gap: 1rem;
-                    position: relative;
-
-                    a {
-                        color: #1b74e4;
-                        cursor: pointer;
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-
-                    .mp_see_fewer_btn {
-                        color: #65676b;
-                        font-size: 18px;
-                        height: 35px;
-                        width: 35px;
-                        display: grid;
-                        place-content: center;
-                        border-radius: 50%;
-                        cursor: pointer;
-
-                        &:hover {
-                            background-color: #cecece;
-                        }
-                    }
-
-                    .mp_see_fewer_menu {
-                        position: absolute;
-                        width: 0;
-                        right: 100px;
-                        top: 35px;
-                        display: flex;
-                        gap: 1rem;
-                        align-items: center;
-                        background: #fff;
-                        padding: 0;
-                        font-size: 16px;
-                        border-radius: 10px;
-                        box-shadow: 0 0 5px #c3c3c3;
-                        visibility: hidden;
-                        user-select: none;
-                        cursor: pointer;
-
-                        &.show_mp_see_fewer_menu {
-                            right: 0px;
-                            padding: 15px 10px;
-                            width: 300px;
-                            visibility: visible;
-                        }
-                    }
-                }
-            }
-
-            .products { 
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-                // grid-template-rows: repeat(auto-fit, minmax(230px, 1fr));
-                gap: .5rem;
-                .product_card {
-                    margin-bottom: 1rem;
-                    img {
-                        width: 100%; 
-                        height: 230px; 
-                        object-fit: cover;  
-                        border-radius: 8px;
-                    }
-
-                    .product_detail {
-                        .price {
-                            font-size: 1.06rem;
-                            font-weight: 500;
-                        }
-                        .name {
-                            font-size: 19px;
-                            font-weight: 300;
-                        }
-
-                        .location {
-                            font-size: 13px;
-                            font-weight: 300;
-                        }
-                     }
-                }
-            }
-        }
-    }
-
-    /*############# group main content ##################*/
-    .group_content {
-        max-width: 1200px;
-        width: 98%;
-        margin: 2rem auto 0 auto;
+// watch-bookmarks-header
+.watch-bookmarks-header {
+    // title
+    .title {
         display: flex;
         justify-content: space-between;
-        gap: 1.5rem;
+        align-items: center;
+    }
+
+    // search 
+    .search-box {
+        position: relative;
+        margin: 10px 0;
+
+        .search-icon {
+            position: absolute;
+            top:50%; 
+            transform: translateY(-50%);
+            left: 10px;
+        }
         
-        img, video {
+        input {
             width: 100%;
+            border: none;
+            outline: none;
+            background: #f0f2f5;
+            font-size: 16px;
+            padding: 10px 10px 10px 35px;
+            border-radius: 20px;
         }
+    }
+}
 
-        .posts {
-            max-width: 680px;
-            width: 98%;
-            margin: 0 auto;
-            h4 {
-                color: rgb(97, 97, 97);
-                letter-spacing: 1px;
-                font-size: 18px;
-                margin-bottom: 1rem;
-            }
-        }
+.watch-bookmarks {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 76vh;
+    @include vertical_scroll(); 
+    
+}
 
-        .group_suggestions {
-            width: 600px;
-            .join-btn {
-                background-color: #1b74e4;
-                color: white;
-            }
+// bookmart-item styles
+.bookmark-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1px;
+    padding: 10px 10px 10px 5px;
+    border-radius: 9px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f0f2f5;
+    }
+}
+
+// Manage
+.following_users {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    button {
+        background:transparent; 
+        font-size: 16px;
+        font-weight: 400;
+        &:hover {
+            background-color: #f0f2f5;
         }
     }
 
-    // games 
-    .game_content {
+}
 
+
+@import './general';
+
+
+// for smaller devices.
+@media screen and (max-width: 800px) {
+    .page-main-content {
+        .left-col {
+            display: none;
+        }
+
+        .main-col {
+            width: 98%;
+        }
     }
 }
