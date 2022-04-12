@@ -19,8 +19,9 @@ $text-scondary: #65676b;
 @import './mixins';
 @import './utilities';
 @import './header';
+@import './layout';
 @import './general';
-@import './page.scss';
+@import './page';
 
 // create home post 
 .create_post {

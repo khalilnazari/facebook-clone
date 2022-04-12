@@ -1,0 +1,99 @@
+// page layout
+.page-main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    // max-width: 1600px;
+    width: 100%;
+    margin-top: 65px auto 0 auto;
+    
+    // bookmark collum in every page.  
+    .left-col {
+        width: 360px;
+        flex-shrink: 0;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.147);
+        padding: 10px 10px 10px 15px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    // left collumn 
+    .col-wrraper {
+        position: fixed; 
+        top: 80px;
+        width: 330px;
+    }
+
+    // right/main column
+    .main-col {
+        width: 60%;
+        margin: 85px auto 0;
+    }
+
+    .marketplace-main-col {
+        width: 90%;
+        max-width: 1800px;
+        margin: 85px auto 0;
+        padding: 0 32px;
+    }
+
+    // Group page layout
+    .group-main-col {
+        max-width: 1200px;
+        width: 70%;
+        margin: 85px auto 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    // group feed col
+    .groups-feed {
+        order: 1;
+        width: 60%;
+    }
+    
+    // group slider col
+    .groups-slider {
+        order:2; 
+        width: 40%;
+    }
+}
+
+
+
+// only for group page. 
+@media screen and (max-width: 1270px) {
+    .group-main-col {
+        flex-direction: column;
+        .groups-feed {
+            order: 2;
+            width: 100%;
+        }
+
+        .groups-slider {
+            order: 1;
+            width: 100%;
+        }
+    }
+}
+
+
+// for smaller devices.
+@media screen and (max-width: 800px) {
+    .page-main-content {
+        .left-col {
+            display: none;
+        }
+
+        .group-main-col, .main-col {
+            width: 98%;
+        }
+
+        .marketplace-main-col {
+            width: 98%;
+            padding: 0 10px;
+        }
+    }
+}

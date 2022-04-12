@@ -1,0 +1,235 @@
+@import './mixins';
+
+// watch-bookmarks-header
+.page-bookmarks-header {
+    // title
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // search 
+    .search-box {
+        position: relative;
+        margin: 10px 0;
+
+        .search-icon {
+            position: absolute;
+            top:50%; 
+            transform: translateY(-50%);
+            left: 10px;
+        }
+        
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: #f0f2f5;
+            font-size: 16px;
+            padding: 10px 10px 10px 35px;
+            border-radius: 20px;
+        }
+    }
+}
+
+.page-bookmarks {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 76vh;
+    @include vertical_scroll(); 
+    
+}
+
+// bookmart-item styles
+.bookmark-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1px;
+    padding: 10px 10px 10px 5px;
+    border-radius: 9px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f0f2f5;
+    }
+}
+
+// Manage
+.following_users {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    button {
+        background:transparent; 
+        font-size: 16px;
+        font-weight: 400;
+        &:hover {
+            background-color: #f0f2f5;
+        }
+    }
+
+}
+
+// marketplace-category
+.create-new-list {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #def7ff;
+    border-radius: 10px;
+    color: #1459c2;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.location-filter {
+    margin: 15px 0;
+    p {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        color: #1b74e4;
+        background: transparent;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.marketplace-category {
+    border-bottom: 1px solid #dadada;
+
+    .filter-text {
+        color: #1b74e4;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0 10px 0;
+    }
+
+    .header-title {
+        font-size: 19px;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 10px;
+    }
+
+    .product-card {
+        margin-bottom: 30px;
+    }
+
+    img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .filter-products {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+// Groups
+.joined-group {
+    
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 8px;
+
+    &:hover {
+        background: #f0f2f5;
+    }
+
+
+    img {
+        height: 60px;
+        width: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+
+    .pinned-group {
+        margin-left: auto;
+        transform: rotate(50deg);
+        color: gray;
+    }
+}
+
+.group-filter-title {
+    margin: 5px 0 20px;
+}
+
+// groups-slider
+.groups-slider {
+   
+
+    .slider-wrapper {
+        position: sticky;
+        top: 85px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, .159);
+        background-color: #fff;
+        border-radius: 8px;
+        padding-bottom: 10px;
+    }
+    
+    .groups-slider-header {
+        padding: 10px 16px 10px; 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;  
+    }
+
+    .slider-item {
+        width: 90%;
+        margin: 10px auto;
+        box-shadow: 0 0 2px #0000002b;
+        border-radius: 10px;
+        padding-bottom: 15px;
+    }
+
+    .slider-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .slider-content {
+        padding: 8px 10px 16px;
+    }
+
+    .join-link {
+        padding: 0 10px;
+    }
+}

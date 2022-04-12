@@ -116,38 +116,28 @@
     display: none;
 }
 
-.btn_auto {
-    @include button();
-    display: block;
-    width: auto;
-}
-.full_width_btn {
-    @include button();
-    display: block;
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 10px;
-}
-.btn_link {
-    @include button();
-    padding: 8px 5px;
-    border-radius: 3px;
-    font-weight: 300;
-    color: $text-theme;
+
+.btn {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
     
-    &:hover {
-        background-color: $bg-hover;
+    &.w-full {
+        display: block;
+        text-align: center;
+    }
+
+    &.btn-theme {
+        background-color: #1b74e4;
+        color: #fff;
+    }
+
+    &.btn-theme:hover {
+        background-color: #166ed8;
     }
 }
-.primary_btn {
-    @include button(); 
-    background-color: $primary-color; 
-    color: #fff;
-}
-.secondary_btn{
-    @include button(); 
-    background-color: $bg-hover;
-}
+
 
 // collapsed-comments-wrraper
 .ml-auto {margin-left: auto;}
