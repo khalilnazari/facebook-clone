@@ -208,3 +208,15 @@ see_more_bm_btn.forEach(btn => {
         scrollable_wrapper_left.scrollTop = 0;
     }) 
 })
+
+
+
+// ################### Profile ######################
+const profile_dropdown_btn = document.getElementById('profile-dropdown-btn')
+profile_dropdown_btn.addEventListener('click', e => {
+    console.log('profile page.')
+    const parent = e.target.closest('.dropdown-nav'); 
+    const menu = parent.querySelector('.dropdown-menu')
+
+    menu.classList.toggle('show')
+})

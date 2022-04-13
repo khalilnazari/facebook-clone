@@ -4,128 +4,142 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="icon" href="../images/fb-logo.png" type="image/x-icon">
-
-
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/profile.css">
-
-    <title>Home</title>
+    <title>Profle | Facebook</title>
 </head>
 <body>
+     <!-- header -->
+     <header>
+        <!-- logo & serach -->
+        <div class="logo-wrapper">
+            <i class="logo-icon fa-brands fa-facebook"></i>
+            
+            <i class="fa-solid fa-arrow-left-long" id="search-close-btn"></i>
+            <i class="search-icon-2 fa-solid fa-magnifying-glass" id="logo-search-btn-1" ></i>
 
-    <!-- header -->
-    <header>
-        <div class="logo-icons">
-            <i class="logo fa-brands fa-facebook"></i>
-            <i id="logo-search-btn" class="fa-solid fa-magnifying-glass"></i>
-
-            <form action="" class="temp-form">
-                <i class="search fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="temp-input" placeholder="Search Facebook...">
-            </form>
-
-
-            <!-- recent search  -->
+            <div class="form-wrapper form-1">
+                <form action="" class="form">
+                    <i class="search-icon fa-solid fa-magnifying-glass" id="logo-search-btn" ></i>
+                    <input type="text" id="" class="search-input-feild" placeholder="Search Facebook...">
+                </form>
+            </div>
+            
             <div class="recent-search">
-                <!-- <div class="form"> -->
-                    <form class="form">
-                        <i class="fa-solid fa-arrow-left" id="rs-back-btn"></i>
-                        <input type="text" placeholder="Search Facebook">
+                <div class="form-wrapper-2">
+                    <i class="fa-solid fa-arrow-left-long" id="search-close-btn-2"></i>
+                    <form action="" class="form-2">
+                        <i class="search-icon fa-solid fa-magnifying-glass" id="logo-search-btn" ></i>
+                        <input type="text" id="" class="search-input-feild feild-2" placeholder="Search Facebook...">
                     </form>
+                </div>
 
-                    <div class="header">
-                        <h4>Recent Searches</h4>
-                        <button>Edit</button>
+                <div class="header">
+                    <h4 class="font_weight_500">Recent Searches</h4>
+                    <button class="search-history-edit-btn">Edit</button>
+                </div>
+
+                <div class="search-terms">
+                    <div class="term">
+                        <p class="term-text"><i class="fa-solid fa-circle-user"></i>Knowlege is power</p>
+                        <i class="remove-rs-term fa-solid fa-xmark"></i>
                     </div>
 
-                    <div class="search-terms">
-                        <div class="term">
-                            <p><i class="fa-solid fa-circle-user"></i>Knowlege is power</p>
-                            <i class="remove-rs-term fa-solid fa-xmark"></i>
-                        </div>
-
-                        <div class="term">
-                            <p><i class="fa-solid fa-circle-user"></i>Kam Air</p>
-                            <i class="remove-rs-term fa-solid fa-xmark"></i>
-                        </div>
-
-                        <div class="term">
-                            <p><i class="fa-solid fa-circle-user"></i>Mark Z.</p>
-                            <i class="remove-rs-term fa-solid fa-xmark"></i>
-                        </div>
-
-                        <div class="term">
-                            <p><i class="fa-solid fa-circle-user"></i>Books</p>
-                            <i class="remove-rs-term fa-solid fa-xmark"></i>
-                        </div>
-
-                        <div class="term">
-                            <p><i class="fa-solid fa-circle-user"></i>Coding</p>
-                            <i class="remove-rs-term fa-solid fa-xmark"></i>
-                        </div>
-
-                        <div class="term">
-                            <p><i class="fa-solid fa-circle-user"></i>Javascript groups</p>
-                            <i class="remove-rs-term fa-solid fa-xmark"></i>
-                        </div>
+                    <div class="term">
+                        <p class="term-text"><i class="fa-solid fa-circle-user"></i>Books</p>
+                        <i class="remove-rs-term fa-solid fa-xmark"></i>
                     </div>
-                <!-- </div> -->
+
+                    <div class="term">
+                        <p class="term-text"><i class="fa-solid fa-circle-user"></i>Books</p>
+                        <i class="remove-rs-term fa-solid fa-xmark"></i>
+                    </div>
+
+                    <div class="term">
+                        <p class="term-text"><i class="fa-solid fa-circle-user"></i>Books</p>
+                        <i class="remove-rs-term fa-solid fa-xmark"></i>
+                    </div>
+
+                    <div class="term">
+                        <p class="term-text"><i class="fa-solid fa-circle-user"></i>Coding</p>
+                        <i class="remove-rs-term fa-solid fa-xmark"></i>
+                    </div>
+
+                    <div class="term">
+                        <p class="term-text"><i class="fa-solid fa-circle-user"></i>Javascript groups</p>
+                        <i class="remove-rs-term fa-solid fa-xmark"></i>
+                    </div>
+                </div> 
             </div>
         </div>
+        <!-- logo & serach end -->
 
+        <!-- page links -->
         <div class="page-icons">
             <a href="../index.html" class="page_link">
-                <i class="fa-solid fa-house"></i>
+                <i class="page-icon fa-solid fa-house"></i>
             </a>
             <a href="./watch.html" class="page_link">
-                <i class="fa-solid fa-tv"></i>
+                <i class="page-icon fa-solid fa-tv"></i>
             </a>
             <a href="./marketplace.html" class="page_link">
-                <i class="fa-solid fa-store"></i>
+                <i class="page-icon fa-solid fa-store"></i>
             </a>
             <a href="./groups.html" class="page_link">
-                <i class="fa-solid fa-user-group"></i>
+                <i class="page-icon fa-solid fa-user-group"></i>
             </a>
-            <a href="./games.html" class="page_link" id="game_btn">
-                <i class="fa-solid fa-gamepad"></i></i>
+            <a href="./games.html" class="page_link active">
+                <i class="page-icon fa-solid fa-gamepad"></i></i>
             </a>
             <a href="./notifications.html" id="bookmark_toggle_btn" class="bookmark_toggle_btn">
-                <i class="fa-solid fa-bars"></i>
+                <i class="page-icon fa-solid fa-bars"></i>
             </a>
         </div>
+        <!-- page links end -->
         
-
+        <!-- profile icons -->
         <div class="profile-icons">
-            <a href="./profile.html" class="user active">
-                <i class="fa-solid fa-user"></i><span>Khalil</span>
+            <a href="./profile.html" class="user-profile-link">
+                <i class=" avatar_round_28 fa-solid fa-user"></i><span>Khalil</span>
             </a>
             
-            <i id="mega-menu-btn" class="fa-solid fa-braille"></i>
-            <i id="create_menu_btn" class="fa-solid fa-plus"></i>
-            <i id="messenger_menu_btn" class="fa-brands fa-facebook-messenger"></i>
-            <i id="notification-menu-btn" class="fa-solid fa-bell"></i>
-            <i id="user-menu-btn" class="fa-solid fa-caret-down"></i>
+            <div id="mega-menu-btn" class="avatar_round_40 mega-menu-btn">
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+            </div>
+            <i id="create_menu_btn" class="avatar_round_40 fa-solid fa-plus"></i>
+            <i id="messenger_menu_btn" class="avatar_round_40 fa-brands fa-facebook-messenger"></i>
+            <i id="notification-menu-btn" class="avatar_round_40 fa-solid fa-bell"></i>
+            <i id="user-menu-btn" class="avatar_round_40 fa-solid fa-caret-down"></i>
         </div>
+        <!-- profile icons end -->
 
         <!-- user-menu -->
         <div class="user-menu">
             <a href="./profile.html" class="item profile-link">
-                <i class="fa fa-user"></i>
+                <i class="avatar_user_60 fa fa-user"></i>
                 <div>
-                    <p>Khalil Ahmad</p>
-                    <span>See your profile</span>
+                    <p class="text_primary text_l font_weight_500">Khalil Ahmad</p>
+                    <span class="text_secondary text_s font_weight_300">See your profile</span>
                 </div>
             </a>
 
             <div class="divider"></div>
 
             <div class="item feedback">
-                <i class="fa-solid fa-circle-info"></i>
+                <i class="avatar_round_36 fa-solid fa-circle-info"></i>
                 <div>
-                    <p>Give Feedback</p>
-                    <span>Help us improve Facebook.</span>
+                    <p class="text_primary text_m font_weight_500">Give Feedback</p>
+                    <span class="text_secondary text_s font_weight_300" >Help us improve Facebook.</span>
                 </div>
             </div>
 
@@ -133,8 +147,8 @@
 
             <div class="item settings">
                 <div class="name">
-                    <i class="fa-solid fa-gear"></i>
-                    <p>Settings & Privacy</p>
+                    <i class="avatar_round_36 fa-solid fa-gear"></i>
+                    <p class="text_primary text_m font_weight_500">Settings & Privacy</p>
                 </div>
                 
                 <i class="fa-solid fa-chevron-right"></i>
@@ -142,8 +156,8 @@
 
             <div class="item settings">
                 <div class="name">
-                    <i class="fa-solid fa-circle-question"></i>
-                    <p>Help & Support</p>
+                    <i class="avatar_round_36 fa-solid fa-circle-question"></i>
+                    <p class="text_primary text_m font_weight_500">Help & Support</p>
                 </div>
 
                 <i class="fa-solid fa-chevron-right"></i>
@@ -151,60 +165,61 @@
 
             <div class="item settings">
                 <div class="name">
-                    <i class="fa-solid fa-moon"></i>
-                    <p>Display & accessibility</p>
+                    <i class="avatar_round_36 fa-solid fa-moon"></i>
+                    <p class="text_primary text_m font_weight_500">Display & accessibility</p>
                 </div>
 
                 <i class="fa-solid fa-chevron-right"></i>
             </div>
 
             <a href="../login.html" class="item logout">
-                <i class="fa-solid fa-right-from-bracket"></i>
-                <p>Log out</p>
+                <i class="avatar_round_36 fa-solid fa-right-from-bracket"></i>
+                <p class="text_primary text_m font_weight_500">Log out</p>
             </a>
 
             <div class="footer-links">
-                <a href="#">Privacy</a>
+                <a href="#" class="text_secondary text_s font_weight_300" href="#">Privacy</a>
                 <span>.</span>
-                <a href="#">Terms</a>
+                <a href="#" class="text_secondary text_s font_weight_300" href="#">Terms</a>
                 <span>.</span>
-                <a href="#">Adversity</a>
+                <a href="#" class="text_secondary text_s font_weight_300" href="#">Adversity</a>
                 <span>.</span>
-                <a href="#">Ad choices</a>
+                <a href="#" class="text_secondary text_s font_weight_300" href="#">Ad choices</a>
                 <span>.</span>
-                <a href="#">Cookies</a>
+                <a href="#" class="text_secondary text_s font_weight_300" href="#">Cookies</a>
                 <span>.</span>
-                <a href="#">More</a>
+                <a href="#" class="text_secondary text_s font_weight_300" href="#">More</a>
                 <span>.</span>
-                <a href="#">Meta &copf; 2022</a>
+                <a href="#" class="text_secondary text_s font_weight_300" href="#">Meta &copf; 2022</a>
             </div>
         </div>
+        <!-- user-menu end -->
 
         <!-- Notifications Menu -->
         <div class="notification-menu thin-scrollbar">
             <div class="header">
-                <h3>Notifications</h3>
-                <i class="fa-solid fa-ellipsis"></i>
+                <p class="text_primary text_xlg font_weight_600">Notifications</p>
+                <i class="avatar_round_32 fa-solid fa-ellipsis"></i>
             </div>
 
             <!-- filter buttons -->
             <div class="filter-btns">
-                <button>All</button>
-                <button>Unread</button>
+                <button class="btn_auto text_m text_primary font_weight_500 active">All</button>
+                <button class="btn_auto text_m text_primary font_weight_500">Unread</button>
             </div>
 
             <!-- new -->
             <div class="noti-wrapper">
-                <div class="text">
-                    <p>New</p>
-                    <a href="./notifications.html">See All</a>
+                <div class="notification-type">
+                    <p class="text_lg text_primary font_weight_500">New</p>
+                    <a class="btn_link" href="./pages/notifications.html">See All</a>
                 </div>
 
                 <a href="#" class="noti-box">
-                    <i class="user fa-solid fa-users"></i>
+                    <i class="avatar_round_56 user fa-solid fa-users"></i>
                     <article>
-                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
-                        <p class="post-time">2 hours ago</p>
+                        <p><span class="font_weight_500">Ahmad</span> posted in <span class="font_weight_500">Developer group</span></p>
+                        <p class="text_theme text_s font_weight_500">2 hours ago</p>
                     </article>
                     <i class="indicator fa-solid fa-circle"></i>
                 </a>
@@ -212,48 +227,48 @@
 
             <!-- friend requests -->
             <div class="noti-wrapper friend-request">
-                <div class="text">
-                    <p>Freinds Requests</p>
-                    <a href="./pages/notifications.html">See All</a>
+                <div class="notification-type">
+                    <p class="text_lg text_primary font_weight_500">Freinds Requests</p>
+                    <a class="btn_link" href="./pages/notifications.html">See All</a>
                 </div>
 
                 <a href="#" class="noti-box">
-                    <i class="user fa-solid fa-users"></i>
+                    <i class="avatar_round_56 user fa-solid fa-users"></i>
                     <article>
-                        <p><span class="user">Mark Z.</span> friend request</p>
+                        <p><span class="font_weight_500">Mark Z.</span> friend request</p>
                         <p class="post-time">2 hours ago</p>
-                        <p class="no-of-mf">43 mutual friends</p>
-                        <div class="btn">
-                            <button class="primary-btn">Confirm</button>
-                            <button class="secondary-btn">Delete</button>
+                        <p class="text_theme text_s font_weight_500">43 mutual friends</p>
+                        <div class="fr-buttons">
+                            <button class="primary_btn">Confirm</button>
+                            <button class="secondary_btn">Delete</button>
                         </div>
                     </article>
                     <i class="indicator fa-solid fa-circle"></i>
                 </a>
 
                 <a href="#" class="noti-box">
-                    <i class="user fa-solid fa-users"></i>
+                    <i class="avatar_round_56 fa-solid fa-users"></i>
                     <article>
-                        <p><span class="user">Mustafa A.</span> friend request</p>
+                        <p><span class="font_weight_500">Mustafa A.</span> friend request</p>
                         <p class="post-time">yesterday</p>
-                        <p class="no-of-mf">43 mutual friends</p>
-                        <div class="btn">
-                            <button class="primary-btn">Confirm</button>
-                            <button class="secondary-btn">Delete</button>
+                        <p class="text_theme text_s font_weight_500">43 mutual friends</p>
+                        <div class="fr-buttons">
+                            <button class="primary_btn">Confirm</button>
+                            <button class="secondary_btn">Delete</button>
                         </div>
                     </article>
                     <i class="indicator fa-solid fa-circle"></i>
                 </a>
 
                 <a href="#" class="noti-box">
-                    <i class="user fa-solid fa-users"></i>
+                    <i class="avatar_round_56 fa-solid fa-users"></i>
                     <article>
-                        <p><span class="user">John Doe</span> friend request</p>
+                        <p><span class="text_lg font_weight_500">John Doe</span> friend request</p>
                         <p class="post-time">2 day ago</p>
-                        <p class="no-of-mf">43 mutual friends</p>
-                        <div class="btn">
-                            <button class="primary-btn">Confirm</button>
-                            <button class="secondary-btn">Delete</button>
+                        <p class="text_theme text_s font_weight_500">43 mutual friends</p>
+                        <div class="fr-buttons">
+                            <button class="primary_btn">Confirm</button>
+                            <button class="secondary_btn">Delete</button>
                         </div>
                     </article>
                     <i class="indicator fa-solid fa-circle"></i>
@@ -262,418 +277,561 @@
 
             <!-- earlier -->
             <div class="noti-wrapper">
-                <div class="text">
-                    <p>Earlier</p>
+                <div class="notification-type">
+                    <p class="text_lg text_primary font_weight_500">Earlier</p>
                 </div>
 
                 <a href="#" class="noti-box">
-                    <i class="user fa-solid fa-user"></i>
+                    <i class="avatar_round_56 fa-solid fa-user"></i>
                     <article>
-                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
-                        <p class="post-time">2 hours ago</p>
+                        <p><span class="text_lg font_weight_500">Ahmad</span> posted in <span class="text_lg font_weight_500">Developer group</span></p>
+                        <p class="text_theme text_s font_weight_500">2 hours ago</p>
                     </article>
                     <i class="indicator fa-solid fa-circle"></i>
                 </a>
                 <a href="#" class="noti-box">
-                    <i class="user fa-solid fa-user"></i>
+                    <i class="avatar_round_56 fa-solid fa-user"></i>
                     <article>
-                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
-                        <p class="post-time">2 hours ago</p>
-                    </article>
-                    <i class="indicator fa-solid fa-circle"></i>
-                </a>
-
-                <a href="#" class="noti-box">
-                    <i class="user fa-solid fa-user"></i>
-                    <article>
-                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
-                        <p class="post-time">2 hours ago</p>
+                        <p><span class="text_lg font_weight_500">Ahmad</span> posted in <span class="text_lg font_weight_500">Developer group</span></p>
+                        <p class="text_theme text_s font_weight_500">2 hours ago</p>
                     </article>
                     <i class="indicator fa-solid fa-circle"></i>
                 </a>
 
                 <a href="#" class="noti-box">
-                    <i class="user fa-solid fa-user"></i>
+                    <i class="avatar_round_56 fa-solid fa-user"></i>
                     <article>
-                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
-                        <p class="post-time">2 hours ago</p>
+                        <p><span class="text_lg font_weight_500">Ahmad</span> posted in <span class="text_lg font_weight_500">Developer group</span></p>
+                        <p class="text_theme text_s font_weight_500">2 hours ago</p>
                     </article>
                     <i class="indicator fa-solid fa-circle"></i>
                 </a>
 
                 <a href="#" class="noti-box">
-                    <i class="user fa-solid fa-user"></i>
+                    <i class="avatar_round_56 fa-solid fa-user"></i>
                     <article>
-                        <p><span class="user">Ahmad</span> posted in <span class="user">Developer group</span></p>
-                        <p class="post-time">2 hours ago</p>
+                        <p><span class="text_lg font_weight_500">Ahmad</span> posted in <span class="text_lg font_weight_500">Developer group</span></p>
+                        <p class="text_theme text_s font_weight_500">2 hours ago</p>
+                    </article>
+                    <i class="indicator fa-solid fa-circle"></i>
+                </a>
+
+                <a href="#" class="noti-box">
+                    <i class="avatar_round_56 fa-solid fa-user"></i>
+                    <article>
+                        <p><span class="text_lg font_weight_500">Ahmad</span> posted in <span class="text_lg font_weight_500">Developer group</span></p>
+                        <p class="text_theme text_s font_weight_500">2 hours ago</p>
                     </article>
                     <i class="indicator fa-solid fa-circle"></i>
                 </a>
             </div>
-
-
         </div>
 
         <!-- messenger-menu -->
         <div class="messenger-menu thin-scrollbar">
-            <div class="header">
-                <h4>Messenger</h4>
-                <div class="icons">
-                    <i class="fa-solid fa-ellipsis"></i>
-                    <i class="fa-solid fa-maximize"></i>
-                    <i class="fa-solid fa-video"></i>
-                    <i class="fa-solid fa-square-pen"></i>
+            <div class="messenger-menu__wrapper">
+                <!-- menu header  -->
+                <div class="messenger-menu__header">
+                    <p class="text_xlg text_primary font_weight_600 menu-title">Messenger</p>
+                    
+                    <div class="header_icons">
+                        <i class="avatar_round_32 fa-solid fa-ellipsis"></i>
+                        <i class="avatar_round_32 fa-solid fa-maximize"></i>
+                        <i class="avatar_round_32 fa-solid fa-video"></i>
+                        <i class="avatar_round_32 fa-solid fa-square-pen"></i>
+                    </div>
                 </div>
+                <!-- menu header end -->
+
+                <!-- form -->
+                <form action="">
+                    <input type="text" placeholder="Search Messenger">
+                </form>
+                <!-- form end -->
+
+                <!-- notifications item -->
+                <div class="messenger-menu__body">
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+    
+                        <div>
+                            <p class="text_primary text_m font_weight_400">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">messege sent<span>.</span> <span>5 d</span></p>
+                        </div>
+                        <i class="avatar_round_16 sent_msg fa-solid fa-check"></i>
+                    </div>
+    
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+    
+                        <div>
+                            <p class="text_primary text_m font_weight_400">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">message delivered<span>.</span> <span>3 m</span></p>
+                        </div>
+                        <i class="avatar_round_16 delivered_msg fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+    
+                        <div>
+                            <p class="text_primary text_m font_weight_400">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">message delivered<span>.</span> <span>3 m</span></p>
+                        </div>
+                        <i class="avatar_round_16 delivered_msg fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+    
+                        <div>
+                            <p class="text_primary text_m font_weight_400">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">message delivered<span>.</span> <span>3 m</span></p>
+                        </div>
+                        <i class="avatar_round_16 delivered_msg fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+    
+                        <div>
+                            <p class="text_primary text_m font_weight_400">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">message delivered<span>.</span> <span>3 m</span></p>
+                        </div>
+                        <i class="avatar_round_16 delivered_msg fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+    
+                        <div>
+                            <p class="text_primary text_m font_weight_400">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">message delivered<span>.</span> <span>3 m</span></p>
+                        </div>
+                        <i class="avatar_round_16 delivered_msg fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+    
+                        <div>
+                            <p class="text_primary text_m font_weight_400">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">message delivered<span>.</span> <span>3 m</span></p>
+                        </div>
+                        <i class="avatar_round_16 delivered_msg fa-solid fa-circle-check"></i>
+                    </div>
+    
+    
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+                        <div>
+                            <p class="name">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                        </div>
+                        <i class="avatar_round_16 seen_msg fa-solid fa-user"></i>
+                    </div>
+    
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+                        <div>
+                            <p class="name">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                        </div>
+                        <i class="avatar_round_16 seen_msg fa-solid fa-user"></i>
+                    </div>
+    
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+                        <div>
+                            <p class="name">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                        </div>
+                    </div>
+    
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+                        <div>
+                            <p class="name">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                        </div>
+                        <i class="avatar_round_16 seen_msg fa-solid fa-user"></i>
+                    </div>
+    
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+                        <div>
+                            <p class="name">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                        </div>
+                    </div>
+    
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+                        <div>
+                            <p class="name">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                        </div>
+                        <i class="avatar_round_16 seen_msg fa-solid fa-user"></i>
+                    </div>
+    
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+                        <div>
+                            <p class="name">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                        </div>
+                        <i class="avatar_round_16 seen_msg fa-solid fa-user"></i>
+                    </div>
+    
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+                        <div>
+                            <p class="name">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                        </div>
+                        <i class="avatar_round_16 seen_msg fa-solid fa-user"></i>
+                    </div>
+    
+                    <div class="message_box">
+                        <div class="user_avatar">
+                            <i class="avatar_round_56 fa-solid fa-user"></i>
+                            <i class="online fa-solid fa-circle"></i>
+                        </div>
+                        <div>
+                            <p class="name">Ahmad Ali</p>
+                            <p class="text_secondary text_s font_weight_300">Ahmad Called you <span>.</span> <span>5 d</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- notification item end -->
             </div>
 
-            <form action="">
-                <input type="text" placeholder="Search Messenger">
-            </form>
-
-            <div class="friends-message">
-                <div class="box">
-                    <i class="fa-solid fa-user"></i>
-                    <div>
-                        <p class="name">Ahmad Ali</p>
-                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
-                    </div>
-                    <i class="online-ind fa-solid fa-circle"></i>
-                </div>
-
-                <div class="box">
-                    <i class="fa-solid fa-user"></i>
-                    <div>
-                        <p class="name">Ahmad Ali</p>
-                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
-                    </div>
-                    <i class="seen-ind fa-solid fa-user"></i>
-                    <i class="online-ind fa-solid fa-circle"></i>
-                </div>
-
-                <div class="box">
-                    <i class="fa-solid fa-user"></i>
-                    <div>
-                        <p class="name">Ahmad Ali</p>
-                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
-                    </div>
-                    <i class="seen-ind fa-solid fa-user"></i>
-                    <i class="online-ind fa-solid fa-circle"></i>
-                </div>
-
-                <div class="box">
-                    <i class="fa-solid fa-user"></i>
-                    <div>
-                        <p class="name">Ahmad Ali</p>
-                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
-                    </div>
-                    <i class="offline-ind fa-solid fa-circle"></i>
-                </div>
-
-                <div class="box">
-                    <i class="fa-solid fa-user"></i>
-                    <div>
-                        <p class="name">Ahmad Ali</p>
-                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
-                    </div>
-                    <i class="seen-ind fa-solid fa-user"></i>
-                    <i class="online-ind fa-solid fa-circle"></i>
-                </div>
-
-                <div class="box">
-                    <i class="fa-solid fa-user"></i>
-                    <div>
-                        <p class="name">Ahmad Ali</p>
-                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
-                    </div>
-                    <i class="offline-ind fa-solid fa-circle"></i>
-                </div>
-
-                <div class="box">
-                    <i class="fa-solid fa-user"></i>
-                    <div>
-                        <p class="name">Ahmad Ali</p>
-                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
-                    </div>
-                    <i class="seen-ind fa-solid fa-user"></i>
-                    <i class="online-ind fa-solid fa-circle"></i>
-                </div>
-
-                <div class="box">
-                    <i class="fa-solid fa-user"></i>
-                    <div>
-                        <p class="name">Ahmad Ali</p>
-                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
-                    </div>
-                    <i class="online-ind fa-solid fa-circle"></i>
-                </div>
-
-                <div class="box">
-                    <i class="fa-solid fa-user"></i>
-                    <div>
-                        <p class="name">Ahmad Ali</p>
-                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
-                    </div>
-                    <i class="seen-ind fa-solid fa-user"></i>
-                    <i class="online-ind fa-solid fa-circle"></i>
-                </div>
-
-                <div class="box">
-                    <i class="fa-solid fa-user"></i>
-                    <div>
-                        <p class="name">Ahmad Ali</p>
-                        <p class="last-message">Ahmad Called you <span>.</span> <span>5 d</span></p>
-                    </div>
-                    <i class="offline-ind fa-solid fa-circle"></i>
-                </div>
-            </div>
+            <!-- link to messenger -->
+            <a href="#" class="messenger-link">See all in Messenger</a>
         </div>
+        <!-- messenger-menu end-->
 
-        <!-- mega menu -->
+        <!-- mega-menu -->
         <div class="mega-menu">
-            <h3>Menu</h3>
-            <div class="content">
-                <div class="menu thin-scrollbar">
-                    <form action="" class="menu-form">
-                        <input type="text" placeholder="Search Menu">
-                    </form>
+            <h3 class="menu-title text_primary text_xlg font_weight_700">Menu</h3>
+            <!-- left column -->
+            <div class="menu thin-scrollbar">
+                <form action="" class="menu-form">
+                    <input type="text" placeholder="Search Menu">
+                </form>
 
-                    <div class="social">
-                        <h5 class="title">Social</h5>
+                <div class="social">
+                    <h3 class="text_primary font_weight_500 text_lg">Social</h3>
 
-                        <a href="#" class="item">
-                            <i class="event fa-solid fa-calendar"></i>
-                            <article>
-                                <p class="name">Event</p>
-                                <span class="about">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </span>
-                            </article>
-                        </a>
+                    <a href="#" class="social_item">
+                        <div>
+                            <i class="event avatar_round_36 fa-solid fa-calendar"></i>
+                        </div>
+                        <article>
+                            <p class="text_primary text_m font_weight_500">Event</p>
+                            <span class="text_s text_secondary font_weight_300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </span>
+                        </article>
+                    </a>
 
-                        <a href="#" class="item">
-                            <i class="friends fa-solid fa-user-group"></i>
-                            <article>
-                                <p class="name">Friends</p>
-                                <span class="about">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </span>
-                            </article>
-                        </a>
+                    <a href="#" class="social_item">
+                        <div>
+                            <i class="friends avatar_round_36 fa-solid fa-user-group"></i>
+                        </div>
+                        <article>
+                            <p class="text_primary text_m font_weight_500">Friends</p>
+                            <span class="text_s text_secondary font_weight_300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </span>
+                        </article>
+                    </a>
 
-                        <a href="#" class="item">
-                            <i class="group fa-solid fa-users"></i>
-                            <article>
-                                <p class="name">Groups</p>
-                                <span class="about">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </span>
-                            </article>
-                        </a>
-                    </div>
-
-                    <div class="divider"></div>
-
-                    <div class="entertainment social">
-                        <h5 class="title">Entertainment</h5>
-
-                        <a href="#" class="item">
-                            <i class="event fa-solid fa-gamepad"></i>
-                            <article>
-                                <p class="name">Game</p>
-                                <span class="about">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </span>
-                            </article>
-                        </a>
-
-                        <a href="#" class="item">
-                            <i class="friends fa-solid fa-tv"></i>
-                            <article>
-                                <p class="name">Watch</p>
-                                <span class="about">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </span>
-                            </article>
-                        </a>
-                    </div>
-
-                    <div class="divider"></div>
-
-                    <div class="entertainment social">
-                        <h5 class="title">Personal</h5>
-
-                        <a href="#" class="item">
-                            <i class="event fa-solid fa-bookmark"></i>
-                            <article>
-                                <p class="name">Saved</p>
-                                <span class="about">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </span>
-                            </article>
-                        </a>
-
-                        <a href="#" class="item">
-                            <i class="friends fa-solid fa-cloud-sun-rain"></i>
-                            <article>
-                                <p class="name">Weather</p>
-                                <span class="about">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </span>
-                            </article>
-                        </a>
-                    </div>
-
-                    <div class="divider"></div>
-
-                    <div class="entertainment social">
-                        <h5 class="title">More From Meta</h5>
-
-                        <a href="#" class="item">
-                            <i class="group fa-brands fa-facebook-messenger"></i>
-                            <article>
-                                <p class="name">Messenger</p>
-                                <span class="about">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </span>
-                            </article>
-                        </a>
-
-                        <a href="#" class="item">
-                            <i class="friends fa-brands fa-facebook-messenger"></i>
-                            <article>
-                                <p class="name">Messenger for kids</p>
-                                <span class="about">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </span>
-                            </article>
-                        </a>
-                    </div>
-
+                    <a href="#" class="social_item">
+                        <div>
+                            <i class="group avatar_round_36 fa-solid fa-users"></i>
+                        </div>
+                        <article>
+                            <p class="text_primary text_m font_weight_500">Groups</p>
+                            <span class="text_s text_secondary font_weight_300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </span>
+                        </article>
+                    </a>
                 </div>
 
-                <div class="create">
-                    <h5 class="title">Create</h5>
+                <div class="divider"></div>
 
-                    <a href="#" class="item">
-                        <i class="fa-solid fa-square-pen"></i>
-                        <span>Post</span>
+                <div class="entertainment social">
+                    <h5 class="text_primary text_m font_weight_500">Entertainment</h5>
+
+                    <a href="#" class="social_item">
+                        <div>
+                            <i class="avatar_round_36 event fa-solid fa-gamepad"></i>
+                        </div>
+                        <article>
+                            <p class="text_primary text_m font_weight_500">Game</p>
+                            <span class="text_s text_secondary font_weight_300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </span>
+                        </article>
                     </a>
 
-                    <a href="#" class="item">
-                        <i class="fa-solid fa-book-open"></i>
-                        <span>Story</span>
+                    <a href="#" class="social_item">
+                        <div>
+                            <i class="avatar_round_36 friends fa-solid fa-tv"></i>
+                        </div>
+                        <article>
+                            <p class="text_primary text_m font_weight_500">Watch</p>
+                            <span class="text_s text_secondary font_weight_300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </span>
+                        </article>
                     </a>
-                    
-                    <a href="#" class="item">
-                        <i class="fa-solid fa-video"></i>
-                        <span>Story</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="entertainment social">
+                    <h5 class="text_primary text_m font_weight_500">Personal</h5>
+
+                    <a href="#" class="social_item">
+                        <div>
+                            <i class="avatar_round_36 event fa-solid fa-bookmark"></i>
+                        </div>
+                        <article>
+                            <p class="text_primary text_m font_weight_500">Saved</p>
+                            <span class="text_s text_secondary font_weight_300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </span>
+                        </article>
                     </a>
 
-                    <div class="divider"></div>
+                    <a href="#" class="social_item">
+                        <div>
+                            <i class="avatar_round_36 friends fa-solid fa-cloud-sun-rain"></i>
+                        </div>
+                        <article>
+                            <p class="text_primary text_m font_weight_500">Weather</p>
+                            <span class="text_s text_secondary font_weight_300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </span>
+                        </article>
+                    </a>
+                </div>
 
-                    <a href="#" class="item">
-                        <i class="fa-solid fa-flag"></i>
-                        <span>Page</span>
+                <div class="divider"></div>
+
+                <div class="entertainment social">
+                    <h5 class="text_primary text_m font_weight_500">More From Meta</h5>
+
+                    <a href="#" class="social_item">
+                        <div>
+                            <i class="avatar_round_36 group fa-brands fa-facebook-messenger"></i>
+                        </div>
+                        <article>
+                            <p class="text_primary text_m font_weight_500">Messenger</p>
+                            <span class="text_s text_secondary font_weight_300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </span>
+                        </article>
                     </a>
 
-                    <a href="#" class="item">
-                        <i class="fa-solid fa-users"></i>
-                        <span>Group</span>
+                    <a href="#" class="social_item">
+                        <div>
+                            <i class="avatar_round_36 friends fa-brands fa-facebook-messenger"></i>
+                        </div>
+                        <article>
+                            <p class="text_primary text_m font_weight_500">Messenger for kids</p>
+                            <span class="text_s text_secondary font_weight_300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </span>
+                        </article>
                     </a>
-
-                    <a href="#" class="item">
-                        <i class="fa-solid fa-calendar-plus"></i>
-                        <span>Event</span>
-                    </a>
-                    
                 </div>
             </div>
-        </div>
+            <!-- left column end -->
 
+            <!-- right column -->
+            <div class="create">
+                <h5 class="text_primary text_lg font_weight_600">Create</h5>
+
+                <a href="#" class="create_item">
+                    <i class="avatar_round_36 fa-solid fa-square-pen"></i>
+                    <span class="text_s text_primary">Post</span>
+                </a>
+
+                <a href="#" class="create_item">
+                    <i class="avatar_round_36 fa-solid fa-book-open"></i>
+                    <span  class="text_s text_primary font_weight_500">Story</span>
+                </a>
+                
+                <a href="#" class="create_item">
+                    <i class="avatar_round_36 fa-solid fa-video"></i>
+                    <span  class="text_s text_primary font_weight_500">Story</span>
+                </a>
+
+                <div class="divider"></div>
+
+                <a href="#" class="create_item">
+                    <i class="avatar_round_36 fa-solid fa-flag"></i>
+                    <span  class="text_s text_primary font_weight_500">Page</span>
+                </a>
+
+                <a href="#" class="create_item">
+                    <i class="avatar_round_36 fa-solid fa-users"></i>
+                    <span  class="text_s text_primary font_weight_500">Group</span>
+                </a>
+
+                <a href="#" class="create_item">
+                    <i class="avatar_round_36 fa-solid fa-calendar-plus"></i>
+                    <span  class="text_s text_primary font_weight_500">Event</span>
+                </a>
+                
+            </div>
+            <!-- right column end-->
+        </div>
+        <!-- mega-menu end -->
+ 
         <!-- create-menu -->
         <div class="create_menu">
-            <h3>Create</h3>
+            <!-- title -->
+            <h3 class="menu-title text_primary text_xlg font_weight_700">Create</h3>
             
             <a href="#" class="create-box">
-                <i class="fa-solid fa-square-pen"></i>
+                <i class="avatar_round_36 fa-solid fa-square-pen"></i>
                 <article>
-                    <p class="name">Post</p>
-                    <span>Share a post on News Feed.</span>
+                    <p class="font_weight_500 text_primary text_m">Post</p>
+                    <span class="font_weight_300 text_s text_secondary">Share a post on News Feed.</span>
                 </article>
             </a>
 
             <a href="#" class="create-box">
-                <i class="fa-solid fa-book-open"></i>
+                <i class="avatar_round_36 fa-solid fa-book-open"></i>
                 <article>
-                    <p class="name">Story</p>
-                    <span>Share a photo or write something.</span>
+                    <p class="font_weight_500 text_primary text_m">Story</p>
+                    <span class="font_weight_300 text_s text_secondary">Share a photo or write something.</span>
                 </article>
             </a>
 
-
             <a href="#" class="create-box">
-                <i class="fa-solid fa-video"></i>
+                <i class="avatar_round_36 fa-solid fa-video"></i>
                 <article>
-                    <p class="name">Video</p>
-                    <span>Make video clases</span>
+                    <p class="font_weight_500 text_primary text_m">Video</p>
+                    <span class="font_weight_300 text_s text_secondary">Make video clases</span>
                 </article>
             </a>
 
             <div class="divider"></div>
 
             <a href="#" class="create-box">
-                <i class="fa-solid fa-flag"></i>
+                <i class="avatar_round_36 fa-solid fa-flag"></i>
                 <article>
-                    <p class="name">Page</p>
-                    <span>Video chat with anyone,.</span>
+                    <p class="font_weight_500 text_primary text_m">Page</p>
+                    <span class="font_weight_300 text_s text_secondary">Video chat with anyone,.</span>
                 </article>
             </a>
 
 
             <a href="#" class="create-box">
-                <i class="fa-solid fa-bullhorn"></i>
+                <i class="avatar_round_36 fa-solid fa-bullhorn"></i>
                 <article>
-                    <p class="name">Ad</p>
-                    <span>Video chat with anyone,.</span>
+                    <p class="font_weight_500 text_primary text_m">Ad</p>
+                    <span class="font_weight_300 text_s text_secondary">Video chat with anyone,.</span>
                 </article>
             </a>
 
             <a href="#" class="create-box">
-                <i class="fa-solid fa-users"></i>
+                <i class="avatar_round_36 fa-solid fa-users"></i>
                 <article>
-                    <p class="name">Group</p>
-                    <span>Video chat with anyone,.</span>
+                    <p class="font_weight_500 text_primary text_m">Group</p>
+                    <span class="font_weight_300 text_s text_secondary">Video chat with anyone,.</span>
                 </article>
             </a>
 
 
             <a href="#" class="create-box">
-                <i class="fa-solid fa-calendar-day"></i>
+                <i class="avatar_round_36 fa-solid fa-calendar-day"></i>
                 <article>
-                    <p class="name">EVent</p>
-                    <span>Video chat with anyone,.</span>
+                    <p class="font_weight_500 text_primary text_m">Event</p>
+                    <span class="font_weight_300 text_s text_secondary">Video chat with anyone</span>
                 </article>
             </a>
         </div>
+        <!-- create-menu end -->
     </header>
+    <!-- header end -->
 
-
-    <!-- profile content -->
-
+    <!-- profile background -->
     <div class="profile-background">
         <div class="container">
-            <img src="../images/profile-background-image.jpg" alt="profile-background-image">
+            <img src="../images/profile-background-image.jpg" class="background-image" alt="profile-background-image">
+
+            <button class="background-update-btn btn btn-secondary btn-icon"><i class="avatar_round_20 fa-solid fa-camera"></i><span>Add Cover Photo</span></button>
         </div>
     </div>
+    <!-- profile background end -->
 
     <!-- profile hero -->
     <section class="profile-hero">
-        <div class="container">
-            <div class="profile-image">
-                <i class="avatar fa-solid fa-user"></i>
+        <div class="profile-container">
+            <div class="profile-user-info">
+                <!-- profile photo -->
+                <div class="profile-user-image-warpper">
+                    <i class="avatar fa-solid fa-user"></i>
+                    <i class="edit-btn avatar_round_36 fa-solid fa-camera"></i>
+                </div>
+                
                 <div class="profile-name">
                     <h1>Khalil Ahmad</h1>
                     <p>1K Friends</p>
+
+                    <!-- friends -->
                     <div class="friends-show">
                         <i class="fa-solid fa-user"></i>
                         <i class="fa-solid fa-user"></i>
@@ -687,41 +845,79 @@
                 </div>
             </div>
 
-
+            <!-- edit butons -->
             <div class="buttons">
-                <button class="create"><i class="fa-solid fa-circle-plus"></i></i> Create story</button>
-                <button class="edit"><i class="fa-solid fa-pen"></i> Edit Profile</button>
+                <button class="btn btn-theme btn-icon"><i class="fa-solid fa-circle-plus"></i></i> Create story</button>
+                <button class="btn btn-secondary btn-icon"><i class="fa-solid fa-pen"></i> Edit Profile</button>
             </div>
         </div>
     </section>  
+    <!-- profile hero end -->
 
-    <!-- nav -->
+    <!-- nav list -->
     <section class="profile-nav">
-        <div class="container">
-            <!-- <div class="links"> -->
-                <ul class="links">
-                    <li class="active"><a href="#">Posts</a></li>
-                    <li><a href="#">Posts</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Friends</a></li>
-                    <li><a href="#">Photos</a></li>
-                    <li><a href="#">Videos</a></li>
-                    <li><a href="#">Check-ins</a></li>
-                    <li class="more">
-                        <a>More <i class="fa-solid fa-caret-down"></i></a>
-                    </li>
-                </ul>
-            <!-- </div> -->
+        <div class="profile-container">
+            <ul class="nav-warpper">
+                <li class="nav-item active"><a class="nav-link" href="#">Posts</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Posts</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Friends</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Photos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Check-ins</a></li>
+                <li class="nav-item">
+                    <a class="nav-link  more-dropdown">More <i class="fa-solid fa-caret-down"></i></a>
+                </li>
+            </ul>
 
-            <div class="menu">
-                <i class="fa-solid fa-ellipsis"></i>
+            <div class="dropdown-nav">
+                <i class="dropdown-btn fa-solid fa-ellipsis" id="profile-dropdown-btn"></i>
+
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-menu-link">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>View as</span>
+                    </a>
+
+                    <a href="#" class="dropdown-menu-link">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Search profile</span>
+                    </a>
+
+                    <a href="#" class="dropdown-menu-link">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>Account status</span>
+                    </a>
+
+                    <a href="#" class="dropdown-menu-link">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span>Archive</span>
+                    </a>
+
+                    <a href="#" class="dropdown-menu-link">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Story archive</span>
+                    </a>
+
+                    <a href="#" class="dropdown-menu-link">
+                        <i class="fa-solid fa-list"></i>
+                        <span>Activity log</span>
+                    </a>
+
+                    <a href="#" class="dropdown-menu-link">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Profile and taggin setting</span>
+                    </a>
+
+                </div>
             </div>
         </div>
     </section>
+    <!-- nav list end -->
 
     <!-- main-content -->
     <section class="profile-main">
-        <div class="container">
+        <div class="profile-container">
             <div class="profile_summary">
                 <div class="intro">
                     <div class="title">
@@ -804,366 +1000,349 @@
                 </div>
     
             </div>
-    
-
-            <!-- posts on proile -->
-            <div class="profile_posts">
-
-                <div class="post-input">
-                    <div class="post">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="What's on your mind, Khalil?" readonly="">
-                    </div>  
-                    <div class="links">
-                        <div>
-                            <i class="fa-solid fa-video live"></i>
-                            <span>Live Video</span>
-                        </div>
-                        <div>
-                            <i class="fa fa-image photo"></i>
-                            <span>Photo/Video</span>
-                        </div>
-                        <div>
-                            <i class="fa fa-face-smile feeling"></i>
-                            <span>Feeling/Activity</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- post item -->
-                <div class="post_item">
+            
+            <!-- post-wrapper -->
+            <div class="profile-posts-wrapper">
+                <div class="post">
+                    <!-- header -->
                     <div class="header">
-                        <div class="user_info">
-                            <i class="user_avatar fa-solid fa-user"></i>
-                            <div class="text">
-                                <p class="name">Khalil Ahmad</p>
-                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                        <div class="avatar">
+                            <i class="fa-solid fa-user avatar_round_48"></i>
+                            <div>
+                                <a href="#" class="text_m font_weight_500">TOLONews . <span class="text_theme">Follow</span></a>
+                                <p class="text_s text_primary">Yesterday at 23:12 <i class="fa-solid fa-earth-asia"></i></p>
                             </div>
                         </div>
+                        <i class="fa-solid fa-ellipsis avatar_round_36 post-header-dropdown-btn"></i>
 
-                        <i class="menu fa-solid fa-ellipsis"></i>
-                    </div>
+                        <div class="post-header-dropdown">
+                            <div class="list_item">
+                                <i class="fa-solid fa-circle-plus text_lg list-item-icon"></i>
+                                <article>
+                                    <p class="text_m">See More</p>
+                                    <span class="text_s font_weight_300">See more of this video in your feed.</span>
+                                </article>
+                            </div>
 
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
-                        
-                    </div>
+                            <div class="list_item">
+                                <i class="fa-solid fa-circle-minus text_lg list-item-icon"></i>
+                                <article>
+                                    <p class="text_m">See Less</p>
+                                    <span class="text_s font_weight_300">video this video and see Less</span>
+                                </article>
+                            </div>
 
-                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+                            <div class="divider"></div>
 
-                    <div class="post_footer">
-                        <div class="reactions">
-                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
-                            <p>
-                                <span class="comment">434 Comments</span>
-                                <span class="share">21 share</span>
-                            </p>
-                        </div>
-                        <div class="action-buttons">
-                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
-                            <button><i class="fa-solid fa-message"></i> Commet</button>
-                            <button><i class="fa-solid fa-share"></i> Share</button>
-                        </div>
-                    </div>
-                </div>
+                            <div class="list_item">
+                                <i class="fa-solid fa-bookmark text_lg list-item-icon"></i>
+                                <article>
+                                    <p class="text_m">Save video</p>
+                                    <span class="text_s font_weight_300">Add this to your save videos</span>
+                                </article>
+                            </div>
 
-                <div class="post_item">
-                    <div class="header">
-                        <div class="user_info">
-                            <i class="user_avatar fa-solid fa-user"></i>
-                            <div class="text">
-                                <p class="name">Khalil Ahmad</p>
-                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                            <div class="list_item">
+                                <i class="fa-solid fa-link text_lg list-item-icon"></i>
+                                <article>
+                                    <p class="text_m">Copy link</p>
+                                </article>
+                            </div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-closed-captioning text_lg list-item-icon"></i>
+                                <article>
+                                    <p class="text_m">Follow </p>
+                                    <span class="text_s font_weight_300">Start seeing videos in your watchliest...</span>
+                                </article>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-info text_lg list-item-icon"></i>
+                                <article>
+                                    <p class="text_m">Report video</p>
+                                    <span class="text_s font_weight_300">I'm concerned about this video</span>
+                                </article>
                             </div>
                         </div>
-
-                        <i class="menu fa-solid fa-ellipsis"></i>
                     </div>
+                    <!-- header end -->
 
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
-                        
+                    <!-- description -->
+                    <div class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eligendi!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eligendi!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eligendi!
                     </div>
+                    <!-- description end -->
 
-                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+                    <!-- video -->
+                    <video class="post-media" src="../videos/pexisl-video.mp4"></video>
 
-                    <div class="post_footer">
-                        <div class="reactions">
-                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
-                            <p>
-                                <span class="comment">434 Comments</span>
-                                <span class="share">21 share</span>
+                    <!-- footer -->
+                    <div class="footer text_secondary">
+                        <div class="footer-item">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        <span class="text_m">Like</span>
+                        </div>
+                        <div class="footer-item comment center comment">
+                            <i class="fa-solid fa-message"></i>
+                            <span class="text_m">Comment</span>
+                        </div>
+                        <div class="footer-item share center">
+                            <i class="fa-solid fa-share"></i>
+                            <span class="text_m">Share</span>
+                        </div>
+                    </div>
+                    <!-- footer end  -->
+
+                    <!-- collspased comments -->
+                    <div class="collapsed-comments-wrraper">
+                        <!-- filter comments -->
+                        <div class="comments-filter">
+                            <p class="comments-filter-btn text_s font_weight_400">
+                                Most relevant 
+                                <i class="fa-solid fa-caret-down"></i>
                             </p>
-                        </div>
-                        <div class="action-buttons">
-                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
-                            <button><i class="fa-solid fa-message"></i> Commet</button>
-                            <button><i class="fa-solid fa-share"></i> Share</button>
-                        </div>
-                    </div>
-                </div>
 
+                            <div class="comments-filter-menu">
+                                <div class="comments-filter-item">
+                                    <p>Most relevant</p>
+                                    <span class="text_s text_secondary font_weight_300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, aspernatur.</span>
+                                </div>
 
-                <div class="post_item">
-                    <div class="header">
-                        <div class="user_info">
-                            <i class="user_avatar fa-solid fa-user"></i>
-                            <div class="text">
-                                <p class="name">Khalil Ahmad</p>
-                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                                <div class="comments-filter-item">
+                                    <p>Newest</p>
+                                    <span class="text_s text_secondary font_weight_300">Lorem ipsum dolor sit amet consectetur, aspernatur.</span>
+                                </div>
+
+                                <div class="comments-filter-item">
+                                    <p>All comments</p>
+                                    <span class="text_s text_secondary font_weight_300">Lorem ipsum dolor sit amet.</span>
+                                </div>
                             </div>
                         </div>
+                        <!-- filter comments end -->
 
-                        <i class="menu fa-solid fa-ellipsis"></i>
-                    </div>
-
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
-                        
-                    </div>
-
-                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
-
-                    <div class="post_footer">
-                        <div class="reactions">
-                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
-                            <p>
-                                <span class="comment">434 Comments</span>
-                                <span class="share">21 share</span>
-                            </p>
-                        </div>
-                        <div class="action-buttons">
-                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
-                            <button><i class="fa-solid fa-message"></i> Commet</button>
-                            <button><i class="fa-solid fa-share"></i> Share</button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="post_item">
-                    <div class="header">
-                        <div class="user_info">
-                            <i class="user_avatar fa-solid fa-user"></i>
-                            <div class="text">
-                                <p class="name">Khalil Ahmad</p>
-                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                        <!-- Write comment -->
+                        <div class="write-comment">
+                            <i class="fa-solid fa-user avatar_round_32 bg_secondary"></i>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="Write a comment...">
+                                <div>
+                                    <i class="fa-solid fa-face-smile avatar_round_28 text_secondary"></i>
+                                </div>
                             </div>
                         </div>
+                        <!-- Write comment end -->
 
-                        <i class="menu fa-solid fa-ellipsis"></i>
-                    </div>
+                        <!-- Given comments -->
+                        <div class="given-comments">
+                            <!-- comment item -->
+                            <div class="given-comments-item">
+                                <i class="fa-solid fa-user avatar_round_32 bg_secondary"></i>
+                                <div class="comment-text">
+                                    <div class="comment-text-avatar">
+                                        <p class="text_m font_weight_500">Khalil Ahmad</p>
+                                        <i class="fa-solid fa-ellipsis avatar_round_32 dropdown-btn"></i>
+                                    </div>
+                                    <p class="text_m text_primary font_weight_300 comment-messege">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, impedit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, ex.
+                                    </p>
+                                </div>
+                            </div>
 
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
-                        
-                    </div>
-
-                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
-
-                    <div class="post_footer">
-                        <div class="reactions">
-                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
-                            <p>
-                                <span class="comment">434 Comments</span>
-                                <span class="share">21 share</span>
-                            </p>
-                        </div>
-                        <div class="action-buttons">
-                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
-                            <button><i class="fa-solid fa-message"></i> Commet</button>
-                            <button><i class="fa-solid fa-share"></i> Share</button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="post_item">
-                    <div class="header">
-                        <div class="user_info">
-                            <i class="user_avatar fa-solid fa-user"></i>
-                            <div class="text">
-                                <p class="name">Khalil Ahmad</p>
-                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                            <!-- comment item -->
+                            <div class="given-comments-item">
+                                <i class="fa-solid fa-user avatar_round_32 bg_secondary"></i>
+                                <div class="comment-text">
+                                    <div class="comment-text-avatar">
+                                        <p class="text_m font_weight_500">John Doe</p>
+                                        <i class="fa-solid fa-ellipsis avatar_round_32 dropdown-btn"></i>
+                                    </div>
+                                    <p class="text_m text_primary font_weight_300 comment-messege">
+                                        Lorem ipsum dolor sit ame
+                                    </p>
+                                </div>
                             </div>
                         </div>
-
-                        <i class="menu fa-solid fa-ellipsis"></i>
+                         <!-- Given comments end -->
                     </div>
-
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
-                        
-                    </div>
-
-                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
-
-                    <div class="post_footer">
-                        <div class="reactions">
-                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
-                            <p>
-                                <span class="comment">434 Comments</span>
-                                <span class="share">21 share</span>
-                            </p>
-                        </div>
-                        <div class="action-buttons">
-                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
-                            <button><i class="fa-solid fa-message"></i> Commet</button>
-                            <button><i class="fa-solid fa-share"></i> Share</button>
-                        </div>
-                    </div>
+                    <!-- collapse-comment-end -->
                 </div>
-
-
-                <div class="post_item">
+                <div class="post">
+                    <!-- header -->
                     <div class="header">
-                        <div class="user_info">
-                            <i class="user_avatar fa-solid fa-user"></i>
-                            <div class="text">
-                                <p class="name">Khalil Ahmad</p>
-                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                        <div class="avatar">
+                            <i class="fa-solid fa-user avatar_round_48"></i>
+                            <div>
+                                <a href="#" class="text_m font_weight_500">TOLONews . <span class="text_theme">Follow</span></a>
+                                <p class="text_s text_primary">Yesterday at 23:12 <i class="fa-solid fa-earth-asia"></i></p>
                             </div>
                         </div>
+                        <i class="fa-solid fa-ellipsis avatar_round_36 post-header-dropdown-btn"></i>
 
-                        <i class="menu fa-solid fa-ellipsis"></i>
-                    </div>
+                        <div class="post-header-dropdown">
+                            <div class="list_item">
+                                <i class="fa-solid fa-circle-plus text_lg list-item-icon"></i>
+                                <article>
+                                    <p class="text_m">See More</p>
+                                    <span class="text_s font_weight_300">See more of this video in your feed.</span>
+                                </article>
+                            </div>
 
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
-                        
-                    </div>
+                            <div class="list_item">
+                                <i class="fa-solid fa-circle-minus text_lg list-item-icon"></i>
+                                <article>
+                                    <p class="text_m">See Less</p>
+                                    <span class="text_s font_weight_300">video this video and see Less</span>
+                                </article>
+                            </div>
 
-                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+                            <div class="divider"></div>
 
-                    <div class="post_footer">
-                        <div class="reactions">
-                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
-                            <p>
-                                <span class="comment">434 Comments</span>
-                                <span class="share">21 share</span>
-                            </p>
-                        </div>
-                        <div class="action-buttons">
-                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
-                            <button><i class="fa-solid fa-message"></i> Commet</button>
-                            <button><i class="fa-solid fa-share"></i> Share</button>
-                        </div>
-                    </div>
-                </div>
+                            <div class="list_item">
+                                <i class="fa-solid fa-bookmark text_lg list-item-icon"></i>
+                                <article>
+                                    <p class="text_m">Save video</p>
+                                    <span class="text_s font_weight_300">Add this to your save videos</span>
+                                </article>
+                            </div>
 
+                            <div class="list_item">
+                                <i class="fa-solid fa-link text_lg list-item-icon"></i>
+                                <article>
+                                    <p class="text_m">Copy link</p>
+                                </article>
+                            </div>
 
-                <div class="post_item">
-                    <div class="header">
-                        <div class="user_info">
-                            <i class="user_avatar fa-solid fa-user"></i>
-                            <div class="text">
-                                <p class="name">Khalil Ahmad</p>
-                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                            <div class="list_item">
+                                <i class="fa-solid fa-closed-captioning text_lg list-item-icon"></i>
+                                <article>
+                                    <p class="text_m">Follow </p>
+                                    <span class="text_s font_weight_300">Start seeing videos in your watchliest...</span>
+                                </article>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-info text_lg list-item-icon"></i>
+                                <article>
+                                    <p class="text_m">Report video</p>
+                                    <span class="text_s font_weight_300">I'm concerned about this video</span>
+                                </article>
                             </div>
                         </div>
-
-                        <i class="menu fa-solid fa-ellipsis"></i>
                     </div>
+                    <!-- header end -->
 
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
-                        
+                    <!-- description -->
+                    <div class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eligendi!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eligendi!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eligendi!
                     </div>
+                    <!-- description end -->
 
-                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
+                    <!-- video -->
+                    <video class="post-media" src="../videos/pexisl-video.mp4"></video>
 
-                    <div class="post_footer">
-                        <div class="reactions">
-                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
-                            <p>
-                                <span class="comment">434 Comments</span>
-                                <span class="share">21 share</span>
+                    <!-- footer -->
+                    <div class="footer text_secondary">
+                        <div class="footer-item">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        <span class="text_m">Like</span>
+                        </div>
+                        <div class="footer-item comment center comment">
+                            <i class="fa-solid fa-message"></i>
+                            <span class="text_m">Comment</span>
+                        </div>
+                        <div class="footer-item share center">
+                            <i class="fa-solid fa-share"></i>
+                            <span class="text_m">Share</span>
+                        </div>
+                    </div>
+                    <!-- footer end  -->
+
+                    <!-- collspased comments -->
+                    <div class="collapsed-comments-wrraper">
+                        <!-- filter comments -->
+                        <div class="comments-filter">
+                            <p class="comments-filter-btn text_s font_weight_400">
+                                Most relevant 
+                                <i class="fa-solid fa-caret-down"></i>
                             </p>
-                        </div>
-                        <div class="action-buttons">
-                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
-                            <button><i class="fa-solid fa-message"></i> Commet</button>
-                            <button><i class="fa-solid fa-share"></i> Share</button>
-                        </div>
-                    </div>
-                </div>
 
+                            <div class="comments-filter-menu">
+                                <div class="comments-filter-item">
+                                    <p>Most relevant</p>
+                                    <span class="text_s text_secondary font_weight_300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, aspernatur.</span>
+                                </div>
 
-                <div class="post_item">
-                    <div class="header">
-                        <div class="user_info">
-                            <i class="user_avatar fa-solid fa-user"></i>
-                            <div class="text">
-                                <p class="name">Khalil Ahmad</p>
-                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                                <div class="comments-filter-item">
+                                    <p>Newest</p>
+                                    <span class="text_s text_secondary font_weight_300">Lorem ipsum dolor sit amet consectetur, aspernatur.</span>
+                                </div>
+
+                                <div class="comments-filter-item">
+                                    <p>All comments</p>
+                                    <span class="text_s text_secondary font_weight_300">Lorem ipsum dolor sit amet.</span>
+                                </div>
                             </div>
                         </div>
+                        <!-- filter comments end -->
 
-                        <i class="menu fa-solid fa-ellipsis"></i>
-                    </div>
-
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
-                        
-                    </div>
-
-                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
-
-                    <div class="post_footer">
-                        <div class="reactions">
-                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
-                            <p>
-                                <span class="comment">434 Comments</span>
-                                <span class="share">21 share</span>
-                            </p>
-                        </div>
-                        <div class="action-buttons">
-                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
-                            <button><i class="fa-solid fa-message"></i> Commet</button>
-                            <button><i class="fa-solid fa-share"></i> Share</button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="post_item">
-                    <div class="header">
-                        <div class="user_info">
-                            <i class="user_avatar fa-solid fa-user"></i>
-                            <div class="text">
-                                <p class="name">Khalil Ahmad</p>
-                                <span>13 March 2022 <i class="fa-solid fa-earth-asia"></i></span>
+                        <!-- Write comment -->
+                        <div class="write-comment">
+                            <i class="fa-solid fa-user avatar_round_32 bg_secondary"></i>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="Write a comment...">
+                                <div>
+                                    <i class="fa-solid fa-face-smile avatar_round_28 text_secondary"></i>
+                                </div>
                             </div>
                         </div>
+                        <!-- Write comment end -->
 
-                        <i class="menu fa-solid fa-ellipsis"></i>
-                    </div>
+                        <!-- Given comments -->
+                        <div class="given-comments">
+                            <!-- comment item -->
+                            <div class="given-comments-item">
+                                <i class="fa-solid fa-user avatar_round_32 bg_secondary"></i>
+                                <div class="comment-text">
+                                    <div class="comment-text-avatar">
+                                        <p class="text_m font_weight_500">Khalil Ahmad</p>
+                                        <i class="fa-solid fa-ellipsis avatar_round_32 dropdown-btn"></i>
+                                    </div>
+                                    <p class="text_m text_primary font_weight_300 comment-messege">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, impedit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, ex.
+                                    </p>
+                                </div>
+                            </div>
 
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, deserunt asperiores placeat, libero fuga tenetur id fugiat ratione excepturi quia, laudantium laboriosam mollitia officia? Unde aliquam, ullam officiis nihil, ea atque rem, perspiciatis doloribus voluptatum qui officia iste aspernatur sequi explicabo? Labore, ipsa eos voluptatum sequi perferendis distinctio maxime, quam laboriosam voluptas, dolores adipisci. Quod veritatis harum quisquam nulla tempore libero esse nesciunt, distinctio corporis, amet porro quos adipisci rem ut laborum dolorem accusantium quo assumenda vitae quia ullam exercitationem aliquid? 
-                        
-                    </div>
-
-                    <img class="post_image" src="../images/profile-background-image.jpg" alt="">
-
-                    <div class="post_footer">
-                        <div class="reactions">
-                            <p class="like"><i class="fa-solid fa-thumbs-up"></i> 545</p>
-                            <p>
-                                <span class="comment">434 Comments</span>
-                                <span class="share">21 share</span>
-                            </p>
+                            <!-- comment item -->
+                            <div class="given-comments-item">
+                                <i class="fa-solid fa-user avatar_round_32 bg_secondary"></i>
+                                <div class="comment-text">
+                                    <div class="comment-text-avatar">
+                                        <p class="text_m font_weight_500">John Doe</p>
+                                        <i class="fa-solid fa-ellipsis avatar_round_32 dropdown-btn"></i>
+                                    </div>
+                                    <p class="text_m text_primary font_weight_300 comment-messege">
+                                        Lorem ipsum dolor sit ame
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="action-buttons">
-                            <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
-                            <button><i class="fa-solid fa-message"></i> Commet</button>
-                            <button><i class="fa-solid fa-share"></i> Share</button>
-                        </div>
+                         <!-- Given comments end -->
                     </div>
+                    <!-- collapse-comment-end -->
                 </div>
-
-                
             </div>
+            <!-- post-wrapper end -->
         </div>
     </section>
 

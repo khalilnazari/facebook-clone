@@ -117,26 +117,45 @@
 }
 
 
+// buttons tyles
 .btn {
     padding: 10px;
     border: none;
     outline: none;
-    border-radius: 8px;
-    
-    &.w-full {
-        display: block;
-        text-align: center;
-    }
-
-    &.btn-theme {
-        background-color: #1b74e4;
-        color: #fff;
-    }
-
-    &.btn-theme:hover {
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+// buttons full width
+.btn-full {
+    display: block;
+    text-align: center;
+}
+// theme buttons
+.btn-theme {
+    background-color: #1b74e4;
+    color: #fff;
+    &:hover {
         background-color: #166ed8;
     }
 }
+// buttons with icon
+.btn-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+// buttons secondary 
+.btn-secondary {
+    background-color: #f0f2f5;
+    color: #000;
+    &:hover {
+        background-color: #dbdbdb;
+    }
+}
+
 
 
 // collapsed-comments-wrraper
@@ -144,3 +163,8 @@
 .mr-auto {margin-right: auto;}
 .mx-auto {margin-right: auto; margin-left: auto;}
 .text-center {text-align: center;}
+
+// positions
+.position-relative {position: relative;}
+.position-fixed {position: fixed;}
+.position-sticky {position: sticky;}
