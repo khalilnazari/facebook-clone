@@ -1,0 +1,67 @@
+@import './mixins';
+
+.game-slider-wrapper {
+    margin-bottom: 15px;
+
+    .slider-container {
+        background: #fff;
+        border-radius: 8px;
+        padding: 12px 0;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .slider-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 15px;
+    }
+
+    .slider {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        @include vertical_scroll(); 
+    }
+
+    .slide {
+        width: 200px;
+        cursor: grab;
+    }
+
+    img {
+        height: 200px;
+        width: 200px;
+        
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .prev-btn, .next-btn {
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        background: lightblue;
+        font-size: 22px;
+        height: 45px;
+        width: 45px;
+        cursor: pointer;
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .prev-btn {
+        left: 15px;
+    }
+    .next-btn {
+    right: 15px;
+    }
+
+    // .recent-activity {}
+    // .featured-games {}
+}

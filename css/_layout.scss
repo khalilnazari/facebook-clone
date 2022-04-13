@@ -31,13 +31,16 @@
         width: 60%;
         margin: 85px auto 0;
     }
+    
 
+    // marketplace-main-col
     .marketplace-main-col {
         width: 90%;
         max-width: 1800px;
         margin: 85px auto 0;
         padding: 0 32px;
     }
+
 
     // Group page layout
     .group-main-col {
@@ -47,17 +50,27 @@
         display: flex;
         gap: 20px;
     }
-
     // group feed col
     .groups-feed {
         order: 1;
         width: 60%;
     }
-    
     // group slider col
     .groups-slider {
         order:2; 
         width: 40%;
+    }
+
+
+    // games
+    .game-main-col {
+        margin-top: 85px;
+        flex-grow: 1;
+        .posts-wrapper, .game-slider-wrapper {
+            max-width: 800px;
+            width: 98%;
+            margin: 0 auto;
+        }
     }
 }
 

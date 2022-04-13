@@ -420,7 +420,7 @@ header i {
 }
 
 .logo-wrapper .recent-search::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 .logo-wrapper .recent-search::-webkit-scrollbar-track {
@@ -677,7 +677,7 @@ header i {
 }
 
 .messenger-menu .messenger-menu__wrapper::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 .messenger-menu .messenger-menu__wrapper::-webkit-scrollbar-track {
@@ -882,7 +882,7 @@ header i {
 }
 
 .mega-menu::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 .mega-menu::-webkit-scrollbar-track {
@@ -1047,6 +1047,17 @@ header i {
   width: 40%;
 }
 
+.page-main-content .game-main-col {
+  margin-top: 85px;
+  flex-grow: 1;
+}
+
+.page-main-content .game-main-col .posts-wrapper, .page-main-content .game-main-col .game-slider-wrapper {
+  max-width: 800px;
+  width: 98%;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 1270px) {
   .group-main-col {
     flex-direction: column;
@@ -1148,6 +1159,11 @@ a {
   display: flex;
   align-items: center;
   gap: 5px;
+  width: 28%;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 18px;
 }
 
 .post .footer-item:hover {
@@ -1160,12 +1176,6 @@ a {
   align-items: center;
   flex-wrap: wrap;
   padding: 10px;
-}
-
-.post .center {
-  display: flex;
-  align-content: center;
-  gap: 5px;
 }
 
 .post .action-btns, .post .counts {
@@ -1359,7 +1369,7 @@ a {
 }
 
 .page-bookmarks::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 .page-bookmarks::-webkit-scrollbar-track {
@@ -1563,6 +1573,94 @@ a {
   padding: 0 10px;
 }
 
+/************* Header **************/
+.game-slider-wrapper {
+  margin-bottom: 15px;
+}
+
+.game-slider-wrapper .slider-container {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.game-slider-wrapper .slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+}
+
+.game-slider-wrapper .slider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.game-slider-wrapper .slider::-webkit-scrollbar {
+  width: 3px;
+}
+
+.game-slider-wrapper .slider::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.game-slider-wrapper .slider::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 5px;
+}
+
+.game-slider-wrapper .slider:hover::-webkit-scrollbar-thumb {
+  background: #b8b8b8;
+}
+
+.game-slider-wrapper .slider::-webkit-scrollbar-thumb:hover {
+  background: #8a8a8a;
+}
+
+.game-slider-wrapper .slide {
+  width: 200px;
+  cursor: grab;
+}
+
+.game-slider-wrapper img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.game-slider-wrapper .prev-btn, .game-slider-wrapper .next-btn {
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background: lightblue;
+  font-size: 22px;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.game-slider-wrapper .prev-btn {
+  left: 15px;
+}
+
+.game-slider-wrapper .next-btn {
+  right: 15px;
+}
+
 .create_post {
   padding: 20px 10px 5px 10px;
   background-color: #fff;
@@ -1670,7 +1768,7 @@ a {
 }
 
 .main-content .left-col::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 .main-content .left-col::-webkit-scrollbar-track {
@@ -1703,7 +1801,7 @@ a {
 }
 
 .main-content .right-col::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 .main-content .right-col::-webkit-scrollbar-track {

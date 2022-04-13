@@ -81,7 +81,7 @@
 
         <!-- page links -->
         <div class="page-icons">
-            <a href="../index.html" class="page_link">
+            <a href="../index.html" class="page_link active">
                 <i class="page-icon fa-solid fa-house"></i>
             </a>
             <a href="./watch.html" class="page_link">
@@ -93,7 +93,7 @@
             <a href="./groups.html" class="page_link">
                 <i class="page-icon fa-solid fa-user-group"></i>
             </a>
-            <a href="./games.html" class="page_link active">
+            <a href="./games.html" class="page_link" id="game_btn">
                 <i class="page-icon fa-solid fa-gamepad"></i></i>
             </a>
             <a href="./notifications.html" id="bookmark_toggle_btn" class="bookmark_toggle_btn">
@@ -812,513 +812,782 @@
     </header>
     <!-- header end -->
 
-    <!-- main content -->
-    <section class="page-main-content">
-        <!-- left-col -->
-        <div class="left-col">
-            <div class="col-wrraper">
-                <!-- title & search -->
-                <div class="page-bookmarks-header">
+    <!-- Watch page. -->
+    <section class="watch_main_content">
+        <!-- left nav pannel -->
+        <div class="left-side-nav">
+            <div class="scrollable_wrapper_left">
+                <div class="search-box">
                     <div class="title">
-                        <h4 class="text_xlg">Games</h4>
-                        <i class="fa-solid fa-gear avatar_round_36 text_secondary bg_secondary"></i>
+                        <h4>Watch</h4>
+                        <i class="fa-solid fa-gear"></i>
                     </div>
-
-                    <div class="search-box">
-                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                        <input type="text" placeholder="Search gaming">
+    
+                    <div class="input">
+                        <input type="text" placeholder="Search videos">
                     </div>
                 </div>
-                <!-- title & search end -->
-
-                <!-- bookmarks -->
-                <div class="page-bookmarks">
-                    <a href="#" class="bookmark-item">
-                        <i class="avatar_round_36 fa-solid fa-gamepad"></i>
-                        <p class="text_m font_weight_500">For you</p>
+    
+                <div class="links">
+                    <div class="link-item active">
+                        <i class="fa-solid fa-tv"></i>
+                        <p class="p">Home</p>
+                    </div>
+    
+                    <div class="link-item">
+                        <i class="fa-solid fa-video"></i>
+                        <p class="p">Live</p>
+                    </div>
+    
+                    <div class="link-item">
+                        <i class="fa-solid fa-film"></i>
+                        <p class="p">Shows</p>
+                    </div>
+    
+                    <div class="link-item">
+                        <i class="fa-solid fa-bookmark"></i>
+                        <p class="p">Saved videos</p>
+                    </div>
+    
+                    <div class="divider"></div>
+    
+    
+                    <div class="following_users">
+                        <h5>Following</h5>
+                        <button>Manage</button>
+                    </div>
+    
+                    <a href="#" class="link-item">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="p">Lates videos</p>
                     </a>
-
-                    <a href="#" class="bookmark-item">
-                        <i class="avatar_round_36 fa-solid fa-play"></i>
-                        <p class="text_m font_weight_500">Videos</p>
+    
+                    <a href="#" class="link-item">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="p">Comedy</p>
                     </a>
-
-                    <a href="#" class="bookmark-item">
-                        <i class="avatar_round_36 fa-solid fa-trophy"></i>
-                        <p class="text_m font_weight_500">Tournaments</p>
+    
+                    <a href="#" class="link-item">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="p">Funny</p>
                     </a>
-
-                    <a href="#" class="bookmark-item">
-                        <i class="avatar_round_36 fa-solid fa-vr-cardboard"></i>
-                        <p class="text_m font_weight_500">Play games</p>
+    
+                    <a href="#" class="link-item">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="p">8pm news</p>
                     </a>
-
-                    <a href="#" class="bookmark-item">
-                        <i class="avatar_round_36 fa-solid fa-circle-user"></i>
-                        <p class="text_m font_weight_500">Gaming Activity</p>
+    
+                    <a href="#" class="link-item">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="p">Coding time</p>
                     </a>
-
-                    <a href="#" class="bookmark-item">
-                        <i class="avatar_round_36 fa-solid fa-bell"></i>
-                        <p class="text_m font_weight_500">Notifications</p>
+    
+                    <a href="#" class="link-item">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="p">Tech videos</p>
                     </a>
+    
+                    <a href="#" class="link-item">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="p">The star daily</p>
+                    </a>
+    
+                    <a href="#" class="link-item">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="p">Learning English</p>
+                    </a>
+    
+                    <div class="link-item">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="p">Eros Now</p>
+                    </div>
+    
+                    <div class="link-item">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="p">Nifty</p>
+                    </div>
+    
                 </div>
             </div>
         </div>
-        <!-- left-col end -->
-
+        
         <!-- All videos -->
-        <div class="game-main-col">
-            <div class="game-slider-wrapper">
-                <!-- slider-container -->
-                <div class="slider-container recent-activity">
-                    <!-- header -->
-                    <div class="slider-header">
-                        <p class="text_lg font_weight_500">Recent activity</p>
+        <div class="watch_content">
+            <div class="post_display">
+                <!-- video post header -->
+                <div class="post__header">
+                    <div class="name">
+                        <i class="avatar fa-solid fa-user"></i>
+                        <article>
+                            <h5>Pexils Videos</h5>
+                            <span>13 March 2022 </span>
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </article>
                     </div>
-                    <!-- header end -->
+                    <div class="menu">
+                        <i class="video_menu_btn fa-solid fa-ellipsis"></i>
+                    
+                        <div class="menu_list">
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-plus"></i>
+                                <article>
+                                    <p class="name">See More</p>
+                                    <span>See more of this video in your feed.</span>
+                                </article>
+                            </div>
 
-                    <!-- slider -->
-                    <div class="slider">
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-minus"></i>
+                                <article>
+                                    <p class="name">See Less</p>
+                                    <span>video this video and see Less</span>
+                                </article>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-bookmark"></i>
+                                <article>
+                                    <p class="name">See Less</p>
+                                    <span>Add this to your save videos</span>
+                                </article>
+                            </div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-link"></i>
+                                <article>
+                                    <p class="name">Copy link</p>
+                                </article>
+                            </div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-closed-captioning"></i>
+                                <article>
+                                    <p class="name">Follow </p>
+                                    <span>Start seeing videos in your watchliest...</span>
+                                </article>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-info"></i>
+                                <article>
+                                    <p class="name">Report video</p>
+                                    <span>I'm concerned about this video</span>
+                                </article>
+                            </div>
+
                         </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        
                     </div>
-                    <!-- slider end -->
-
-                    <!-- prev-btn -->
-                    <button class="prev-btn"><i class="fa-solid fa-angle-left"></i></button>
-                    <!-- next-btn -->
-                    <button class="next-btn"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
-                <!-- slider-container end -->
 
-                  <!-- slider-container -->
-                  <div class="slider-container recent-activity">
-                    <!-- header -->
-                    <div class="slider-header">
-                        <p class="text_lg font_weight_500">Featured games</p>
+                <!-- video description -->
+                <p class="post__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam magnam deserunt blanditiis quidem repellendus nihil veritatis voluptatem? Libero, voluptas beatae.
+                </p>
+
+                <!-- video player -->
+                <video controls class="post__media">
+                    <source src="../videos/pexisl-video.mp4" type="video/mp4">
+                </video>
+
+                <!-- user reactions -->
+                <div class="post__reactions">
+                    <!-- reaction & comment button -->
+                    <div class="buttons">
+                        <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                        <button class="show_comment_btn"><i class="fa-solid fa-message"></i> Comment</button>
+                        <button><i class="fa-solid fa-share"></i> Share</button>
                     </div>
-                    <!-- header end -->
 
-                    <!-- slider -->
-                    <div class="slider">
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/game-slider/recent-1.webp" alt="">
-                        </div>
-                        
+                    <!-- counts -->
+                    <div class="reaction_counts">
+                        <span class="liks"><i class="thumbs fa-solid fa-thumbs-up"></i> <span class="likes_count">Khalil and 212K others</span></span>
+
+                        <i class="dot fa-solid fa-circle"></i>
+                        <span class="post_comment_count">23.4K comments</span>
+                        <i class="dot fa-solid fa-circle"></i>
+                        <span>66M views</span>
                     </div>
-                    <!-- slider end -->
-
-                    <!-- prev-btn -->
-                    <button class="prev-btn"><i class="fa-solid fa-angle-left"></i></button>
-                    <!-- next-btn -->
-                    <button class="next-btn"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
-                <!-- slider-container end -->
-                
-            </div>
 
-            <!-- post-wrapper -->
-            <div class="posts-wrapper">
-                <div class="post">
-                    <!-- header -->
-                    <div class="header">
-                        <div class="avatar">
-                            <i class="fa-solid fa-user avatar_round_48"></i>
-                            <div>
-                                <a href="#" class="text_m font_weight_500">TOLONews . <span class="text_theme">Follow</span></a>
-                                <p class="text_s text_primary">Yesterday at 23:12 <i class="fa-solid fa-earth-asia"></i></p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-ellipsis avatar_round_36 post-header-dropdown-btn"></i>
+                <!-- video & write comments -->
+                <div class="post__comments">
+                    <!-- most relevent drop-down menu -->
+                    <!-- most relevent drop-down menu -->
+                    <div class="most_relevent_menu">
+                        <button class="video_mr_comment">Most relevent <i class="fa-solid fa-caret-down"></i></button>
 
-                        <div class="post-header-dropdown">
-                            <div class="list_item">
-                                <i class="fa-solid fa-circle-plus text_lg list-item-icon"></i>
-                                <article>
-                                    <p class="text_m">See More</p>
-                                    <span class="text_s font_weight_300">See more of this video in your feed.</span>
-                                </article>
+                        <div class="mr_menu">
+                            <div class="item">
+                                <p class="title">Most relevent</p>
+                                <p class="text">Show friends' comments and the most engaging comments first.</p>
                             </div>
 
-                            <div class="list_item">
-                                <i class="fa-solid fa-circle-minus text_lg list-item-icon"></i>
-                                <article>
-                                    <p class="text_m">See Less</p>
-                                    <span class="text_s font_weight_300">video this video and see Less</span>
-                                </article>
+                            <div class="item">
+                                <p class="title">Newest</p>
+                                <p class="text">Show all comments, with the newest comments first,</p>
                             </div>
 
-                            <div class="divider"></div>
-
-                            <div class="list_item">
-                                <i class="fa-solid fa-bookmark text_lg list-item-icon"></i>
-                                <article>
-                                    <p class="text_m">Save video</p>
-                                    <span class="text_s font_weight_300">Add this to your save videos</span>
-                                </article>
-                            </div>
-
-                            <div class="list_item">
-                                <i class="fa-solid fa-link text_lg list-item-icon"></i>
-                                <article>
-                                    <p class="text_m">Copy link</p>
-                                </article>
-                            </div>
-
-                            <div class="list_item">
-                                <i class="fa-solid fa-closed-captioning text_lg list-item-icon"></i>
-                                <article>
-                                    <p class="text_m">Follow </p>
-                                    <span class="text_s font_weight_300">Start seeing videos in your watchliest...</span>
-                                </article>
-                            </div>
-
-                            <div class="divider"></div>
-
-                            <div class="list_item">
-                                <i class="bordered fa-solid fa-info text_lg list-item-icon"></i>
-                                <article>
-                                    <p class="text_m">Report video</p>
-                                    <span class="text_s font_weight_300">I'm concerned about this video</span>
-                                </article>
+                            <div class="item">
+                                <p class="title">All Comments</p>
+                                <p class="text">Show all comments, including potential spam. The most relevant comments will appear first.</p>
                             </div>
                         </div>
                     </div>
-                    <!-- header end -->
 
-                    <!-- description -->
-                    <div class="description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eligendi!
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eligendi!
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eligendi!
+                    <!-- Write comment -->
+                    <div class="input_comment">
+                        <i class="user_avatar fa-solid fa-user"></i>
+                        <input type="text" placeholder="Write a comment">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-face-smile"></i>
                     </div>
-                    <!-- description end -->
 
-                    <!-- video -->
-                    <video class="post-media" src="../videos/pexisl-video.mp4"></video>
-
-                    <!-- footer -->
-                    <div class="footer text_secondary">
-                        <div class="footer-item">
-                            <i class="fa-solid fa-thumbs-up"></i>
-                        <span class="text_m">Like</span>
-                        </div>
-                        <div class="footer-item comment center comment">
-                            <i class="fa-solid fa-message"></i>
-                            <span class="text_m">Comment</span>
-                        </div>
-                        <div class="footer-item share center">
-                            <i class="fa-solid fa-share"></i>
-                            <span class="text_m">Share</span>
-                        </div>
-                    </div>
-                    <!-- footer end  -->
-
-                    <!-- collspased comments -->
-                    <div class="collapsed-comments-wrraper">
-                        <!-- filter comments -->
-                        <div class="comments-filter">
-                            <p class="comments-filter-btn text_s font_weight_400">
-                                Most relevant 
-                                <i class="fa-solid fa-caret-down"></i>
-                            </p>
-
-                            <div class="comments-filter-menu">
-                                <div class="comments-filter-item">
-                                    <p>Most relevant</p>
-                                    <span class="text_s text_secondary font_weight_300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, aspernatur.</span>
-                                </div>
-
-                                <div class="comments-filter-item">
-                                    <p>Newest</p>
-                                    <span class="text_s text_secondary font_weight_300">Lorem ipsum dolor sit amet consectetur, aspernatur.</span>
-                                </div>
-
-                                <div class="comments-filter-item">
-                                    <p>All comments</p>
-                                    <span class="text_s text_secondary font_weight_300">Lorem ipsum dolor sit amet.</span>
-                                </div>
+                    <article class="all-comments">
+                        <!-- users comments item -->
+                        <div class="user_comments">
+                            <div><i class="user_avatar fa-solid fa-user"></i></div>
+                            <div class="comment_text">
+                                <p class="user_name">Khalil Ahmad</p>
+                                <p class="text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque esse cumque perferendis consectetur error ut odit sed voluptatum. Voluptatum, quam? 
+                                </p>
                             </div>
                         </div>
-                        <!-- filter comments end -->
 
-                        <!-- Write comment -->
-                        <div class="write-comment">
-                            <i class="fa-solid fa-user avatar_round_32 bg_secondary"></i>
-                            <div class="input-wrapper">
-                                <input type="text" placeholder="Write a comment...">
-                                <div>
-                                    <i class="fa-solid fa-face-smile avatar_round_28 text_secondary"></i>
-                                </div>
+                        <div class="user_comments">
+                            <div><i class="user_avatar fa-solid fa-user"></i></div>
+                            <div class="comment_text">
+                                <p class="user_name">Khalil Ahmad</p>
+                                <p class="text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore. quam? 
+                                </p>
                             </div>
                         </div>
-                        <!-- Write comment end -->
 
-                        <!-- Given comments -->
-                        <div class="given-comments">
-                            <!-- comment item -->
-                            <div class="given-comments-item">
-                                <i class="fa-solid fa-user avatar_round_32 bg_secondary"></i>
-                                <div class="comment-text">
-                                    <div class="comment-text-avatar">
-                                        <p class="text_m font_weight_500">Khalil Ahmad</p>
-                                        <i class="fa-solid fa-ellipsis avatar_round_32 dropdown-btn"></i>
-                                    </div>
-                                    <p class="text_m text_primary font_weight_300 comment-messege">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, impedit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, ex.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- comment item -->
-                            <div class="given-comments-item">
-                                <i class="fa-solid fa-user avatar_round_32 bg_secondary"></i>
-                                <div class="comment-text">
-                                    <div class="comment-text-avatar">
-                                        <p class="text_m font_weight_500">John Doe</p>
-                                        <i class="fa-solid fa-ellipsis avatar_round_32 dropdown-btn"></i>
-                                    </div>
-                                    <p class="text_m text_primary font_weight_300 comment-messege">
-                                        Lorem ipsum dolor sit ame
-                                    </p>
-                                </div>
+                        <div class="user_comments">
+                            <div><i class="user_avatar fa-solid fa-user"></i></div>
+                            <div class="comment_text">
+                                <p class="user_name">Khalil Ahmad</p>
+                                <p class="text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
                             </div>
                         </div>
-                            <!-- Given comments end -->
-                    </div>
-                    <!-- collapse-comment-end -->
-                </div>
-                <div class="post">
-                    <!-- header -->
-                    <div class="header">
-                        <div class="avatar">
-                            <i class="fa-solid fa-user avatar_round_48"></i>
-                            <div>
-                                <a href="#" class="text_m font_weight_500">TOLONews . <span class="text_theme">Follow</span></a>
-                                <p class="text_s text_primary">Yesterday at 23:12 <i class="fa-solid fa-earth-asia"></i></p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-ellipsis avatar_round_36 post-header-dropdown-btn"></i>
-
-                        <div class="post-header-dropdown">
-                            <div class="list_item">
-                                <i class="fa-solid fa-circle-plus text_lg list-item-icon"></i>
-                                <article>
-                                    <p class="text_m">See More</p>
-                                    <span class="text_s font_weight_300">See more of this video in your feed.</span>
-                                </article>
-                            </div>
-
-                            <div class="list_item">
-                                <i class="fa-solid fa-circle-minus text_lg list-item-icon"></i>
-                                <article>
-                                    <p class="text_m">See Less</p>
-                                    <span class="text_s font_weight_300">video this video and see Less</span>
-                                </article>
-                            </div>
-
-                            <div class="divider"></div>
-
-                            <div class="list_item">
-                                <i class="fa-solid fa-bookmark text_lg list-item-icon"></i>
-                                <article>
-                                    <p class="text_m">Save video</p>
-                                    <span class="text_s font_weight_300">Add this to your save videos</span>
-                                </article>
-                            </div>
-
-                            <div class="list_item">
-                                <i class="fa-solid fa-link text_lg list-item-icon"></i>
-                                <article>
-                                    <p class="text_m">Copy link</p>
-                                </article>
-                            </div>
-
-                            <div class="list_item">
-                                <i class="fa-solid fa-closed-captioning text_lg list-item-icon"></i>
-                                <article>
-                                    <p class="text_m">Follow </p>
-                                    <span class="text_s font_weight_300">Start seeing videos in your watchliest...</span>
-                                </article>
-                            </div>
-
-                            <div class="divider"></div>
-
-                            <div class="list_item">
-                                <i class="bordered fa-solid fa-info text_lg list-item-icon"></i>
-                                <article>
-                                    <p class="text_m">Report video</p>
-                                    <span class="text_s font_weight_300">I'm concerned about this video</span>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- header end -->
-
-                    <!-- description -->
-                    <div class="description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eligendi!
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eligendi!
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eligendi!
-                    </div>
-                    <!-- description end -->
-
-                    <!-- video -->
-                    <video class="post-media" src="../videos/pexisl-video.mp4"></video>
-
-                    <!-- footer -->
-                    <div class="footer text_secondary">
-                        <div class="footer-item">
-                            <i class="fa-solid fa-thumbs-up"></i>
-                        <span class="text_m">Like</span>
-                        </div>
-                        <div class="footer-item comment center comment">
-                            <i class="fa-solid fa-message"></i>
-                            <span class="text_m">Comment</span>
-                        </div>
-                        <div class="footer-item share center">
-                            <i class="fa-solid fa-share"></i>
-                            <span class="text_m">Share</span>
-                        </div>
-                    </div>
-                    <!-- footer end  -->
-
-                    <!-- collspased comments -->
-                    <div class="collapsed-comments-wrraper">
-                        <!-- filter comments -->
-                        <div class="comments-filter">
-                            <p class="comments-filter-btn text_s font_weight_400">
-                                Most relevant 
-                                <i class="fa-solid fa-caret-down"></i>
-                            </p>
-
-                            <div class="comments-filter-menu">
-                                <div class="comments-filter-item">
-                                    <p>Most relevant</p>
-                                    <span class="text_s text_secondary font_weight_300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, aspernatur.</span>
-                                </div>
-
-                                <div class="comments-filter-item">
-                                    <p>Newest</p>
-                                    <span class="text_s text_secondary font_weight_300">Lorem ipsum dolor sit amet consectetur, aspernatur.</span>
-                                </div>
-
-                                <div class="comments-filter-item">
-                                    <p>All comments</p>
-                                    <span class="text_s text_secondary font_weight_300">Lorem ipsum dolor sit amet.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- filter comments end -->
-
-                        <!-- Write comment -->
-                        <div class="write-comment">
-                            <i class="fa-solid fa-user avatar_round_32 bg_secondary"></i>
-                            <div class="input-wrapper">
-                                <input type="text" placeholder="Write a comment...">
-                                <div>
-                                    <i class="fa-solid fa-face-smile avatar_round_28 text_secondary"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Write comment end -->
-
-                        <!-- Given comments -->
-                        <div class="given-comments">
-                            <!-- comment item -->
-                            <div class="given-comments-item">
-                                <i class="fa-solid fa-user avatar_round_32 bg_secondary"></i>
-                                <div class="comment-text">
-                                    <div class="comment-text-avatar">
-                                        <p class="text_m font_weight_500">Khalil Ahmad</p>
-                                        <i class="fa-solid fa-ellipsis avatar_round_32 dropdown-btn"></i>
-                                    </div>
-                                    <p class="text_m text_primary font_weight_300 comment-messege">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, impedit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, ex.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- comment item -->
-                            <div class="given-comments-item">
-                                <i class="fa-solid fa-user avatar_round_32 bg_secondary"></i>
-                                <div class="comment-text">
-                                    <div class="comment-text-avatar">
-                                        <p class="text_m font_weight_500">John Doe</p>
-                                        <i class="fa-solid fa-ellipsis avatar_round_32 dropdown-btn"></i>
-                                    </div>
-                                    <p class="text_m text_primary font_weight_300 comment-messege">
-                                        Lorem ipsum dolor sit ame
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- Given comments end -->
-                    </div>
-                    <!-- collapse-comment-end -->
+                    </article>
                 </div>
             </div>
-            <!-- post-wrapper end -->
+
+
+            <div class="post_display">
+                <!-- video post header -->
+                <div class="post__header">
+                    <div class="name">
+                        <i class="avatar fa-solid fa-user"></i>
+                        <article>
+                            <h5>Pexils Videos</h5>
+                            <span>13 March 2022 </span>
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </article>
+                    </div>
+                    <div class="menu">
+                        <i class="video_menu_btn fa-solid fa-ellipsis"></i>
+                    
+                        <div class="menu_list">
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-plus"></i>
+                                <article>
+                                    <p class="name">See More</p>
+                                    <span>See more of this video in your feed.</span>
+                                </article>
+                            </div>
+
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-minus"></i>
+                                <article>
+                                    <p class="name">See Less</p>
+                                    <span>video this video and see Less</span>
+                                </article>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-bookmark"></i>
+                                <article>
+                                    <p class="name">See Less</p>
+                                    <span>Add this to your save videos</span>
+                                </article>
+                            </div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-link"></i>
+                                <article>
+                                    <p class="name">Copy link</p>
+                                </article>
+                            </div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-closed-captioning"></i>
+                                <article>
+                                    <p class="name">Follow </p>
+                                    <span>Start seeing videos in your watchliest...</span>
+                                </article>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-info"></i>
+                                <article>
+                                    <p class="name">Report video</p>
+                                    <span>I'm concerned about this video</span>
+                                </article>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- video description -->
+                <p class="post__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam magnam deserunt blanditiis quidem repellendus nihil veritatis voluptatem? Libero, voluptas beatae.
+                </p>
+
+                <!-- video player -->
+                <video controls class="post__media">
+                    <source src="../videos/pexisl-video.mp4" type="video/mp4">
+                </video>
+
+                <!-- user reactions -->
+                <div class="post__reactions">
+                    <!-- reaction & comment button -->
+                    <div class="buttons">
+                        <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                        <button class="show_comment_btn"><i class="fa-solid fa-message"></i> Comment</button>
+                        <button><i class="fa-solid fa-share"></i> Share</button>
+                    </div>
+
+                    <!-- counts -->
+                    <div class="reaction_counts">
+                        <span class="liks"><i class="thumbs fa-solid fa-thumbs-up"></i> <span class="likes_count">Khalil and 212K others</span></span>
+
+                        <i class="dot fa-solid fa-circle"></i>
+                        <span class="post_comment_count">23.4K comments</span>
+                        <i class="dot fa-solid fa-circle"></i>
+                        <span>66M views</span>
+                    </div>
+                </div>
+
+                <!-- video & write comments -->
+                <div class="post__comments">
+                    <!-- most relevent drop-down menu -->
+                    <!-- most relevent drop-down menu -->
+                    <div class="most_relevent_menu">
+                        <button class="video_mr_comment">Most relevent <i class="fa-solid fa-caret-down"></i></button>
+
+                        <div class="mr_menu">
+                            <div class="item">
+                                <p class="title">Most relevent</p>
+                                <p class="text">Show friends' comments and the most engaging comments first.</p>
+                            </div>
+
+                            <div class="item">
+                                <p class="title">Newest</p>
+                                <p class="text">Show all comments, with the newest comments first,</p>
+                            </div>
+
+                            <div class="item">
+                                <p class="title">All Comments</p>
+                                <p class="text">Show all comments, including potential spam. The most relevant comments will appear first.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Write comment -->
+                    <div class="input_comment">
+                        <i class="user_avatar fa-solid fa-user"></i>
+                        <input type="text" placeholder="Write a comment">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+
+                    <article class="all-comments">
+                        <!-- users comments item -->
+                        <div class="user_comments">
+                            <div><i class="user_avatar fa-solid fa-user"></i></div>
+                            <div class="comment_text">
+                                <p class="user_name">Khalil Ahmad</p>
+                                <p class="text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque esse cumque perferendis consectetur error ut odit sed voluptatum. Voluptatum, quam? 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="user_comments">
+                            <div><i class="user_avatar fa-solid fa-user"></i></div>
+                            <div class="comment_text">
+                                <p class="user_name">Khalil Ahmad</p>
+                                <p class="text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore. quam? 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="user_comments">
+                            <div><i class="user_avatar fa-solid fa-user"></i></div>
+                            <div class="comment_text">
+                                <p class="user_name">Khalil Ahmad</p>
+                                <p class="text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+
+            <div class="post_display">
+                <!-- video post header -->
+                <div class="post__header">
+                    <div class="name">
+                        <i class="avatar fa-solid fa-user"></i>
+                        <article>
+                            <h5>Pexils Videos</h5>
+                            <span>13 March 2022 </span>
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </article>
+                    </div>
+                    <div class="menu">
+                        <i class="video_menu_btn fa-solid fa-ellipsis"></i>
+                    
+                        <div class="menu_list">
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-plus"></i>
+                                <article>
+                                    <p class="name">See More</p>
+                                    <span>See more of this video in your feed.</span>
+                                </article>
+                            </div>
+
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-minus"></i>
+                                <article>
+                                    <p class="name">See Less</p>
+                                    <span>video this video and see Less</span>
+                                </article>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-bookmark"></i>
+                                <article>
+                                    <p class="name">See Less</p>
+                                    <span>Add this to your save videos</span>
+                                </article>
+                            </div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-link"></i>
+                                <article>
+                                    <p class="name">Copy link</p>
+                                </article>
+                            </div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-closed-captioning"></i>
+                                <article>
+                                    <p class="name">Follow </p>
+                                    <span>Start seeing videos in your watchliest...</span>
+                                </article>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-info"></i>
+                                <article>
+                                    <p class="name">Report video</p>
+                                    <span>I'm concerned about this video</span>
+                                </article>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- video description -->
+                <p class="post__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam magnam deserunt blanditiis quidem repellendus nihil veritatis voluptatem? Libero, voluptas beatae.
+                </p>
+
+                <!-- video player -->
+                <video controls class="post__media">
+                    <source src="../videos/pexisl-video.mp4" type="video/mp4">
+                </video>
+
+                <!-- user reactions -->
+                <div class="post__reactions">
+                    <!-- reaction & comment button -->
+                    <div class="buttons">
+                        <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                        <button class="show_comment_btn"><i class="fa-solid fa-message"></i> Comment</button>
+                        <button><i class="fa-solid fa-share"></i> Share</button>
+                    </div>
+
+                    <!-- counts -->
+                    <div class="reaction_counts">
+                        <span class="liks"><i class="thumbs fa-solid fa-thumbs-up"></i> <span class="likes_count">Khalil and 212K others</span></span>
+
+                        <i class="dot fa-solid fa-circle"></i>
+                        <span class="post_comment_count">23.4K comments</span>
+                        <i class="dot fa-solid fa-circle"></i>
+                        <span>66M views</span>
+                    </div>
+                </div>
+
+                <!-- video & write comments -->
+                <div class="post__comments">
+                    <!-- most relevent drop-down menu -->
+                    <!-- most relevent drop-down menu -->
+                    <div class="most_relevent_menu">
+                        <button class="video_mr_comment">Most relevent <i class="fa-solid fa-caret-down"></i></button>
+
+                        <div class="mr_menu">
+                            <div class="item">
+                                <p class="title">Most relevent</p>
+                                <p class="text">Show friends' comments and the most engaging comments first.</p>
+                            </div>
+
+                            <div class="item">
+                                <p class="title">Newest</p>
+                                <p class="text">Show all comments, with the newest comments first,</p>
+                            </div>
+
+                            <div class="item">
+                                <p class="title">All Comments</p>
+                                <p class="text">Show all comments, including potential spam. The most relevant comments will appear first.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Write comment -->
+                    <div class="input_comment">
+                        <i class="user_avatar fa-solid fa-user"></i>
+                        <input type="text" placeholder="Write a comment">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+
+                    <article class="all-comments">
+                        <!-- users comments item -->
+                        <div class="user_comments">
+                            <div><i class="user_avatar fa-solid fa-user"></i></div>
+                            <div class="comment_text">
+                                <p class="user_name">Khalil Ahmad</p>
+                                <p class="text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque esse cumque perferendis consectetur error ut odit sed voluptatum. Voluptatum, quam? 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="user_comments">
+                            <div><i class="user_avatar fa-solid fa-user"></i></div>
+                            <div class="comment_text">
+                                <p class="user_name">Khalil Ahmad</p>
+                                <p class="text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore. quam? 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="user_comments">
+                            <div><i class="user_avatar fa-solid fa-user"></i></div>
+                            <div class="comment_text">
+                                <p class="user_name">Khalil Ahmad</p>
+                                <p class="text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+ 
+            <div class="post_display">
+                <!-- video post header -->
+                <div class="post__header">
+                    <div class="name">
+                        <i class="avatar fa-solid fa-user"></i>
+                        <article>
+                            <h5>Pexils Videos</h5>
+                            <span>13 March 2022 </span>
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </article>
+                    </div>
+                    <!-- <div class="menu">
+                        <i class="video_menu_btn fa-solid fa-ellipsis"></i>
+                    
+                        <div class="menu_list">
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-plus"></i>
+                                <article>
+                                    <p class="name">See More</p>
+                                    <span>See more of this video in your feed.</span>
+                                </article>
+                            </div>
+
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-minus"></i>
+                                <article>
+                                    <p class="name">See Less</p>
+                                    <span>video this video and see Less</span>
+                                </article>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-bookmark"></i>
+                                <article>
+                                    <p class="name">See Less</p>
+                                    <span>Add this to your save videos</span>
+                                </article>
+                            </div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-link"></i>
+                                <article>
+                                    <p class="name">Copy link</p>
+                                </article>
+                            </div>
+
+                            <div class="list_item">
+                                <i class="fa-solid fa-closed-captioning"></i>
+                                <article>
+                                    <p class="name">Follow </p>
+                                    <span>Start seeing videos in your watchliest...</span>
+                                </article>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="list_item">
+                                <i class="bordered fa-solid fa-info"></i>
+                                <article>
+                                    <p class="name">Report video</p>
+                                    <span>I'm concerned about this video</span>
+                                </article>
+                            </div>
+
+                        </div>
+                    </div> -->
+                </div>
+
+                <!-- video description -->
+                <p class="post__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam magnam deserunt blanditiis quidem repellendus nihil veritatis voluptatem? Libero, voluptas beatae.
+                </p>
+
+                <!-- video player -->
+                <video controls class="post__media">
+                    <source src="../videos/pexisl-video.mp4" type="video/mp4">
+                </video>
+
+                <!-- user reactions -->
+                <div class="post__reactions">
+                    <!-- reaction & comment button -->
+                    <div class="buttons">
+                        <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                        <button class="show_comment_btn"><i class="fa-solid fa-message"></i> Comment</button>
+                        <button><i class="fa-solid fa-share"></i> Share</button>
+                    </div>
+
+                    <!-- counts -->
+                    <div class="reaction_counts">
+                        <span class="liks"><i class="thumbs fa-solid fa-thumbs-up"></i> <span class="likes_count">Khalil and 212K others</span></span>
+
+                        <i class="dot fa-solid fa-circle"></i>
+                        <span class="post_comment_count">23.4K comments</span>
+                        <i class="dot fa-solid fa-circle"></i>
+                        <span>66M views</span>
+                    </div>
+                </div>
+
+                <!-- video & write comments -->
+                <div class="post__comments">
+                    <!-- most relevent drop-down menu -->
+                    <!-- most relevent drop-down menu -->
+                    <div class="most_relevent_menu">
+                        <button class="video_mr_comment">Most relevent <i class="fa-solid fa-caret-down"></i></button>
+
+                        <div class="mr_menu">
+                            <div class="item">
+                                <p class="title">Most relevent</p>
+                                <p class="text">Show friends' comments and the most engaging comments first.</p>
+                            </div>
+
+                            <div class="item">
+                                <p class="title">Newest</p>
+                                <p class="text">Show all comments, with the newest comments first,</p>
+                            </div>
+
+                            <div class="item">
+                                <p class="title">All Comments</p>
+                                <p class="text">Show all comments, including potential spam. The most relevant comments will appear first.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Write comment -->
+                    <div class="input_comment">
+                        <i class="user_avatar fa-solid fa-user"></i>
+                        <input type="text" placeholder="Write a comment">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+
+                    <article class="all-comments">
+                        <!-- users comments item -->
+                        <div class="user_comments">
+                            <div><i class="user_avatar fa-solid fa-user"></i></div>
+                            <div class="comment_text">
+                                <p class="user_name">Khalil Ahmad</p>
+                                <p class="text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque esse cumque perferendis consectetur error ut odit sed voluptatum. Voluptatum, quam? 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="user_comments">
+                            <div><i class="user_avatar fa-solid fa-user"></i></div>
+                            <div class="comment_text">
+                                <p class="user_name">Khalil Ahmad</p>
+                                <p class="text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore. quam? 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="user_comments">
+                            <div><i class="user_avatar fa-solid fa-user"></i></div>
+                            <div class="comment_text">
+                                <p class="user_name">Khalil Ahmad</p>
+                                <p class="text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- main content end -->
     
     <!-- javascript -->
     <script src="../js/mains.js"></script>

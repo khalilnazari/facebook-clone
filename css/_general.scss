@@ -74,6 +74,11 @@ a {
         display: flex;
         align-items: center;
         gap: 5px;
+        width: 28%;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 3px;
+        font-size: 18px;
 
         &:hover {
             background-color: lightblue;
@@ -88,11 +93,6 @@ a {
         padding: 10px;
     }
 
-    .center {
-        display: flex;
-        align-content: center;
-        gap: 5px;
-    }
     .action-btns, .counts {
         display: flex;
         align-items: center;

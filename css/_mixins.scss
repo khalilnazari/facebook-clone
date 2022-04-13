@@ -52,7 +52,7 @@
 // scroll
 @mixin vertical_scroll {
     &::-webkit-scrollbar {
-        width: 5px;
+        width: 3px;
     }
     
     /* Track */
@@ -71,7 +71,6 @@
             background: rgb(184, 184, 184); 
         }
     }
-
 
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
