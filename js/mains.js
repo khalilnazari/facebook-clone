@@ -212,11 +212,97 @@ see_more_bm_btn.forEach(btn => {
 
 
 // ################### Profile ######################
+// profile-nav-menu toggle
 const profile_dropdown_btn = document.getElementById('profile-dropdown-btn')
 profile_dropdown_btn.addEventListener('click', e => {
-    console.log('profile page.')
     const parent = e.target.closest('.dropdown-nav'); 
-    const menu = parent.querySelector('.dropdown-menu')
-
+    const menu = parent.querySelector('.dropdown-nav-menu')
     menu.classList.toggle('show')
+})
+
+
+// dropdown-page-nav toggle
+const proflile_dropdown_page_btn = document.getElementById('proflile-dropdown-page-btn'); 
+const dropdown_page_nav = document.querySelector('.dropdown-page-nav')
+proflile_dropdown_page_btn.addEventListener('click', e => {
+    console.log('navnnn')
+    dropdown_page_nav.classList.toggle('show-page-nav')
+})
+
+// inline-page-nav
+
+
+// inline-page-nav
+const inline_page_nav = document.querySelector('.inline-page-nav')
+const inline_page_nav_width = inline_page_nav.clientWidth; 
+const inline_page_nav_children = inline_page_nav.children; 
+
+const inline_page_nav_last_child = inline_page_nav.children[inline_page_nav_children.length-1]
+
+
+
+let inline_nav_item_width =0; 
+let inline_nav_item_remove = []; 
+for(let i = 0; i<inline_page_nav_children.length; i++){
+    inline_nav_item_width += inline_page_nav_children[i].clientWidth; 
+
+    // if width of nav-items is bigger than their cotainer
+    if(inline_nav_item_width > inline_page_nav_width) {
+        dropdown_page_nav.insertBefore(inline_page_nav_children[i], dropdown_page_nav.firstChild)
+        inline_page_nav_children[i].remove(); 
+    }
+
+}
+
+
+
+
+// if((inline_nav_item_width * (inline_page_nav_length + 1)) > profile_nav_wrapper_width)
+// console.log((inline_nav_item_width * (inline_page_nav_length + 1)), profile_nav_wrapper_width)
+
+
+
+window.addEventListener('resize', () => {
+
+    // inline-page-nav
+    const inline_page_nav = profile_nav_wrapper.querySelector('.inline-page-nav')
+    const inline_page_nav_length = inline_page_nav.children.length; 
+    const inline_page_nav_width = inline_page_nav.clientWidth; 
+    const inline_page_nav_last_child = inline_page_nav.children[inline_page_nav_length-1]
+    const inline_page_nav_last_childClone = inline_page_nav_last_child.cloneNode(true); 
+
+    // dropdown-page-nav
+    const dropdown_page_nav = document.querySelector('.dropdown-page-nav')
+    const dropdown_page_nav_firstChild = dropdown_page_nav.children[0]
+    const dropdown_page_nav_firstChildClone = dropdown_page_nav_firstChild.cloneNode(true);
+
+    // dropdown_page_nav_firstChild.remove(); 
+    // console.log(dropdown_page_nav_firstChildClone)
+
+
+    // total width of nav-items 
+    let inline_nav_item_width = 0; 
+    [...inline_page_nav.children].forEach(nav_item => {
+        inline_nav_item_width += (nav_item.clientWidth); 
+    })
+
+    // if width of nav-items is bigger than their cotainer
+    if(inline_nav_item_width > inline_page_nav_width) {
+        dropdown_page_nav.insertBefore(inline_page_nav_last_childClone, dropdown_page_nav.firstChild)
+        inline_page_nav_last_child.remove(); 
+    }
+
+    // console.log(inline_nav_item_width , inline_page_nav_width)
+    inline_nav_item_width = 0; 
+    [...inline_page_nav.children].forEach(nav_item => {
+        inline_nav_item_width += (nav_item.clientWidth); 
+    })
+
+    if(inline_nav_item_width <= inline_page_nav_width) {
+        if(dropdown_page_nav_firstChild.dataset.type != 'dropdown') {
+            dropdown_page_nav_firstChild.remove(); 
+            inline_page_nav.appendChild(dropdown_page_nav_firstChildClone)
+        }
+    }
+    
 })
