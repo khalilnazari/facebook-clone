@@ -1,5 +1,4 @@
-# facebook-clone Project.  
-#### [Click here to view](https://khalilnazari.github.io/facebook-clone/)
+# facebook-clone Project - [View live](https://khalilnazari.github.io/facebook-clone/)
 
 ### 🔸 Why I have developed this project. 
 * Facebook UI is very rich in features 
